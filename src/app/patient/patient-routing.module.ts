@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MyProfileComponent } from './my-profile/my-profile.component';
+ import { MyProfileComponent } from './my-profile/my-profile.component';
  
 import { PatientComponent } from './patient/patient.component';
 import { LandingComponent } from '../shared/navigation/landing/landing.component';
