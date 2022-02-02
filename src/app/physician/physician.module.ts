@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PhysicianComponent } from './physician/physician.component';
+import { SharedModule } from '../shared/shared.module';
+import { PhysicianRoutingModule } from './physician-routing.module';
 
 
 
 @NgModule({
   declarations: [PhysicianComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule,
+    PhysicianRoutingModule
   ],
-  exports: [
-    PhysicianComponent
-  ]
+  // exports: [
+  //   PhysicianComponent
+  // ]
 })
 export class PhysicianModule { }
