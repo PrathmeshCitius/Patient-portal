@@ -4,6 +4,7 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { LandingComponent } from './navigation/landing/landing.component';
 import { SidebarComponent } from './navigation/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 
@@ -11,8 +12,11 @@ import { RouterModule } from '@angular/router';
   declarations: [HeaderComponent, LandingComponent, SidebarComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    MatToolbarModule
   ],
-  // exports:[LandingComponent]
+  exports:[LandingComponent,
+    HeaderComponent
+  ]
 })
 export class SharedModule { }

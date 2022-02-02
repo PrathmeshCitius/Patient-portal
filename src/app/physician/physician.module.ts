@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { PhysicianComponent } from './physician/physician.component';
 import { SharedModule } from '../shared/shared.module';
 import { PhysicianRoutingModule } from './physician-routing.module';
+import { PhysicianDashboardComponent } from './physician-dashboard/physician-dashboard.component';
 
 
 
 @NgModule({
-  declarations: [PhysicianComponent],
+  declarations: [PhysicianComponent, PhysicianDashboardComponent],
   imports: [
     CommonModule,
     SharedModule,
