@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'Patient-portal';
   
+  users=[{'id':1,"name":"abc"}];
   constructor(
     private route:Router
   ){}

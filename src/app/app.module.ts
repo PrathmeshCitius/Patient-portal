@@ -8,6 +8,7 @@ import { PatientModule } from './patient/patient.module';
 import { PhysicianModule } from './physician/physician.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SharedModule } from './shared/shared.module';
      PatientModule,
       PhysicianModule,
       AdminModule,
-      SharedModule
+      SharedModule,
+      BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
