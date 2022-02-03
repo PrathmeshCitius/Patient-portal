@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from '../auth.service';
 
 
 @Component({
@@ -11,7 +13,18 @@ export class LoginComponent implements OnInit {
 
   loginForm: FormGroup;
 
-  constructor() {
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {
+
+    this.createLoginForm();
+
+
+  }
+
+
+  createLoginForm() {
 
     this.loginForm = new FormGroup({
 
@@ -21,15 +34,23 @@ export class LoginComponent implements OnInit {
 
     });
 
-  }
 
+
+  }
   ngOnInit(): void {
   }
 
 
-  onSubmit(){
+  onSubmit(): void {
+    console.log("hi");
+    if (this.loginForm.invalid) return;
+
+
+    this.router.navigateByUrl('/patient');
+
 
   }
+
 
 }
 
