@@ -1,26 +1,26 @@
 <div class="physician-container">
-<div class="physician-sidebar">
-  <app-physician-sidebar></app-physician-sidebar>
-</div>
-<div class="m-auto physician-dashboard">
-  <div class="d-flex ">
-    <div>
-      <mat-form-field MatFormFieldControl appearance="fill">
-        <mat-label>Choose a date</mat-label>
-        <input matInput [matDatepicker]="picker">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
+  <div class="physician-sidebar">
+    <app-physician-sidebar></app-physician-sidebar>
+  </div>
+  <div class="m-auto physician-dashboard">
+    <div class="d-flex ">
+      <div>
+        <mat-form-field MatFormFieldControl appearance="fill">
+          <mat-label>Choose a date</mat-label>
+          <input matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <!-- <br><br> -->
+
+    </div>
+    <button mat-raised-button color="primary">Primary</button>
+
+    <div class="graph-container">
+      <img src="../assets/img1.jpg" alt="" style="height:500px; width:1000px;object-fit: contain;">
     </div>
 
-    <!-- <br><br> -->
-    
   </div>
-  <button mat-raised-button color="primary">Primary</button>
-  
-  <div class="graph-container">
-    <img src="../assets/img1.jpg" alt="" style="height:500px; width:1000px;object-fit: contain;">
-  </div>
-
-</div>
 </div>
