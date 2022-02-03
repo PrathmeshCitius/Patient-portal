@@ -7,6 +7,9 @@ import { NgModule } from "@angular/core";
 import { LoginComponent } from "./auth/login/login.component";
 import { RegistrationComponent } from "./auth/registration/registration.component";
 import { LogoutComponent} from "./auth/logout/logout.component";
+// import { DashboardComponent } from "./patient/patient/dashboard/dashboard.component";
+// import { SideNavbarComponent } from "./patient/patient/side-navbar/side-navbar.component";
+
 
 const routes: Routes = [
 
@@ -23,6 +26,11 @@ const routes: Routes = [
     { path: "auth/registration", component: RegistrationComponent },
 
     { path: "auth/logout", component: LogoutComponent },
+
+    // Pateint Dashboard by Prathmesh on 02-02-22
+    // { path: "dashboard", component: DashboardComponent },
+
+    // { path: "side-navbar", component: SideNavbarComponent },
   
   ];
   
