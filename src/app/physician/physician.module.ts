@@ -8,13 +8,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
+import { PhysicianSidebarComponent } from './physician-sidebar/physician-sidebar.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 
 
 
 @NgModule({
-  declarations: [PhysicianComponent],
+  declarations: [PhysicianComponent, PhysicianSidebarComponent],
   imports: [
     CommonModule,
     SharedModule,
@@ -23,8 +25,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatFormFieldModule,
     MatNativeDateModule,
     MatInputModule,
-    MatButtonModule
-    
+    MatButtonModule,
+    MatSidenavModule
     
   ],
   exports: [
