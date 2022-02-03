@@ -6,8 +6,11 @@ import { Routes, RouterModule, ROUTES } from "@angular/router";
 import { NgModule } from "@angular/core";
 import { LoginComponent } from "./auth/login/login.component";
 import { RegistrationComponent } from "./auth/registration/registration.component";
-import { LogoutComponent } from "./auth/logout/logout.component";
 import { LandingComponent } from "./shared/navigation/landing/landing.component";
+import { LogoutComponent } from "./auth/logout/logout.component";
+// import { DashboardComponent } from "./patient/patient/dashboard/dashboard.component";
+// import { SideNavbarComponent } from "./patient/patient/side-navbar/side-navbar.component";
+
 
 const routes: Routes = [
 
@@ -20,9 +23,10 @@ const routes: Routes = [
   }
   ,
 
+
   { path: "admin", component: AdminComponent },
 
-  { path: "physician", loadChildren: () => import('./physician/physician.module').then((m) => m.PhysicianModule)},
+  { path: "physician", loadChildren: () => import('./physician/physician.module').then((m) => m.PhysicianModule) },
 
   { path: "auth/login", component: LoginComponent },
 
@@ -42,6 +46,5 @@ const routes: Routes = [
   exports: [RouterModule]
 
 })
-
 
 export class AppRoutingModule { }
