@@ -9,14 +9,10 @@ const routes: Routes = [
    
 
     {
-        path: '', component:LandingComponent,
+        path: '', component:PhysicianComponent,
         
         children: [
-          {
-            path: 'dashboard',
-            component: PhysicianComponent
-          },
-    
+         
          ]
       },
 

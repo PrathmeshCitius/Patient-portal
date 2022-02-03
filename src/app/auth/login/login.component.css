@@ -21,3 +21,13 @@ h4, p {
     width: 100%;
   
   }
+  .loginclass{
+    width: 400px;
+    margin-left: 400px;
+    margin-top: 150px;
+  }
+  .btnclass{
+    background-color: rgb(54, 54, 136) ;
+    height: 40px;
+    color: cornsilk;
+  }
