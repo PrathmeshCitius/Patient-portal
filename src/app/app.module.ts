@@ -9,7 +9,8 @@ import { PhysicianModule } from './physician/physician.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent
@@ -19,6 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     RouterModule,
     AuthModule,
     AppRoutingModule,
+    MatDatepickerModule,
+    MatButtonModule,
 
      PatientModule,
       PhysicianModule,

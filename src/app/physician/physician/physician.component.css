@@ -1,0 +1,7 @@
+.d-flex{
+    display: flex;
+    flex-direction: row;
+}
+.m-auto{
+    margin:20px 50px;
+}
