@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PatientComponent } from './patient/patient.component';
-
-import { MyProfileComponent } from './my-profile/my-profile.component';
 import { PatientRoutingModule } from './patient-routing.module';
 import { LandingComponent } from '../shared/navigation/landing/landing.component';
 import { SharedModule } from '../shared/shared.module';
@@ -21,6 +19,9 @@ import { RouterModule } from '@angular/router';
 import {MatCardModule} from '@angular/material/card';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {MatDividerModule} from '@angular/material/divider';
+import { HeaderComponent } from '../shared/navigation/header/header.component';
+
+
 
 
 
@@ -34,6 +35,7 @@ import {MatDividerModule} from '@angular/material/divider';
     PatientRoutingModule,
     MatCardModule,
     MatDividerModule
+    SharedModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
