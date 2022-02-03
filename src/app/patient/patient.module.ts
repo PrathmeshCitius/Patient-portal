@@ -16,6 +16,9 @@ import { OrdersComponent } from './patient/orders/orders.component';
 import { PatientEducationComponent } from './patient/patient-education/patient-education.component';
 import { SideNavbarComponent } from './patient/side-navbar/side-navbar.component';
 import { RouterModule } from '@angular/router';
+import {MatCardModule} from '@angular/material/card';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import {MatDividerModule} from '@angular/material/divider';
 import { HeaderComponent } from '../shared/navigation/header/header.component';
 
 
@@ -30,12 +33,17 @@ import { HeaderComponent } from '../shared/navigation/header/header.component';
     CommonModule,
     RouterModule,
     PatientRoutingModule,
+    MatCardModule,
+    MatDividerModule
     SharedModule
-    
 
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
   // exports: [
   //   PatientComponent
   // ]
 })
-export class PatientModule { }
+export class PatientModule { 
+  
+}

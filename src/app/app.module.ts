@@ -9,10 +9,8 @@ import { PhysicianModule } from './physician/physician.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatButtonModule} from '@angular/material/button';
-
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -21,6 +19,8 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
   declarations: [
     AppComponent
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+
 
   imports: [
     BrowserModule,
@@ -28,16 +28,17 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     AuthModule,
     AppRoutingModule,
     MatDatepickerModule,
-    MatButtonModule,     PatientModule,
+    MatButtonModule,     
+    PatientModule,
       PhysicianModule,
       AdminModule,
       SharedModule,
       BrowserAnimationsModule,
-   
       AdminModule,
       BrowserAnimationsModule,
       MatSidenavModule,
-      MatCardModule  ],
+      MatCardModule  
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
