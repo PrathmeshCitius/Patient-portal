@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PatientComponent } from './patient/patient.component';
-
-import { MyProfileComponent } from './my-profile/my-profile.component';
 import { PatientRoutingModule } from './patient-routing.module';
 import { LandingComponent } from '../shared/navigation/landing/landing.component';
 import { SharedModule } from '../shared/shared.module';
@@ -18,6 +16,7 @@ import { OrdersComponent } from './patient/orders/orders.component';
 import { PatientEducationComponent } from './patient/patient-education/patient-education.component';
 import { SideNavbarComponent } from './patient/side-navbar/side-navbar.component';
 import { RouterModule } from '@angular/router';
+import { HeaderComponent } from '../shared/navigation/header/header.component';
 
 
 
@@ -30,7 +29,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     RouterModule,
-    PatientRoutingModule
+    PatientRoutingModule,
+    SharedModule
+    
 
   ],
   // exports: [
