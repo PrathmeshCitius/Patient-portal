@@ -1,5 +1,47 @@
-<div class="card">
-    <mat-card >lore</mat-card>
+<div class="patient-vital">
+    <mat-list>
+        <!-- Temporarily had coded data -->
+        <mat-list-item>Patient Name: {{name}}</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Age: 67</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Gender: Male</mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>Address: 3717 Anthony Avenue</mat-list-item>
+    </mat-list>
 </div>
 
-
+<mat-tab-group>
+    <mat-tab label="Blood Pressure">
+        <mat-icon>
+            <span class="material-icons-outlined">
+                bloodtype
+            </span>
+        </mat-icon> BP: 120/110
+    </mat-tab>
+    <mat-tab label="Pulse">
+        <mat-icon>
+            <span class="material-icons-outlined">
+                favorite
+            </span>
+        </mat-icon>Pulse Rate: xyz
+    </mat-tab>
+    <mat-tab label="Temperature">
+        <mat-icon>
+            <span class="material-icons-outlined">
+                thermostat
+            </span>
+        </mat-icon>
+        Temperature: 98
+    </mat-tab>>
+    <mat-tab label="Respiration"> Respiration: abc </mat-tab>
+    <mat-tab label="Height"> Height: 6 feet </mat-tab>
+    <mat-tab label="Weight "> Weight: 150 pounds </mat-tab>
+</mat-tab-group>
+<!-- <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+<mat-icon aria-hidden="false" aria-label="Example home icon">table</mat-icon>
+<mat-icon aria-hidden="false" aria-label="Example home icon">heart</mat-icon>
+<mat-icon class="mat-icon-rtl-mirror" svgIcon="thumb-up"></mat-icon>
+<mat-icon><span class="material-icons-outlined">
+    face
+    </span></mat-icon> -->

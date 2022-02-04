@@ -22,6 +22,8 @@ import {MatDividerModule} from '@angular/material/divider';
 import { HeaderComponent } from '../shared/navigation/header/header.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -39,7 +41,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatDividerModule,
     SharedModule,
     ReactiveFormsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatTabsModule, 
+    MatIconModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
@@ -48,5 +52,5 @@ import { MatSidenavModule } from '@angular/material/sidenav';
   // ]
 })
 export class PatientModule { 
-  
+  name: string = "abc";
 }
