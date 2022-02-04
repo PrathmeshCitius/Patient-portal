@@ -20,11 +20,13 @@ const routes: Routes = [
   {
     path: 'patient',
     loadChildren: () => import('./patient/patient.module').then((m) => m.PatientModule)
-  }
-  ,
+  } ,
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule)
+  },
 
-
-  { path: "admin", component: AdminComponent },
+ // { path: "admin", component: AdminComponent },
 
   { path: "physician", loadChildren: () => import('./physician/physician.module').then((m) => m.PhysicianModule) },
 
