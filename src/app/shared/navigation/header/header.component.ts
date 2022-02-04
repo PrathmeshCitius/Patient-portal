@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +9,15 @@ import { FormControl } from '@angular/forms';
 })
 export class HeaderComponent implements OnInit {
   disableSelect = new FormControl();
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  logOut(){
+    this.router.navigateByUrl('/auth/login');
   }
 
 }

@@ -20,6 +20,8 @@ import {MatCardModule} from '@angular/material/card';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {MatDividerModule} from '@angular/material/divider';
 import { HeaderComponent } from '../shared/navigation/header/header.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 
 
@@ -35,7 +37,13 @@ import { HeaderComponent } from '../shared/navigation/header/header.component';
     PatientRoutingModule,
     MatCardModule,
     MatDividerModule,
+<<<<<<< HEAD
     SharedModule
+=======
+    SharedModule,
+    ReactiveFormsModule,
+    MatSidenavModule
+>>>>>>> 6f6c2d9f3a6df3bd74a12514a09d8451f713d7e0
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
