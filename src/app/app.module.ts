@@ -31,11 +31,9 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
     MatButtonModule,     
     PatientModule,
       PhysicianModule,
-      AdminModule,
       SharedModule,
       BrowserAnimationsModule,
       AdminModule,
-      BrowserAnimationsModule,
       MatSidenavModule,
       MatCardModule  
     ],
