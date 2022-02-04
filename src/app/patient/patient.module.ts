@@ -34,7 +34,7 @@ import { HeaderComponent } from '../shared/navigation/header/header.component';
     RouterModule,
     PatientRoutingModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
     SharedModule
 
   ],
