@@ -1,7 +1,12 @@
 .w-30{
-    width: 30%;
+    width: 20%;
 }
 .w-70{
-    width: 70%;
+    width: 80%;
 }
+
+/* .patient-container {
+    display: flex;
+    flex-direction: row;
+} */
 

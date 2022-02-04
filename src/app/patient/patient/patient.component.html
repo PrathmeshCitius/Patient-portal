@@ -1,9 +1,16 @@
 
 <!-- <app-landing></app-landing> -->
 <p>patient works</p>
-<div class="" style="display: flex;">
-    <mat-card style="padding: 0;">  
-        <app-side-navbar></app-side-navbar>
-    </mat-card>
-<router-outlet></router-outlet>
+
+<div class="patient-container" style="display: flex;">
+    <div class="w-30">
+        <mat-card style="padding: 0;">  
+            <app-side-navbar></app-side-navbar>
+        </mat-card>
+    </div>
+
+<div class="w-70">
+    <router-outlet></router-outlet>
+</div>
+
 </div>
