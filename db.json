@@ -1,0 +1,74 @@
+{
+  "immunization_details": [
+    {
+      "id": 1,
+      "vaccineName": "Covid-19",
+      "doses": "2",
+      "date": "10/09/2021"
+    },
+    {
+      "vaccineName": "aa",
+      "doses": "aa",
+      "date": "2022-02-16T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "vaccineName": "aaaaa",
+      "doses": "ssss",
+      "date": "2022-02-21T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "vaccineName": "Flu-Dengue",
+      "doses": "aa",
+      "date": "2022-02-24T18:30:00.000Z",
+      "id": 4
+    },
+    {
+      "vaccineName": "aaaa",
+      "doses": "aaa",
+      "date": "2022-02-11T18:30:00.000Z",
+      "id": 5
+    },
+    {
+      "vaccineName": "Maleria",
+      "doses": "1",
+      "date": "2021-11-18T18:30:00.000Z",
+      "id": 6
+    },
+    {
+      "vaccineName": "aaa",
+      "doses": "aaa",
+      "date": "2021-12-22T18:30:00.000Z",
+      "id": 7
+    },
+    {
+      "vaccineName": "bbb",
+      "doses": "bbb",
+      "date": "2021-12-22T18:30:00.000Z",
+      "id": 8
+    },
+    {
+      "vaccineName": "Uday",
+      "doses": "4",
+      "date": "2022-02-03T18:30:00.000Z",
+      "id": 9
+    },
+    {
+      "vaccineName": "xxxx",
+      "doses": "2",
+      "date": "2022-02-02T18:30:00.000Z",
+      "id": 10
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
