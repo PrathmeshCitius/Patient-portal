@@ -35,7 +35,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
-
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -79,8 +79,9 @@ import {MatSortModule} from '@angular/material/sort';
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
 
+    MatTabsModule, 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
@@ -91,5 +92,5 @@ import {MatSortModule} from '@angular/material/sort';
   ]
 })
 export class PatientModule { 
-  
+  name: string = "abc";
 }
