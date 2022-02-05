@@ -40,11 +40,9 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     MatButtonModule,     
     PatientModule,
       PhysicianModule,
-      AdminModule,
       SharedModule,
       BrowserAnimationsModule,
       AdminModule,
-      BrowserAnimationsModule,
       MatSidenavModule,
       MatCardModule ,
       PerfectScrollbarModule

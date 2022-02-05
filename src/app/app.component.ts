@@ -8,7 +8,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'Patient-portal';
-  
+  name1 = "abc";
+
   users=[{'id':1,"name":"abc"}];
   constructor(
     private route:Router
