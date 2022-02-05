@@ -22,7 +22,9 @@ import {MatDividerModule} from '@angular/material/divider';
 import { HeaderComponent } from '../shared/navigation/header/header.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
-
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -39,8 +41,10 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatDividerModule,
     SharedModule,
     ReactiveFormsModule,
-    MatSidenavModule
-
+    MatSidenavModule,
+    MatInputModule,
+    MatFormFieldModule,
+    HttpClientModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 

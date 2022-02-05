@@ -10,7 +10,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule} from '@angular/material/icon';
 
-
+import { PerfectScrollbarConfigInterface, PerfectScrollbarModule,PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';  
+  
+const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {  
+  suppressScrollX: true,
+  wheelPropagation:true,
+  minScrollbarLength:80
+};  
 
 @NgModule({
   declarations: [HeaderComponent, LandingComponent, SidebarComponent],
@@ -21,8 +27,13 @@ import { MatIconModule} from '@angular/material/icon';
     MatSelectModule,
     MatInputModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    PerfectScrollbarModule
   ],
+  providers: [{
+    provide: PERFECT_SCROLLBAR_CONFIG,
+     useValue: P_SCROLLBAR_CONFIG
+  }],
   exports:[LandingComponent,
     HeaderComponent
   ]
