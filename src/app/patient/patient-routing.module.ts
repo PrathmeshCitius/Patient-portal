@@ -10,7 +10,6 @@ import { OrdersComponent } from './patient/orders/orders.component';
 import { PatientEducationComponent } from './patient/patient-education/patient-education.component';
 import { AppointmentHistoryComponent } from './patient/appointment-history/appointment-history.component';
 import { DemographicsComponent } from './patient/demographics/demographics.component';
-import { ImmunizationDetailsComponent } from './patient/immunization-details/immunization-details.component';
 import { MedicationAndAllergiesComponent } from './patient/medication-and-allergies/medication-and-allergies.component';
 import { PatientVitalsComponent } from './patient/patient-vitals/patient-vitals.component';
 import { ScheduleAppointmentComponent } from './patient/schedule-appointment/schedule-appointment.component';
@@ -35,9 +34,7 @@ const routes: Routes = [
          {
             path: 'demographics', component: DemographicsComponent,
          },
-         {
-            path: 'immunization-details', component: ImmunizationDetailsComponent,
-         },
+        
          {
             path: 'medication-and-allergies', component: MedicationAndAllergiesComponent,
          },

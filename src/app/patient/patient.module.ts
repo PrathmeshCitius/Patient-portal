@@ -10,7 +10,7 @@ import { ScheduleAppointmentComponent } from './patient/schedule-appointment/sch
 import { AppointmentHistoryComponent } from './patient/appointment-history/appointment-history.component';
 import { DemographicsComponent } from './patient/demographics/demographics.component';
 import { MedicationAndAllergiesComponent } from './patient/medication-and-allergies/medication-and-allergies.component';
-import { ImmunizationDetailsComponent } from './patient/immunization-details/immunization-details.component';
+//import { ImmunizationDetailsComponent } from './patient/immunization-details/immunization-details.component';
 import { PatientVitalsComponent } from './patient/patient-vitals/patient-vitals.component';
 import { OrdersComponent } from './patient/orders/orders.component';
 import { PatientEducationComponent } from './patient/patient-education/patient-education.component';
@@ -27,7 +27,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import { DialogComponent } from './patient/immunization-details/dialog/dialog.component';
+//import { DialogComponent } from './patient/immunization-details/dialog/dialog.component';
 import { MatInputModule } from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
@@ -50,14 +50,12 @@ import {MatTabsModule} from '@angular/material/tabs';
                 ScheduleAppointmentComponent, 
                 AppointmentHistoryComponent, 
                 DemographicsComponent, 
-                MedicationAndAllergiesComponent, 
-                ImmunizationDetailsComponent, 
+                MedicationAndAllergiesComponent,  
                 PatientVitalsComponent, 
                 OrdersComponent, 
                 PatientEducationComponent, 
-                SideNavbarComponent, 
-                DialogComponent
-              
+                SideNavbarComponent
+            
               ],
   imports: [
     CommonModule,
@@ -80,15 +78,15 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-
     MatTabsModule, 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
   exports: [
     PatientComponent,
-    ImmunizationDetailsComponent,
-    DialogComponent
+    //DialogComponent,
+    MedicationAndAllergiesComponent,
+
   ]
 })
 export class PatientModule { 
