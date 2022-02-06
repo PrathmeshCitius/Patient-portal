@@ -14,9 +14,20 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
+
+ 
+import { PerfectScrollbarConfigInterface, PerfectScrollbarModule,PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';  
+  
+const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {  
+  suppressScrollX: true,
+  wheelPropagation:true,
+  minScrollbarLength:80
+};  
+  
 
 @NgModule({
   declarations: [
@@ -38,12 +49,19 @@ import { HttpClientModule } from '@angular/common/http';
       BrowserAnimationsModule,
       AdminModule,
       MatSidenavModule,
+
       MatCardModule,
       MatFormFieldModule,
       MatInputModule,
-      HttpClientModule
+      HttpClientModule,
+
+      MatCardModule ,
+      PerfectScrollbarModule
     ],
-  providers: [],
+  providers: [{
+    provide: PERFECT_SCROLLBAR_CONFIG,
+    useValue: P_SCROLLBAR_CONFIG
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
