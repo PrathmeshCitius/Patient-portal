@@ -14,6 +14,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatCardModule} from '@angular/material/card';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
       BrowserAnimationsModule,
       AdminModule,
       MatSidenavModule,
-      MatCardModule  
+      MatCardModule,
+      MatFormFieldModule,
+      MatInputModule,
+      HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]

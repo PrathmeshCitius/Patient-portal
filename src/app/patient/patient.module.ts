@@ -22,7 +22,16 @@ import {MatDividerModule} from '@angular/material/divider';
 import { HeaderComponent } from '../shared/navigation/header/header.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
-
+import { MatButton } from '@angular/material/button';
+import {MatButtonModule} from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatNativeDateModule } from '@angular/material/core';
+import { HttpClientModule } from '@angular/common/http';
+import {MatTableModule} from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 
@@ -39,7 +48,15 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatDividerModule,
     SharedModule,
     ReactiveFormsModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    HttpClientModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTabsModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 
