@@ -28,8 +28,8 @@
       "surgery": "",
       "insurance": "",
       "id": 1
-    },
-    {
+    }],
+    
   "medicationList": [
     {
       "allergy": "Allergy",
@@ -150,8 +150,8 @@
     "name": "typicode"
   }
 }
-  ]
-}
+  
+
 
 
 
