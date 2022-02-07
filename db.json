@@ -1,7 +1,36 @@
 {
-    "patientdemo": [
-     
-    ],
+
+  "users":[
+    {
+      "fName": "",
+      "lName":"",
+      "dob":"",
+      "username":"",
+      "role":"",
+      "email":"",
+      "mobile":"",
+      "password":"",
+      "isAuthenticated": false
+    }
+  ],
+  "patientdemo": [
+    {
+      "firstName": "Seema",
+      "lastName": "Patil",
+      "dob": "",
+      "gender": "",
+      "ethnicity": "",
+      "education": "BE",
+      "occupation": "",
+      "address": "mumbai",
+      "contact": "8787887865",
+      "medHist": "",
+      "fmMedHist": "",
+      "surgery": "",
+      "insurance": "",
+      "id": 1
+    }
+  ],
   "immunization_details": [
     {
       "id": 1,
@@ -75,4 +104,3 @@
     "name": "typicode"
   }
 }
-

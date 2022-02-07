@@ -36,9 +36,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatTabsModule} from '@angular/material/tabs';
-
-
-
+import {MatRadioModule} from '@angular/material/radio';
 
 
 @NgModule({
@@ -81,6 +79,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatPaginatorModule,
     MatSortModule,
     MatTabsModule, 
+    MatRadioModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

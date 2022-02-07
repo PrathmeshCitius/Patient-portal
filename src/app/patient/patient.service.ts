@@ -15,7 +15,11 @@ export class PatientService {
   ) { }
 
 
-  createPatientDemographics(data) {
-    return this.http.post(`${this.API_URL}/patientdemo`, data);
+  updatePatientDemographics(data,id) {
+    return this.http.put(`${this.API_URL}/patientdemo/${id}`, data);
+  }
+
+  fetchPatientDemographicsById(id){
+    return this.http.get(`${this.API_URL}/patientdemo/${id}`);
   }
 }
