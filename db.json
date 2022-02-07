@@ -1,14 +1,14 @@
 {
-  "users":[
+  "users": [
     {
       "fName": "",
-      "lName":"",
-      "dob":"",
-      "username":"",
-      "role":"",
-      "email":"",
-      "mobile":"",
-      "password":"",
+      "lName": "",
+      "dob": "",
+      "username": "",
+      "role": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
       "isAuthenticated": false
     }
   ],
@@ -28,8 +28,8 @@
       "surgery": "",
       "insurance": "",
       "id": 1
-    }],
-    
+    }
+  ],
   "medicationList": [
     {
       "allergy": "Allergy",
@@ -121,12 +121,6 @@
   ],
   "immunization_details": [
     {
-      "id": 1,
-      "vaccineName": "COVID-19 vaccine",
-      "doses": "2",
-      "date": "2021-11-16T18:30:00.000Z"
-    },
-    {
       "vaccineName": "Dengue vaccine",
       "doses": "1",
       "date": "2022-01-31T18:30:00.000Z",
@@ -150,9 +144,3 @@
     "name": "typicode"
   }
 }
-  
-
-
-
-
-
