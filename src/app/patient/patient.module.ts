@@ -52,7 +52,7 @@ import {MatRadioModule} from '@angular/material/radio';
                 AppointmentHistoryComponent, 
                 DemographicsComponent, 
                 MedicationAndAllergiesComponent, 
-                ImmunizationDetailsComponent, 
+               ImmunizationDetailsComponent, 
                 PatientVitalsComponent, 
                 OrdersComponent, 
                 PatientEducationComponent, 
