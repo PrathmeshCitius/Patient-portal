@@ -22,6 +22,10 @@ import {MatDividerModule} from '@angular/material/divider';
 import { HeaderComponent } from '../shared/navigation/header/header.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSidenavModule } from '@angular/material/sidenav';
+
+import { MatButton } from '@angular/material/button';
+
+
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
@@ -37,7 +41,6 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatRadioModule} from '@angular/material/radio';
-
 
 @NgModule({
 
@@ -66,6 +69,14 @@ import {MatRadioModule} from '@angular/material/radio';
     SharedModule,
     ReactiveFormsModule,
     MatSidenavModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
+    HttpClientModule,
+    MatPaginatorModule,
+    MatSortModule,
+    MatTabsModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
