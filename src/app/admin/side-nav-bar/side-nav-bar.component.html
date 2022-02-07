@@ -1,21 +1,24 @@
-<p>side-nav-bar works!</p>
 <div class="adminsidebar">
     <ul>
         <li>
-            <a routerLink='/dashboard'>Dashboard</a>
+            <a [routerLink]="['./dashboard']">Dashboard</a>
         </li>
+        <mat-divider></mat-divider>
         <li>
-            <a routerLink='/managepatientrecords'>Manage Patients Records</a>
+            <a [routerLink]="['./managepatientrecords']">Manage Patients Records</a>
         </li>
+        <mat-divider></mat-divider>
         <li>
-            <a routerLink='/managephysicianrecords'>Manage Physicians Records</a>
+            <a [routerLink]="['./managephysicianrecords']">Manage Physicians Records</a>
         </li>
+        <mat-divider></mat-divider>
         <li>
-            <a routerLink='/manageappontment'>Manage Appointments</a>
+            <a [routerLink]="['./manageappontment']">Manage Appointments</a>
         </li>
+        <mat-divider></mat-divider>
         <li>
-            <a routerLink='/billing'>Billing</a>
+            <a [routerLink]="['./billing']">Billing</a>
         </li>
-       
+
     </ul>
 </div>
