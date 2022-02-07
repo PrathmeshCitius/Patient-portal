@@ -1,135 +1,164 @@
-<h3>Patient Demographics</h3>
+<div class="row mainContainers">
+	<div class="col-12">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title"><span>Patient Demographics</span></h4>
 
-<form [formGroup]="demographicForm" class="floating-labels mt-40" (ngSubmit)="onSubmit()">
-	<div class="row">
+				<form [formGroup]="demographicForm" class="floating-labels mt-40" (ngSubmit)="onSubmit()">
+					<div class="row">
 
-		<div class="form-group m-b-10 col-lg-6">
-			<mat-form-field>
-				<input matInput placeholder="First Name" formControlName="firstName">
-			</mat-form-field>
+						<div class="form-group m-b-10 col-lg-6">
+							<mat-form-field>
+								<input matInput placeholder="First Name" formControlName="firstName">
+							</mat-form-field>
 
-			<div *ngIf="!f.firstName.valid && (f.firstName.dirty ||f.firstName.touched || submitted)" class="error-msg">
-				First Name is required
-			</div>
-		</div>
+							<div *ngIf="!f.firstName.valid && (f.firstName.dirty ||f.firstName.touched || submitted)"
+								class="error-msg">
+								First Name is required
+							</div>
+						</div>
 
-		<div class="form-group m-b-10 col-lg-6">
-			<mat-form-field>
-				<input matInput placeholder="Last Name" formControlName="lastName">
-			</mat-form-field>
+						<div class="form-group m-b-10 col-lg-6">
+							<mat-form-field>
+								<input matInput placeholder="Last Name" formControlName="lastName">
+							</mat-form-field>
 
-			<div *ngIf="!f.lastName.valid && (f.lastName.dirty ||f.lastName.touched || submitted)" class="error-msg">
-				Last Name is required
-			</div>
-		</div>
-		<div class="form-group m-b-10 col-lg-6">
-			<mat-form-field>
-				<input matInput placeholder="DOB" formControlName="dob">
-			</mat-form-field>
+							<div *ngIf="!f.lastName.valid && (f.lastName.dirty ||f.lastName.touched || submitted)"
+								class="error-msg">
+								Last Name is required
+							</div>
+						</div>
+						<div class="form-group m-b-10 col-lg-6">
+							<mat-form-field appearance="fill">
+								<mat-label>Date of Birth</mat-label>
+								<input matInput [matDatepicker]="picker" formControlName="dob">
+								<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+								<mat-datepicker #picker></mat-datepicker>
+							  </mat-form-field>
 
-			<div *ngIf="!f.dob.valid && (f.dob.dirty ||f.dob.touched || submitted)" class="error-msg">
-				DOB is required
-			</div>
-		</div>
+							<div *ngIf="!f.dob.valid && (f.dob.dirty ||f.dob.touched || submitted)" class="error-msg">
+								DOB is required
+							</div>
+						</div>
 
-		<div class="form-group m-b-10 col-lg-6">
-			<mat-form-field>
-				<input matInput placeholder="Gender" formControlName="gender">
-			</mat-form-field>
-
-			<div *ngIf="!f.gender.valid && (f.gender.dirty ||f.gender.touched || submitted)" class="error-msg">
-				Gender is required
-			</div>
-		</div>
-
-
-		<div class="form-group m-b-10 col-lg-6">
-			<mat-form-field>
-				<input matInput placeholder="Ethnicity" formControlName="ethnicity">
-			</mat-form-field>
-
-			<div *ngIf="!f.ethnicity.valid && (f.ethnicity.dirty ||f.ethnicity.touched || submitted)" class="error-msg">
-				Ethnicity is required
-			</div>
-		</div>
+						<div class="form-group m-b-10 col-lg-6">
+						
+							<mat-radio-group aria-label="Select an option" formControlName="gender">
+								<mat-radio-button value="male">Male</mat-radio-button>
+								<mat-radio-button value="female">Female</mat-radio-button>
+							  </mat-radio-group>
+							
 
 
-		<div class="form-group m-b-10 col-lg-6">
-			<mat-form-field>
-				<input matInput placeholder="Education" formControlName="education">
-			</mat-form-field>
-
-			<div *ngIf="!f.education.valid && (f.education.dirty ||f.education.touched || submitted)" class="error-msg">
-				Education is required
-			</div>
-		</div>
+							<div *ngIf="!f.gender.valid && (f.gender.dirty ||f.gender.touched || submitted)"
+								class="error-msg">
+								Gender is required
+							</div>
+						</div>
 
 
-		<div class="form-group m-b-10 col-lg-6">
-			<mat-form-field>
-				<input matInput placeholder="Employment" formControlName="occupation">
-			</mat-form-field>
+						<div class="form-group m-b-10 col-lg-6">
+							<mat-form-field>
+								<input matInput placeholder="Ethnicity" formControlName="ethnicity">
+							</mat-form-field>
 
-			<div *ngIf="!f.occupation.valid && (f.occupation.dirty ||f.occupation.touched || submitted)"
-				class="error-msg">
-				Employment is required
-			</div>
-		</div>
+							<div *ngIf="!f.ethnicity.valid && (f.ethnicity.dirty ||f.ethnicity.touched || submitted)"
+								class="error-msg">
+								Ethnicity is required
+							</div>
+						</div>
 
 
-		<div class="form-group m-b-10 col-lg-6">
-			<mat-form-field>
-				<input matInput placeholder="Address" formControlName="address">
-			</mat-form-field>
+						<div class="form-group m-b-10 col-lg-6">
+							<mat-form-field>
+								<input matInput placeholder="Education" formControlName="education">
+							</mat-form-field>
 
-			<div *ngIf="!f.address.valid && (f.address.dirty ||f.address.touched || submitted)" class="error-msg">
-				Address is required
-			</div>
-		</div>
+							<div *ngIf="!f.education.valid && (f.education.dirty ||f.education.touched || submitted)"
+								class="error-msg">
+								Education is required
+							</div>
+						</div>
 
-		<div class="form-group m-b-10 col-lg-6">
-			<mat-form-field>
-				<input matInput placeholder="Phone Number" formControlName="contact">
-			</mat-form-field>
 
-			<!-- <div *ngIf="!f.contact.valid && (f.contact.dirty ||f.contact.touched || submitted)" class="error-msg">
+						<div class="form-group m-b-10 col-lg-6">
+							<mat-form-field>
+								<input matInput placeholder="Employment" formControlName="occupation">
+							</mat-form-field>
+
+							<div *ngIf="!f.occupation.valid && (f.occupation.dirty ||f.occupation.touched || submitted)"
+								class="error-msg">
+								Employment is required
+							</div>
+						</div>
+
+
+						<div class="form-group m-b-10 col-lg-6">
+							<mat-form-field>
+								<input matInput placeholder="Address" formControlName="address">
+							</mat-form-field>
+
+							<div *ngIf="!f.address.valid && (f.address.dirty ||f.address.touched || submitted)"
+								class="error-msg">
+								Address is required
+							</div>
+						</div>
+
+						<div class="form-group m-b-10 col-lg-6">
+							<mat-form-field>
+								<input matInput placeholder="Phone Number" formControlName="contact">
+							</mat-form-field>
+
+							<!-- <div *ngIf="!f.contact.valid && (f.contact.dirty ||f.contact.touched || submitted)" class="error-msg">
 			Contact is required
 			</div> -->
-		</div>
+						</div>
 
-		<div class="form-group m-b-10 col-lg-6">
-			<mat-form-field>
-				<input matInput placeholder="Medical History" formControlName="medHist">
-			</mat-form-field>
+						<div class="form-group m-b-10 col-lg-6">
+							<mat-form-field>
+								<input matInput placeholder="Medical History" formControlName="medHist">
+							</mat-form-field>
 
-			<!-- <div *ngIf="!f.medHist.valid && (f.medHist.dirty ||f.medHist.touched || submitted)" class="error-msg">
+							<!-- <div *ngIf="!f.medHist.valid && (f.medHist.dirty ||f.medHist.touched || submitted)" class="error-msg">
 			Medical History is required
 			</div> -->
+						</div>
+
+						<div class="form-group m-b-10 col-lg-6">
+							<mat-form-field>
+								<input matInput placeholder="Family Medical History" formControlName="fmMedHist">
+							</mat-form-field>
+
+						</div>
+
+
+						<div class="form-group m-b-10 col-lg-6">
+							<mat-form-field>
+								<input matInput placeholder="Surgeries" formControlName="surgery">
+							</mat-form-field>
+
+						</div>
+
+
+						<div class="form-group m-b-10 col-lg-6">
+							<mat-form-field>
+								<input matInput placeholder="Insurance Provider" formControlName="insurance">
+							</mat-form-field>
+
+						</div>
+
+						<div class="col-md-12 m-b-ft" align="center" style="margin-bottom:200px;">
+							<button type="submit" class="btn btn-success" style="margin:10px;">
+								<span>Submit</span>
+							</button>
+
+						</div>
+
+					</div>
+
+				</form>
+
+			</div>
 		</div>
-
-		<div class="form-group m-b-10 col-lg-6">
-			<mat-form-field>
-				<input matInput placeholder="Family Medical History" formControlName="fmMedHist">
-			</mat-form-field>
-
-		</div>
-
-
-		<div class="form-group m-b-10 col-lg-6">
-			<mat-form-field>
-				<input matInput placeholder="Surgeries" formControlName="surgery">
-			</mat-form-field>
-
-		</div>
-
-
-		<div class="form-group m-b-10 col-lg-6">
-			<mat-form-field>
-				<input matInput placeholder="Insurance Provider" formControlName="insurance">
-			</mat-form-field>
-
-		</div>
-
 	</div>
-
-</form>
+</div>

@@ -9,31 +9,26 @@ import { PhysicianModule } from './physician/physician.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatCardModule} from '@angular/material/card';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { HttpClientModule } from '@angular/common/http';
+import { MatSidenavModule } from '@angular/material/sidenav';
+// import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 
- 
-import { PerfectScrollbarConfigInterface, PerfectScrollbarModule,PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';  
-  
-const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {  
-  suppressScrollX: true,
-  wheelPropagation:true,
-  minScrollbarLength:80
-};  
-  
+// const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+
+//   suppressScrollX: true,
+//   wheelPropagation: true,
+//   minScrollbarLength: 80
+// };
+
 
 @NgModule({
   declarations: [
     AppComponent
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [],
 
 
   imports: [
@@ -41,8 +36,6 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     RouterModule,
     AuthModule,
     AppRoutingModule,
-    MatDatepickerModule,
-    MatButtonModule,     
     PatientModule,
       PhysicianModule,
       SharedModule,
@@ -53,12 +46,13 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
       MatFormFieldModule,
       MatInputModule,
       HttpClientModule,
-     
-    ],
-  providers: [{
-    provide: PERFECT_SCROLLBAR_CONFIG,
-    useValue: P_SCROLLBAR_CONFIG
-    }],
+  //  PerfectScrollbarModule
+  ],
+
+  // providers: [{
+  //   provide: PERFECT_SCROLLBAR_CONFIG,
+  //   useValue: P_SCROLLBAR_CONFIG
+  // }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

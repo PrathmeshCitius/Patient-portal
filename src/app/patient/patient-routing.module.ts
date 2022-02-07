@@ -16,7 +16,6 @@ import { ScheduleAppointmentComponent } from './patient/schedule-appointment/sch
 
 const routes: Routes = [
 
-
     {
         path: "", component: PatientComponent,
         children: [{
@@ -32,7 +31,7 @@ const routes: Routes = [
             path: 'appointment-history', component: AppointmentHistoryComponent,
          },
          {
-            path: 'demographics', component: DemographicsComponent,
+            path: 'demographics/:id', component: DemographicsComponent,
          },
         
          {

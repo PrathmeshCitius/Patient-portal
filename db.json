@@ -1,4 +1,35 @@
 {
+  "users":[
+    {
+      "fName": "",
+      "lName":"",
+      "dob":"",
+      "username":"",
+      "role":"",
+      "email":"",
+      "mobile":"",
+      "password":"",
+      "isAuthenticated": false
+    }
+  ],
+  "patientdemo": [
+    {
+      "firstName": "Seema",
+      "lastName": "Patil",
+      "dob": "",
+      "gender": "",
+      "ethnicity": "",
+      "education": "BE",
+      "occupation": "",
+      "address": "mumbai",
+      "contact": "8787887865",
+      "medHist": "",
+      "fmMedHist": "",
+      "surgery": "",
+      "insurance": "",
+      "id": 1
+    },
+    {
   "medicationList": [
     {
       "currentmedications": "Dolo 650",
@@ -43,5 +74,17 @@
       "title": "json-server anfjkan",
       "author": "typicode"
     }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
   ]
 }
