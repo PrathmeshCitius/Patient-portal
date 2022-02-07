@@ -1,45 +1,12 @@
 .example-spacer {
-
-    flex: 1 1 auto;
-  
+   flex: 1 1 auto;
   }
-  
-  .m-10{
-  
-      margin:10px;
-  
+.m-10{margin:10px;}
+.mat-form-field {
+   display: block; position: relative; text-align: left;
   }
-  
-  .mat-form-field {
-  
-    display: block;
-  
-    position: relative;
-  
-    text-align: left;
-  
-  }
-  
   table {
-  
-    width: 100%;
-  
-  }
-  
-  
-  
-  .mat-form-field {
-  
-    font-size: 14px;
-  
-    width: 100%;
-  
-  }
-  
-  
-  
-  td, th {
-  
-    width: 25%;
-  
-  }
+     width: 100%;
+    } .mat-form-field {
+       font-size: 14px;width: 100%;}
+

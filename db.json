@@ -1,5 +1,4 @@
 {
-
   "medicationList": [
     {
       "allergy": "Allergy",
@@ -87,6 +86,69 @@
       "overthecounter": "Counter",
       "HVMA": "Herbs",
       "id": 14
+    },
+    {
+      "allergy": "a",
+      "socialdrug": "a",
+      "otherdetail": "a",
+      "currentmedication": "n",
+      "overthecounter": "n",
+      "HVMA": "n",
+      "id": 15
+    },
+    {
+      "currentmedications": "Current",
+      "otc": "OTC",
+      "hvma": "herbs",
+      "socialdrugs": "social",
+      "drugsallergies": "Drugs",
+      "otherallergies": "Other",
+      "id": 16
+    },
+    {
+      "currentmedications": "aaa",
+      "otc": "aaa",
+      "hvma": "aa",
+      "socialdrugs": "a",
+      "drugsallergies": "aa",
+      "otherallergies": "aa",
+      "id": 17
+    },
+    {
+      "currentmedications": "c1",
+      "otc": "c2",
+      "hvma": "c3",
+      "socialdrugs": "c4",
+      "drugsallergies": "c5",
+      "otherallergies": "c6",
+      "id": 18
+    },
+    {
+      "currentmedications": "c2",
+      "otc": "c2",
+      "hvma": "c2",
+      "socialdrugs": "c2",
+      "drugsallergies": "c2",
+      "otherallergies": "c2",
+      "id": 19
+    },
+    {
+      "currentmedications": "c1",
+      "otc": "o1",
+      "hvma": "herbs",
+      "socialdrugs": "social",
+      "drugsallergies": "drugs",
+      "otherallergies": "other",
+      "id": 20
+    },
+    {
+      "currentmedications": "medication",
+      "otc": "OTC",
+      "hvma": "Herbs",
+      "socialdrugs": "social",
+      "drugsallergies": "Drugs",
+      "otherallergies": "other",
+      "id": 21
     }
   ],
   "immunization_details": [
@@ -152,7 +214,3 @@
     }
   ]
 }
-
-
-
-
