@@ -131,6 +131,12 @@
       "vaccineName": "Ebola vaccine",
       "doses": "2",
       "date": "2020-02-05T18:30:00.000Z"
+    },
+    {
+      "vaccineName": "COVID-19 Vaccine",
+      "doses": "2",
+      "date": "2021-11-16T18:30:00.000Z",
+      "id": 4
     }
   ],
   "comments": [
