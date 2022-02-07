@@ -1,7 +1,16 @@
-<div class="adminsidebar">
-    <ul>
-        <li>
-            <a [routerLink]="['./dashboard']">Dashboard</a>
+<div class="sidenav">
+    <div class="logo">
+        <a href="/" class="simple-text logo-mini">
+        <div class="logo-img">
+            <img src="">
+        </div>
+        </a>
+    </div>
+    <ul class="nav">
+        <li class="active">
+            <a [routerLink]="['./dashboard']">
+                <i class="fas fa-chart-line"></i>
+                Dashboard</a>
         </li>
         <mat-divider></mat-divider>
         <li>
@@ -21,4 +30,5 @@
         </li>
 
     </ul>
+
 </div>
