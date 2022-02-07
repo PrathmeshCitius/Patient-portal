@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideNavbarComponent implements OnInit {
 
+  patientId: number;
+  
   constructor() { }
 
   ngOnInit(): void {
+
+    this.patientId = 1;
   }
 
 }
