@@ -31,13 +31,16 @@ mat-sidenav {
     margin: 16px;
     margin-left: 32px;
 
-    display: flex;
     justify-content: center;
     align-items: center;
 
-    font-size: 1rem;
-    color: lightgray;
-} */
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 2rem;
+    color: lightgray; */ 
 
 mat-sidenav-container {
     height: calc(100vh - 65px);

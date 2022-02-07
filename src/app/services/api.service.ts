@@ -11,4 +11,10 @@ export class ApiService {
   getMedication() {
     return this.http.get<any>('http://localhost:3000/medicationList/');
   }
+  updateMedication(id:number,data:any){
+    return this.http.put<any>("http://localhost:3000/medicationList/"+id, data)
+  }
+  deleteMedication(id:number){
+    return this.http.delete<any>("http://localhost:3000/medicationList/"+id)
+  }
 }

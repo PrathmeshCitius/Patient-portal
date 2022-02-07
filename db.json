@@ -1,19 +1,47 @@
 {
-  "prductList": [
+  "medicationList": [
+    {
+      "currentmedications": "Dolo 650",
+      "otc": "Crocin",
+      "hvma": "Bcomplex",
+      "socialdrugs": "NA",
+      "drugsallergies": "lovocitrizin",
+      "otherallergies": "Gluten",
+      "id": 1
+    },
+    {
+      "currentmedications": "sne",
+      "otc": "sne",
+      "hvma": "s",
+      "socialdrugs": "sne",
+      "drugsallergies": "sne",
+      "otherallergies": "sne",
+      "id": 5
+    },
+    {
+      "currentmedications": "aa",
+      "otc": "aa",
+      "hvma": "aa",
+      "socialdrugs": "aaaaa",
+      "drugsallergies": "aaaaa",
+      "otherallergies": "aaaaa",
+      "id": 6
+    },
+    {
+      "currentmedications": "Dolo 650",
+      "otc": "Crocin",
+      "hvma": "Bcomplex",
+      "socialdrugs": "NA",
+      "drugsallergies": "lovocitrizin",
+      "otherallergies": "Prathmesh",
+      "id": 7
+    }
+  ],
+  "immunization_details": [
     {
       "id": 1,
       "title": "json-server anfjkan",
       "author": "typicode"
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
