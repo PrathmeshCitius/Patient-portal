@@ -1,19 +1,20 @@
-
-<app-header></app-header>
-
+<!-- 
+<app-header></app-header> -->
+<div class="container-fluid">
+  <app-toolbar [inputSideNav]="sideNav"></app-toolbar>
   <mat-sidenav-container>
-    <mat-sidenav #sidenav mode="side" mode="side" opened role="navigation" >
-      <mat-nav-list>
+    <mat-sidenav #sideNav mode="side" opened>      <!-- <mat-nav-list> -->
         <app-side-nav-bar>
      
         </app-side-nav-bar>
-      </mat-nav-list>
+      <!-- </mat-nav-list> -->
     </mat-sidenav>
     <mat-sidenav-content>
-        <div class="">
+        <!-- <div class=""> -->
             <router-outlet></router-outlet>
-        </div>
+        <!-- </div> -->
      
     </mat-sidenav-content>
   </mat-sidenav-container>
+  </div>
 

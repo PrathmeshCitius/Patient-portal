@@ -10,6 +10,7 @@ import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
 import { RouterModule } from '@angular/router';
 import { AdminRoutingModule } from './admin-routing.module';
 import { SharedModule } from '../shared/shared.module';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { SharedModule } from '../shared/shared.module';
     ManagePhysicianRecordsComponent,
     ManageAppointmentComponent,
     BillingComponent,
-    SideNavBarComponent],
+    SideNavBarComponent,
+    ToolbarComponent],
   imports: [
     CommonModule, RouterModule, AdminRoutingModule,SharedModule
   ],
