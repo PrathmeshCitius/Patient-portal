@@ -1,33 +1,29 @@
-h4, p {
+.form-container{
+  display:block;
+  max-width: 300px;
+  margin: auto;
+  background: #fbfdfd;;
+  padding: 48px;
+  border-radius: 16px;
+}
+mat-form-field {
+  width: 100%;
+}
 
-    font-family: Lato;
-  
-  }
-  
-  
-  
-  .example-container {
-  
-    display: flex;
-  
-    flex-direction: column;
-  
-  }
-  
-  
-  
-  .example-container > * {
-  
-    width: 100%;
-  
-  }
-  .loginclass{
-    width: 400px;
-    margin-left: 400px;
-    margin-top: 150px;
-  }
-  .btnclass{
-    background-color: rgb(54, 54, 136) ;
-    height: 40px;
-    color: cornsilk;
-  }
+
+.center {
+display: flex;
+justify-content: center;
+}
+
+.margin-top {
+margin-top: 16px !important;
+}
+
+.text-center {
+text-align: center;
+}
+.mat-icon .matcolor{
+  font-size: 14px;
+  color:grey
+}
