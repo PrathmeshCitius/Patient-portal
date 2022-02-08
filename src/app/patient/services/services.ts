@@ -22,4 +22,6 @@ export class ApiService{
     deleteImmunizationDetails(id:number){
         return this.http.delete<any>("http://localhost:3000/immunization_details/"+id)
     }
+
+  
 }
