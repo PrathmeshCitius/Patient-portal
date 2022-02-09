@@ -71,7 +71,7 @@ export class RegistrationComponent implements OnInit {
   .subscribe(res=>{
     alert("resistered successfully");
     this.registerForm.reset();
-    //this.registerForm.navigate(['login'])
+    this.router.navigateByUrl('/auth/login');
   },err=>{
     alert("something went wrong");
   })

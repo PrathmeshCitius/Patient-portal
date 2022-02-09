@@ -13,7 +13,8 @@ export class SideNavbarComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.patientId = 1;
+    const user = JSON.parse(localStorage.getItem("currentUser"));
+    this.patientId = user.id;
   }
 
 }
