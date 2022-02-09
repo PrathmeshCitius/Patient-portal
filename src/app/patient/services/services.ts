@@ -6,6 +6,9 @@ import { PhysicianService } from "src/app/physician/physician.service";
     providedIn: 'root'
 })
 export class ApiService implements OnInit {
+    getPatientVital() {
+      throw new Error('Method not implemented.');
+    }
     constructor(private http: HttpClient, private physicianService: PhysicianService) {
 
     }
