@@ -1,15 +1,14 @@
 {
-  "users": [
+  "registerUsers": [
     {
-      "fName": "",
-      "lName": "",
-      "dob": "",
-      "username": "",
-      "role": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "isAuthenticated": false
+      "firstName": "Prinu",
+      "lastName": "Pillai",
+      "email": "prinu9@gmail.com",
+      "dob": "1993-09-14T18:30:00.000Z",
+      "phone": "9403373385",
+      "password": "P@1234",
+      "confirmPassword": "P@1234",
+      "id": 1
     }
   ],
   "patientdemo": [
@@ -32,18 +31,14 @@
   ],
   "medicationList": [
     {
-      "allergy": "Allergy",
-      "socialdrug": "Drug",
-      "otherdetail": "Other",
-      "id": 1
-    },
-    {
-      "allergy": "Allergy",
-      "socialdrug": "Drug",
-      "otherdetail": "Other",
-      "id": 2
+      "id": 15,
+      "currentmedications": "combiflame123",
+      "otc": "none",
+      "hvma": "vitamin c",
+      "socialdrugs": "dolo",
+      "drugsallergies": "none",
+      "otherallergies": "none"
     }
-    
   ],
   "immunization_details": [
     {
@@ -63,6 +58,24 @@
       "doses": "2",
       "date": "2021-11-16T18:30:00.000Z",
       "id": 4
+    },
+    {
+      "id": 5,
+      "vaccineName": "aa",
+      "doses": "aa",
+      "date": "2022-02-07T18:30:00.000Z"
+    },
+    {
+      "id": 6,
+      "vaccineName": "bbb",
+      "doses": "bb",
+      "date": "2022-02-09T18:30:00.000Z"
+    },
+    {
+      "id": 7,
+      "vaccineName": "fff",
+      "doses": "ff",
+      "date": "2022-02-07T18:30:00.000Z"
     }
   ],
   "comments": [

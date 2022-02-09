@@ -8,8 +8,8 @@ import { LoginComponent } from "./auth/login/login.component";
 import { RegistrationComponent } from "./auth/registration/registration.component";
 import { LandingComponent } from "./shared/navigation/landing/landing.component";
 import { LogoutComponent } from "./auth/logout/logout.component";
-// import { DashboardComponent } from "./patient/patient/dashboard/dashboard.component";
-// import { SideNavbarComponent } from "./patient/patient/side-navbar/side-navbar.component";
+import { AuthGuard } from "./helpers/authguard";
+
 
 
 const routes: Routes = [
@@ -18,7 +18,7 @@ const routes: Routes = [
 
   { path: "", redirectTo: 'auth/login', pathMatch: "full" },
   {
-    path: 'patient',
+    path: 'patient',canActivate: [AuthGuard] ,
     loadChildren: () => import('./patient/patient.module').then((m) => m.PatientModule)
   } ,
   {

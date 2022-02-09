@@ -6,12 +6,9 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class PatientService {
-
   private readonly API_URL = `${environment.apiUrl}`;
-  
   constructor(
-    private http: HttpClient,
-
+  private http: HttpClient,
   ) { }
 
   updatePatientDemographics(data,id) {
@@ -22,7 +19,6 @@ export class PatientService {
     return this.http.get(`${this.API_URL}/patientdemo/${id}`);
   }
   //Snehals code
-
   postMedication(data: any) {
     return this.http.post<any>('http://localhost:3000/medicationList/', data);
   }

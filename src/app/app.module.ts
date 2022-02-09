@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { ToastrModule } from 'ngx-toastr';
 
 const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
@@ -43,7 +44,8 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SharedModule,
     BrowserAnimationsModule,
     AdminModule,
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    ToastrModule.forRoot(),
   ],
 
   providers: [{
