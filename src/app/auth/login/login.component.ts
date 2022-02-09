@@ -40,7 +40,7 @@ this.http.get<any>("http://localhost:3000/registerUsers")
   {
     alert("login successfully");
     this.loginForm.reset();
-    this.router.navigate(['logout'])
+    this.router.navigate(['patient'])
   }else{
     alert("user not found")
   }

@@ -3,8 +3,7 @@
   <form [formGroup]="loginForm" (ngSubmit)="login()" >
         <mat-form-field>
          <input matInput placeholder="username" formControlName="email" />
-         <mat-icon style="font-size: 14px;
-         color:grey" matSuffix>email</mat-icon>
+         <mat-icon  matSuffix>email</mat-icon>
          <mat-error *ngIf="email?.errors?.required">
           Email address is required
         </mat-error>
@@ -15,7 +14,7 @@
         <mat-form-field>
          <input matInput placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'"/>
          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-          <mat-icon style="color:grey">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          <mat-icon >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
          <mat-error *ngIf="password?.errors?.required">
           Password is required
