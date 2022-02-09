@@ -14,18 +14,13 @@ import { PatientVitalsComponent } from './patient/patient-vitals/patient-vitals.
 import { OrdersComponent } from './patient/orders/orders.component';
 import { PatientEducationComponent } from './patient/patient-education/patient-education.component';
 import { SideNavbarComponent } from './patient/side-navbar/side-navbar.component';
-import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
 import { DialogComponent } from './patient/immunization-details/dialog/dialog.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-
-
- 
-
-
   declarations: [
     PatientComponent,
     DashboardComponent,
@@ -55,6 +50,7 @@ import { HttpClientModule } from '@angular/common/http';
   exports: [
     PatientComponent,
     ImmunizationDetailsComponent,
+    MedicationAndAllergiesComponent,
     DialogComponent
   ]
 })

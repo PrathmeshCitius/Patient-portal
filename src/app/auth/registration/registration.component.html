@@ -1,1 +1,98 @@
-<p>registration works!</p>
+<div class="form-container mat-elevation-z5">
+    <h1>Register</h1>
+    <form [formGroup]=" registerForm"  (ngSubmit)="submit()">
+    <div class="row">
+       <div class="col-md-6">
+      <mat-form-field>
+        <input class="inputtext" matInput placeholder="First Name" formControlName="firstName" />
+        <mat-error *ngIf="firstName?.errors?.required">
+         First  Name is required
+        </mat-error>
+      </mat-form-field>
+     
+ </div>
+ <div class="col-md-6">
+      <mat-form-field>
+        <input class="inputtext" matInput placeholder=" Last Name" formControlName="lastName" />
+        <mat-error *ngIf="lastName?.errors?.required">
+          Last Name is required
+        </mat-error>
+      </mat-form-field>
+      
+ </div>
+ <div class="col-md-6">
+      <mat-form-field>
+        <input class="inputtext" matInput placeholder="Email address" formControlName="email" />
+        <mat-icon style="font-size: 14px;
+        color:grey"matSuffix>email</mat-icon>
+        <mat-error *ngIf="email?.errors?.required">
+          Email address is required
+        </mat-error>
+        <mat-error *ngIf="email?.errors?.email">
+          Please enter a valid email address
+        </mat-error>
+      </mat-form-field>
+    
+ </div>
+ <div class="col-md-6">
+      <mat-form-field>
+        <input class="inputtext" matInput [matDatepicker]="picker" placeholder="Date of Birth" formControlName="dob" />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6">
+      <mat-form-field>
+        <input class="inputtext" matInput placeholder="Phone" formControlName="phone" />
+        <mat-error *ngIf="phone?.errors?.required">
+          Phone number is required
+        </mat-error>
+        <mat-error *ngIf="phone?.errors?.phone">
+          Please enter a 10 digit phone number
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-md-6">
+      <mat-form-field>
+        <input
+          matInput class="inputtext"
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+        />
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon style="color:grey">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        <mat-error *ngIf="password?.errors?.required">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+  </div>
+  <div class="col-md-6">
+      <mat-form-field>
+        <input
+          matInput class="inputtext"
+          type="password"
+          placeholder="Confirm Password"
+          formControlName="confirmPassword"
+        />
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon style="color:grey">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        <mat-error *ngIf="confirmPassword?.errors?.required">
+          Confirm Password is required
+        </mat-error>
+      </mat-form-field>
+   
+      <mat-error *ngIf="registerForm.errors?.passwordsDontMatch">
+          Passwords should match
+      </mat-error>
+    </div>
+  </div>
+      <div class="center margin-top">
+        <button style="margin-right: 8px; width: 80%;" type="submit" mat-raised-button color="primary">Register</button>
+        <button style=" width: 80%;" mat-raised-button  type="reset" (click)="onReset()">Cancel</button>
+      </div>
+    
+    </form>
+  </div>

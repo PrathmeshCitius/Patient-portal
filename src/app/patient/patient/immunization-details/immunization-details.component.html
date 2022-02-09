@@ -1,4 +1,3 @@
-
 <mat-card class="container px-5">
   <form [formGroup]="immunizationForm">
     <div class="row pt-4 " >
@@ -6,14 +5,17 @@
     <mat-form-field appearance="fill">
       <mat-label>Vaccine Name</mat-label>
       <input matInput placeholder="Placeholder" formControlName="vaccineName">      
-      <mat-hint>Hint</mat-hint>
+      <mat-hint class="text-danger" *ngIf="immunizationForm.controls['vaccineName'].dirty && immunizationForm.hasError('required','vaccineName')">Vaccine name is required</mat-hint>
+  
+
     </mat-form-field>
   </div>
   <div class="col-md-4">
     <mat-form-field appearance="fill">
       <mat-label>No. of Doses Taken</mat-label>
       <input matInput placeholder="Placeholder" formControlName="doses">      
-      <mat-hint>Hint</mat-hint>
+      <mat-hint class="text-danger" *ngIf="immunizationForm.controls['doses'].dirty && immunizationForm.hasError('required','doses')">No of doses are required.</mat-hint>
+      
     </mat-form-field>
   </div>
   <div class="col-md-4">

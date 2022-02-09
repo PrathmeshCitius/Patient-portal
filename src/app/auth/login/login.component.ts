@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -11,49 +12,45 @@ import { AuthService } from '../auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  loginForm: FormGroup;
+  hide = true;
+  loginForm= new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required]),
+  });
+  constructor(private http:HttpClient, private router:Router) { }
 
-  constructor(
-    private authService: AuthService,
-    private router: Router
-  ) {
-
-    this.createLoginForm();
-
-
-  }
-
-
-  createLoginForm() {
-
-    this.loginForm = new FormGroup({
-
-      email: new FormControl('', [Validators.required, Validators.email]),
-
-      password: new FormControl('', [Validators.required])
-
-    });
-
-
-
-  }
   ngOnInit(): void {
   }
-
-
-  onSubmit(): void {
-    console.log("hi");
-    if (this.loginForm.invalid) return;
-
-
-    this.router.navigateByUrl('/patient');
-
-
+  get email() {
+    return this.loginForm.get('email');
   }
 
+  get password() {
+    return this.loginForm.get('password');
+  }
 
+ login()
+ {
+this.http.get<any>("http://localhost:3000/registerUsers")
+.subscribe(res=>{
+  const user=res.find((a:any)=>{
+    return a.email===this.loginForm.value.email && a.password ===this.loginForm.value.password
+  });
+  if(user)
+  {
+    alert("login successfully");
+    this.loginForm.reset();
+    this.router.navigate(['logout'])
+  }else{
+    alert("user not found")
+  }
+}, err=>
+{
+  alert("something went wrong")
 }
-
+)
+ }
+}
 
 
 

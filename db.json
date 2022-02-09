@@ -16,107 +16,38 @@
     {
       "firstName": "Seema",
       "lastName": "Patil",
-      "dob": "",
-      "gender": "",
-      "ethnicity": "",
-      "education": "BE",
-      "occupation": "",
-      "address": "mumbai",
+      "dob": "2022-02-16T18:30:00.000Z",
+      "gender": "female",
+      "ethnicity": "mlk",
+      "education": "`llnl",
+      "occupation": "lknk",
+      "address": "n",
       "contact": "8787887865",
-      "medHist": "",
-      "fmMedHist": "",
-      "surgery": "",
-      "insurance": "",
+      "medHist": "lknk",
+      "fmMedHist": "kn",
+      "surgery": "kn",
+      "insurance": "kjn",
       "id": 1
     }
   ],
   "medicationList": [
     {
-      "allergy": "Allergy",
-      "socialdrug": "Drug",
-      "otherdetail": "Other",
-      "id": 1
+      "id": 15,
+      "currentmedications": "combiflame123",
+      "otc": "none",
+      "hvma": "vitamin c",
+      "socialdrugs": "dolo",
+      "drugsallergies": "none",
+      "otherallergies": "none"
     },
     {
-      "allergy": "Allergy",
-      "socialdrug": "Drug",
-      "otherdetail": "Other",
-      "id": 2
-    },
-    {
-      "allergy": "allergy 2",
-      "socialdrug": "drug2",
-      "otherdetail": "other2",
-      "id": 3
-    },
-    {
-      "allergy": "A1",
-      "socialdrug": "D1",
-      "otherdetail": "o1",
-      "id": 4
-    },
-    {
-      "allergy": "aa",
-      "socialdrug": "dd",
-      "otherdetail": "oo",
-      "id": 5
-    },
-    {
-      "allergy": "Fever",
-      "socialdrug": "dolo",
-      "otherdetail": "high fever",
-      "id": 6
-    },
-    {
-      "allergy": "Fever",
-      "socialdrug": "dolo",
-      "otherdetail": "dolo1",
-      "id": 7
-    },
-    {
-      "allergy": "Allergy101",
-      "socialdrug": "Drug101",
-      "otherdetail": "Other101",
-      "id": 8
-    },
-    {
-      "allergy": "a1",
-      "socialdrug": "s1",
-      "otherdetail": "o1",
-      "id": 9
-    },
-    {
-      "allergy": "a1",
-      "socialdrug": "s1",
-      "otherdetail": "o1",
-      "id": 10
-    },
-    {
-      "allergy": "C11",
-      "socialdrug": "O11",
-      "otherdetail": "H11",
-      "id": 11
-    },
-    {
-      "allergy": "C11",
-      "socialdrug": "O11",
-      "otherdetail": "H11",
-      "id": 12
-    },
-    {
-      "allergy": "Allergy",
-      "socialdrug": "OTC",
-      "otherdetail": "Herbs",
-      "id": 13
-    },
-    {
-      "allergy": "Current Medication",
-      "socialdrug": "Social Drug",
-      "otherdetail": "Other",
-      "currentmedication": "Medication",
-      "overthecounter": "Counter",
-      "HVMA": "Herbs",
-      "id": 14
+      "currentmedications": "c1",
+      "otc": "c",
+      "hvma": "cc",
+      "socialdrugs": "c",
+      "drugsallergies": "c",
+      "otherallergies": "c",
+      "id": 16
     }
   ],
   "immunization_details": [
@@ -131,6 +62,36 @@
       "vaccineName": "Ebola vaccine",
       "doses": "2",
       "date": "2020-02-05T18:30:00.000Z"
+    },
+    {
+      "vaccineName": "COVID-19 Vaccine",
+      "doses": "2",
+      "date": "2021-11-16T18:30:00.000Z",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "vaccineName": "aa",
+      "doses": "aa",
+      "date": "2022-02-07T18:30:00.000Z"
+    },
+    {
+      "id": 6,
+      "vaccineName": "bbb",
+      "doses": "bb",
+      "date": "2022-02-09T18:30:00.000Z"
+    },
+    {
+      "id": 7,
+      "vaccineName": "fff",
+      "doses": "ff",
+      "date": "2022-02-07T18:30:00.000Z"
+    },
+    {
+      "vaccineName": "VN",
+      "doses": "12",
+      "date": "2022-02-19T18:30:00.000Z",
+      "id": 8
     }
   ],
   "comments": [

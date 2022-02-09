@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SideNavbarComponent implements OnInit {
 
   patientId: number;
-  
+  showMyContainer;
   constructor() { }
 
   ngOnInit(): void {
