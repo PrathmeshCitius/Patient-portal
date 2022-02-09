@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
     return this.loginForm.get('password');
   }
 
+
   login() {
     this.authService.authenticateUser().subscribe(res => {
       const user = res.find((a: any) => {
@@ -53,9 +54,4 @@ export class LoginComponent implements OnInit {
     }
     )
   }
-
-  
 }
-
-
-

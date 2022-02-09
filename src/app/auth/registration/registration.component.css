@@ -1,10 +1,11 @@
 .form-container{
     display: block;
-    max-width: 400px;
+    max-width: 600px;
     margin: auto;
     background: #fbfdfd;
     padding: 48px;
     border-radius: 16px;
+    margin-top: 100px;
    
 }
 mat-form-field {
@@ -34,3 +35,7 @@ mat-form-field {
 .text-center {
   text-align: center;
 }
+.mat-icon {
+    font-size: 14px;
+    color:grey
+  }

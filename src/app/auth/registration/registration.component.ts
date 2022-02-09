@@ -31,6 +31,7 @@ export class RegistrationComponent implements OnInit {
     phone:new FormControl('',[Validators.required, Validators.minLength(10)]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)]),
     confirmPassword: new FormControl('',Validators.required),
+    address: new FormControl(''),
  },
  { validators: passwordsMatchValidator() }
  )
@@ -62,6 +63,9 @@ export class RegistrationComponent implements OnInit {
   get dob() {
     return this.registerForm.get('dob');
   }
+  get address() {
+    return this.registerForm.get('address');
+  }
   submit()
   {
     if (this.registerForm.invalid) {
@@ -71,7 +75,7 @@ export class RegistrationComponent implements OnInit {
   .subscribe(res=>{
     alert("resistered successfully");
     this.registerForm.reset();
-    this.router.navigateByUrl('/auth/login');
+    this.router.navigate(['auth/login'])
   },err=>{
     alert("something went wrong");
   })
