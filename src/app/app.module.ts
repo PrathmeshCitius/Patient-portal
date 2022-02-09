@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PhysicianService } from './physician/physician.service';
 
 const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
@@ -46,9 +47,9 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     PerfectScrollbarModule
   ],
 
-  providers: [{
-    provide: PERFECT_SCROLLBAR_CONFIG,
-    useValue: P_SCROLLBAR_CONFIG
+  providers: [PhysicianService, {
+    provide: PERFECT_SCROLLBAR_CONFIG, 
+    useValue: P_SCROLLBAR_CONFIG, 
   }],
   bootstrap: [AppComponent]
 })

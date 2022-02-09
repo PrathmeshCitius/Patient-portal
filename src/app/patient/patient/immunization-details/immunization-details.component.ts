@@ -26,12 +26,17 @@ export class ImmunizationDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.immunizationForm= this.fb.group({  
+      
       id:Number,    
       vaccineName:['', Validators.required],
       doses:['', Validators.required],
       date:['', Validators.required]
     })
-    this.getImmunizationDetail()
+    this.getImmunizationDetail();
+    
+    // this.api.getPhysicianData().subscribe(res =>{
+    //     console.log("Physician data into patient: ", res);
+    // }); 
   }
   // addImmunizationDetails(){
   //   console.log(this.immunizationForm.value)

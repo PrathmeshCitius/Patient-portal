@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "physician": [
+    {
+      "bp": "180 / 110",
+      "pulse": "Normal",
+      "resp": "Normal",
+      "temp": "96 deg",
+      "height": "180 cm",
+      "weight": "80kg",
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
