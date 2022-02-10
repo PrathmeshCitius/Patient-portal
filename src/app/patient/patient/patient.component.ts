@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./patient.component.css']
 })
 export class PatientComponent implements OnInit {
-
-  constructor() { }
+   constructor() { }
 
   ngOnInit(): void {
+    
   }
 }
+
+

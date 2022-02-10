@@ -1,1 +1,65 @@
-<p>myprofile works!</p>
+<mat-card>
+    <div class="d-flex flex-row justify-content-between">
+        <h1>My Profile</h1>
+        <button mat-raised-button color="primary" routerLink="/myprofile" [queryParams]="{EditMode:true}"><mat-icon>edit</mat-icon>Edit Profile</button>
+    </div>
+    <div class="row mt-5">
+        <div class="col-md-2">User photo</div>
+        <div class="col-md-10 ">
+            <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                <div class="d-flex justify-content-around">
+                    <div *ngIf="!editMode"> First Name: Dipali</div>
+                    <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="fname">
+                        <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+
+                    <div *ngIf="!editMode"> Last Name: Tiwaskar</div>
+                    <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="lname">
+                        <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+
+                    <div *ngIf="!editMode"> Date of Birth: 21/06/1994</div>
+                    <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
+                        <mat-label>Date of Birth</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="dob">
+                        <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+                </div>
+                <div class="d-flex justify-content-around">
+
+                    <div *ngIf="!editMode"> Role: Patient</div>
+                    <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
+                        <mat-label>Role</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="role">
+                        <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+
+                    <div *ngIf="!editMode"> Email: Dipali@gmail.com</div>
+                    <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="email">
+                        <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+
+                    <div *ngIf="!editMode"> Mobile: 7866654543</div>
+                    <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
+                        <mat-label>Mobile</mat-label>
+                        <input matInput placeholder="Placeholder" formControlName="mobile">
+                        <mat-hint>Hint</mat-hint>
+                    </mat-form-field>
+
+                </div>
+                <div class="d-flex justify-content-end" *ngIf="editMode">
+                    <button mat-raised-button color="primary" class="mx-2" (click)="onDiscard()">Discard</button>
+                    <button mat-raised-button color="primary">Save Profile</button>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</mat-card>

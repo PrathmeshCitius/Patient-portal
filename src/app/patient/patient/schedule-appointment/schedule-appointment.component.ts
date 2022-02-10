@@ -18,7 +18,7 @@ export class ScheduleAppointmentComponent implements OnInit {
 
   ngOnInit(): void {
     setTimeout(() => {
-      return this.httpClient.get('http://localhost:8888/event.php')
+      return this.httpClient.get('http://localhost:3000/event')
         .subscribe(res => {
             this.Events.push(res);
             console.log(this.Events);
