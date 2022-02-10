@@ -1,13 +1,13 @@
 {
     "registerUsers": [],
     "users": [{
-        "fName": "",
-        "lName": "",
-        "dob": "",
-        "username": "",
-        "role": "",
-        "email": "",
-        "mobile": "",
+        "fName": "John",
+        "lName": "Doe",
+        "dob": "23/07/1995",
+        "username": "Jdoe",
+        "role": "patient",
+        "email": "johndoe@gmail.com",
+        "mobile": "7866698785",
         "password": "",
         "isAuthenticated": false
     }],

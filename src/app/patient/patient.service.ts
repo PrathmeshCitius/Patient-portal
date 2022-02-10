@@ -18,6 +18,9 @@ export class PatientService {
   fetchPatientDemographicsById(id){
     return this.http.get(`${this.API_URL}/patientdemo/${id}`);
   }
+  fetchPatientDemographicsBy(){
+    return this.http.get(`${this.API_URL}/patientdemo/`);
+  }
   //Snehals code
   postMedication(data: any) {
     return this.http.post<any>('http://localhost:3000/medicationList/', data);

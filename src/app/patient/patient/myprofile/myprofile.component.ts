@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { PatientService } from '../../patient.service';
 
 @Component({
   selector: 'app-myprofile',
@@ -10,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class MyprofileComponent implements OnInit {
   editMode:boolean=false;
   profileForm:FormGroup;
-  constructor(private fb:FormBuilder, private router:Router, private activatedRoute:ActivatedRoute ) { }
+  constructor(private fb:FormBuilder, private router:Router, private activatedRoute:ActivatedRoute, private patientService:PatientService ) { }
 
   ngOnInit(): void {
     this.profileForm=this.fb.group({
@@ -44,4 +45,9 @@ export class MyprofileComponent implements OnInit {
     this.router.navigate([],{queryParams:{EditMode:null}})
   }
 
+  getPatientData(){
+    this.patientService.fetchPatientDemographicsBy().subscribe(res=>{
+      console.log("data for myprofile",res);
+    })
+  }
 }
