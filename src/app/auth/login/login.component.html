@@ -1,32 +1,32 @@
-
-
-<div class="loginclass">
-    
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
-
-  <div class="example-container">
-
-    <mat-form-field>
-
-      <input matInput placeholder="Email" formControlName="email">
-
-    </mat-form-field>
-
-
-
-    <mat-form-field>
-
-      <input matInput type="password" placeholder="Password" formControlName="password">    
-
-    </mat-form-field>
-
-<br>
-
-    <button 
-    [disabled]="!loginForm.valid" mat-raised-button color="primary" mat-button class="btnclass">Sign In</button>
-    <br>
-    <span><a href="./auth/registration">Not a Member yet? </a></span>
-  </div>
-
-</form>
+<div class="form-container mat-elevation-z5">
+  <h3>Log into Patient Portal</h3>
+  <form [formGroup]="loginForm" (ngSubmit)="login()" >
+        <mat-form-field>
+         <input matInput placeholder="username" formControlName="email" />
+         <mat-icon  matSuffix>email</mat-icon>
+         <mat-error *ngIf="email?.errors?.required">
+          Email address is required
+        </mat-error>
+        <mat-error *ngIf="email?.errors?.email">
+          Please enter a valid email address
+        </mat-error>
+        </mat-form-field>
+        <mat-form-field>
+         <input matInput placeholder="Password" formControlName="password" [type]="hide ? 'password' : 'text'"/>
+         <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+         <mat-error *ngIf="password?.errors?.required">
+          Password is required
+        </mat-error>
+        </mat-form-field>
+        <div class="center margin-top">
+            <button mat-raised-button color="primary" type="submit">Login</button>
+        </div>
+      
+       <span class="center margin-top">Iam new here </span>
+       <div class="center margin-top">
+       <button mat-raised-button routerLink="/auth/registration" type="submit">Create Account</button>
+       </div>
+   </form>
 </div>

@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideNavbarComponent implements OnInit {
 
+  patientId: number;
+  
   constructor() { }
 
   ngOnInit(): void {
+
+    const user = JSON.parse(localStorage.getItem("currentUser"));
+    this.patientId = user.id;
   }
 
 }

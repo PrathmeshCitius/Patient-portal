@@ -1,0 +1,41 @@
+.form-container{
+    display: block;
+    max-width: 600px;
+    margin: auto;
+    background: #fbfdfd;
+    padding: 48px;
+    border-radius: 16px;
+    margin-top: 100px;
+   
+}
+mat-form-field {
+    width: 100%;
+    padding: 0 20px 0 0;
+    
+  }
+ 
+.form-container{
+  padding:20px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+ 
+}
+.inputtext{
+  padding: 0 10px;
+}
+.margin-top {
+  margin-top: 16px !important;
+  
+}
+
+.text-center {
+  text-align: center;
+}
+.mat-icon {
+    font-size: 14px;
+    color:grey
+  }

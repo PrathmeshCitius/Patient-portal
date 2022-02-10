@@ -1,21 +1,39 @@
-<p>side-nav-bar works!</p>
-<div class="adminsidebar">
-    <ul>
-        <li>
-            <a routerLink='/dashboard'>Dashboard</a>
+<div class="sidenav">
+    <div class="logo">
+        <a href="/" class="simple-text logo-mini">
+        <div class="logo-img">
+            <img src="">
+        </div>
+        </a>
+    </div>
+    <ul class="nav">
+        <li class="active">
+            <a [routerLink]="['./dashboard']">
+                <i class="fas fa-chart-line"></i>
+                Dashboard</a>
         </li>
         <li>
-            <a routerLink='/managepatientrecords'>Manage Patients Records</a>
+            <a [routerLink]="['./managepatientrecords']">
+                <i class="fas fa-chart-line"></i>
+                Manage Patients Records</a>
         </li>
+        <!-- <mat-divider></mat-divider>
         <li>
-            <a routerLink='/managephysicianrecords'>Manage Physicians Records</a>
+            <a [routerLink]="['./managepatientrecords']">Manage Patients Records</a>
         </li>
+        <mat-divider></mat-divider>
         <li>
-            <a routerLink='/manageappontment'>Manage Appointments</a>
+            <a [routerLink]="['./managephysicianrecords']">Manage Physicians Records</a>
         </li>
+        <mat-divider></mat-divider>
         <li>
-            <a routerLink='/billing'>Billing</a>
+            <a [routerLink]="['./manageappontment']">Manage Appointments</a>
         </li>
-       
+        <mat-divider></mat-divider>
+        <li>
+            <a [routerLink]="['./billing']">Billing</a>
+        </li> -->
+
     </ul>
+
 </div>

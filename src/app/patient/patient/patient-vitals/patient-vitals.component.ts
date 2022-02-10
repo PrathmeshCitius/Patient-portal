@@ -17,6 +17,10 @@ export class PatientVitalsComponent implements OnInit {
   }]
 
   ngOnInit(): void {
+    
+    // this.api.getPhysicianData().subscribe(res => {
+    //   console.log("Physician data into patient: ", res);
+    // });
   }
 
   test: string = 'abc';

@@ -3,31 +3,19 @@ import { CommonModule } from '@angular/common';
 import { PhysicianComponent } from './physician/physician.component';
 import { SharedModule } from '../shared/shared.module';
 import { PhysicianRoutingModule } from './physician-routing.module';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatNativeDateModule } from '@angular/material/core';
-import { MatInputModule } from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
 import { PhysicianSidebarComponent } from './physician-sidebar/physician-sidebar.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
-
-
-
+// import { PatientDetaiYComponent } from './patient-detai-y/patient-detai-y.component';
+import { PatientDetailsComponent } from './patient-details/patient-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
-  declarations: [PhysicianComponent, PhysicianSidebarComponent],
+  declarations: [PhysicianComponent, PhysicianSidebarComponent, PatientDetailsComponent],
   imports: [
     CommonModule,
     SharedModule,
-    PhysicianRoutingModule,
-    MatDatepickerModule,
-    MatFormFieldModule,
-    MatNativeDateModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSidenavModule
-    
+    PhysicianRoutingModule, 
+    ReactiveFormsModule
   ],
   exports: [
     PhysicianComponent,

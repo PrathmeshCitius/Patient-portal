@@ -9,31 +9,25 @@ import { PhysicianModule } from './physician/physician.module';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatCardModule} from '@angular/material/card';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
+import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { PhysicianService } from './physician/physician.service';
 
- 
-import { PerfectScrollbarConfigInterface, PerfectScrollbarModule,PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';  
-  
-const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {  
+import { ToastrModule } from 'ngx-toastr';
+
+const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+
   suppressScrollX: true,
-  wheelPropagation:true,
-  minScrollbarLength:80
-};  
-  
+  wheelPropagation: true,
+  minScrollbarLength: 80
+};
+
 
 @NgModule({
   declarations: [
     AppComponent
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [],
 
 
   imports: [
@@ -41,27 +35,25 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     RouterModule,
     AuthModule,
     AppRoutingModule,
-    MatDatepickerModule,
-    MatButtonModule,     
     PatientModule,
-      PhysicianModule,
-      SharedModule,
-      BrowserAnimationsModule,
-      AdminModule,
-      MatSidenavModule,
+    PhysicianModule,
+    SharedModule,
+    BrowserAnimationsModule,
+    AdminModule,
+    HttpClientModule,
+    PerfectScrollbarModule,
+    PhysicianModule,
+    SharedModule,
+    BrowserAnimationsModule,
+    AdminModule,
+    PerfectScrollbarModule,
+    ToastrModule.forRoot(),
+  ],
 
-      MatCardModule,
-      MatFormFieldModule,
-      MatInputModule,
-      HttpClientModule,
-
-      MatCardModule ,
-      PerfectScrollbarModule
-    ],
-  providers: [{
-    provide: PERFECT_SCROLLBAR_CONFIG,
-    useValue: P_SCROLLBAR_CONFIG
-    }],
+  providers: [PhysicianService, {
+    provide: PERFECT_SCROLLBAR_CONFIG, 
+    useValue: P_SCROLLBAR_CONFIG, 
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

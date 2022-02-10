@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PatientComponent } from './patient/patient.component';
 import { PatientRoutingModule } from './patient-routing.module';
-import { LandingComponent } from '../shared/navigation/landing/landing.component';
 import { SharedModule } from '../shared/shared.module';
 import { DashboardComponent } from './patient/dashboard/dashboard.component';
 import { MyprofileComponent } from './patient/myprofile/myprofile.component';
@@ -15,93 +14,46 @@ import { PatientVitalsComponent } from './patient/patient-vitals/patient-vitals.
 import { OrdersComponent } from './patient/orders/orders.component';
 import { PatientEducationComponent } from './patient/patient-education/patient-education.component';
 import { SideNavbarComponent } from './patient/side-navbar/side-navbar.component';
-import { RouterModule } from '@angular/router';
-import {MatCardModule} from '@angular/material/card';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import {MatDividerModule} from '@angular/material/divider';
-import { HeaderComponent } from '../shared/navigation/header/header.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MatSidenavModule } from '@angular/material/sidenav';
-
-import { MatButton } from '@angular/material/button';
-
-
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatDialogModule} from '@angular/material/dialog';
-import {MatFormFieldModule} from '@angular/material/form-field';
 import { DialogComponent } from './patient/immunization-details/dialog/dialog.component';
-import { MatInputModule } from '@angular/material/input';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
-import {MatTableModule} from '@angular/material/table';
-import {MatPaginatorModule} from '@angular/material/paginator';
-import {MatSortModule} from '@angular/material/sort';
-import {MatTabsModule} from '@angular/material/tabs';
-
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
+  declarations: [
+    PatientComponent,
+    DashboardComponent,
+    MyprofileComponent,
+    ScheduleAppointmentComponent,
+    AppointmentHistoryComponent,
+    DemographicsComponent,
+    MedicationAndAllergiesComponent,
+    ImmunizationDetailsComponent,
+    PatientVitalsComponent,
+    OrdersComponent,
+    PatientEducationComponent,
+    SideNavbarComponent,
+    DialogComponent
 
- 
-  declarations: [PatientComponent, 
-                DashboardComponent, 
-                MyprofileComponent, 
-                ScheduleAppointmentComponent, 
-                AppointmentHistoryComponent, 
-                DemographicsComponent, 
-                MedicationAndAllergiesComponent, 
-                ImmunizationDetailsComponent, 
-                PatientVitalsComponent, 
-                OrdersComponent, 
-                PatientEducationComponent, 
-                SideNavbarComponent, 
-                DialogComponent
-              
-              ],
+  ],
   imports: [
     CommonModule,
     RouterModule,
     PatientRoutingModule,
-    MatCardModule,
-    MatDividerModule,
     SharedModule,
     ReactiveFormsModule,
-    MatSidenavModule,
-    MatButtonModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatNativeDateModule,
-    HttpClientModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    HttpClientModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatTabsModule, 
-
+    HttpClientModule
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  schemas: [],
 
   exports: [
     PatientComponent,
     ImmunizationDetailsComponent,
+    MedicationAndAllergiesComponent,
     DialogComponent
   ]
 })
-export class PatientModule { 
+export class PatientModule {
   name: string = "abc";
 }

@@ -7,11 +7,11 @@ import { ReturnStatement } from '@angular/compiler';
 })
 export class ApiService {
 
-  constructor(private http:HttpClient ) { }
-  postMedication(data:any){
-    return this.http.post<any>("http://localhost:3000/medicationList/", data);
-  }
-  getMedication(){
-    return this.http.get<any>("http://localhost:3000/medicationList/");
-  }
+  // constructor(private http:HttpClient ) { }
+  // postMedication(data:any){
+  //   return this.http.post<any>("http://localhost:3000/medicationList/", data);
+  // }
+  // getMedication(){
+  //   return this.http.get<any>("http://localhost:3000/medicationList/");
+  // }
 }

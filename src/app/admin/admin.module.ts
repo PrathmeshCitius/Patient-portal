@@ -9,20 +9,22 @@ import { BillingComponent } from './billing/billing.component';
 import { SideNavBarComponent } from './side-nav-bar/side-nav-bar.component';
 import { RouterModule } from '@angular/router';
 import { AdminRoutingModule } from './admin-routing.module';
-
-
+import { SharedModule } from '../shared/shared.module';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 
 @NgModule({
-  declarations: [AdminComponent, 
+  declarations: [
+    AdminComponent,
     DashboardComponent,
-     ManagePatientRecordsComponent, 
-     ManagePhysicianRecordsComponent,
-      ManageAppointmentComponent, 
-      BillingComponent,
-       SideNavBarComponent],
+    ManagePatientRecordsComponent,
+    ManagePhysicianRecordsComponent,
+    ManageAppointmentComponent,
+    BillingComponent,
+    SideNavBarComponent,
+    ToolbarComponent],
   imports: [
-    CommonModule,RouterModule, AdminRoutingModule
+    CommonModule, RouterModule, AdminRoutingModule,SharedModule
   ],
   exports: [
     AdminComponent,
@@ -30,7 +32,8 @@ import { AdminRoutingModule } from './admin-routing.module';
     ManageAppointmentComponent,
     ManagePatientRecordsComponent,
     ManagePatientRecordsComponent,
-    SideNavBarComponent,BillingComponent
+    SideNavBarComponent,
+    BillingComponent
   ]
 })
 export class AdminModule { }

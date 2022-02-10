@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { PatientService } from '../../patient.service';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
@@ -11,55 +11,107 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 })
 export class DemographicsComponent implements OnInit {
 
-  scrollConfig: PerfectScrollbarConfigInterface = {suppressScrollX:false};
+  scrollConfig: PerfectScrollbarConfigInterface = { suppressScrollX: false };
   demographicForm: FormGroup;
   submitted = false;
 
-  constructor(fb: FormBuilder,
-    private patientService: PatientService,
-    public router:Router
-    ) {
-    this.demographicForm = fb.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      dob: ['', Validators.required],
-      gender: ['', Validators.required],
-      ethnicity: [''],
-      education: [''],
-      occupation:[''],
-      address: ['', Validators.required],
-      contact:['',Validators.required],
-      medHist:[''],
-      fmMedHist:[''],
-      surgery:[''],
-      insurance:[''],
+  pId: any;
+  pDemoData: any;
 
+
+  constructor(private fb: FormBuilder,
+    private patientService: PatientService,
+    private router: Router,
+    private activeRoute: ActivatedRoute
+
+
+  ) {
+    this.pId = this.activeRoute.snapshot.paramMap.get('id')
+    console.log(this.pId);
+      if (this.pId) {
+        this.getPatientById();
+
+      }
+    this.initForm();
     
-    });
   }
 
   ngOnInit(): void {
   }
 
 
-  onSubmit(){
   
-    this.patientService.createPatientDemographics(this.demographicForm.value).subscribe((response) => {
-   
-      if (response) {
-        // sessionStorage.setItem('user', JSON.stringify(response.data));
-        // this.snackBar.open(response.message);
-        // setTimeout(() => {
-        //   this.snackBar.dismiss();
-        //   this.router.navigateByUrl('/todos');
-          this.router.navigate(['/immunization-details']);
-        }
-      
-   
+
+  initForm() {
+
+    this.demographicForm = this.fb.group({
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
+      dob: ['', Validators.required],
+      gender: ['', Validators.required],
+      ethnicity: [''],
+      education: [''],
+      occupation: [''],
+      address: ['', Validators.required],
+      contact: ['', Validators.required],
+      medHist: [''],
+      fmMedHist: [''],
+      surgery: [''],
+      insurance: [''],
+
+
     });
   }
-  
-    // convenience getter for easy access to form fields
-    get f() { return this.demographicForm.controls; }
+
+
+  getPatientById() {
+    this.patientService.fetchPatientDemographicsById(this.pId).subscribe(response => {
+      this.pDemoData = response;
+      this.patchPDemodata();
+    });
+  }
+
+
+
+
+  onSubmit() {
+
+    if (this.demographicForm.invalid) return;
+
+    this.patientService.updatePatientDemographics(this.demographicForm.value,this.pId).subscribe((response) => {
+
+      if (response) {
+        this.router.navigate(['/patient/immunization-details']);
+      }
+
+
+    });
+  }
+
+
+  patchPDemodata() {
+    this.demographicForm.patchValue({
+
+      firstName: this.pDemoData.firstName,
+      lastName: this.pDemoData.lastName,
+      dob: this.pDemoData.dob,
+      gender: this.pDemoData.gender,
+      ethnicity: this.pDemoData.ethnicity,
+      education: this.pDemoData.education,
+      occupation: this.pDemoData.occupation,
+      address: this.pDemoData.address,
+      contact: this.pDemoData.contact,
+      medHist: this.pDemoData.medHist,
+      fmMedHist: this.pDemoData.fmMedHist,
+      surgery: this.pDemoData.surgery,
+      insurance: this.pDemoData.insurance,
+
+
+
+    });
+  }
+
+  // convenience getter for easy access to form fields
+  get f() { return this.demographicForm.controls; }
 
 }
