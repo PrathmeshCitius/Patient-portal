@@ -1,196 +1,141 @@
 {
-    "registerUsers": [],
-    "users": [{
-        "fName": "",
-        "lName": "",
-        "dob": "",
-        "username": "",
-        "role": "",
-        "email": "",
-        "mobile": "",
-        "password": "",
-        "isAuthenticated": false
-    }],
-    "physician": [{
-        "bp": "180 / 110",
-        "pulse": "Normal",
-        "resp": "Normal",
-        "temp": "96 deg",
-        "height": "180 cm",
-        "weight": "80kg",
-        "id": 1
-    }],
-    "patientdemo": [{
-        "firstName": "Seema",
-        "lastName": "Patil",
-        "dob": "",
-        "gender": "",
-        "ethnicity": "",
-        "education": "BE",
-        "occupation": "",
-        "address": "mumbai",
-        "contact": "8787887865",
-        "medHist": "",
-        "fmMedHist": "",
-        "surgery": "",
-        "insurance": "",
-        "id": 1
-    }],
-    "medicationList": [{
-            "allergy": "Allergy",
-            "socialdrug": "Drug",
-            "otherdetail": "Other",
-            "id": 1
-        },
-        {
-            "allergy": "Allergy",
-            "socialdrug": "Drug",
-            "otherdetail": "Other",
-            "id": 2
-        },
-        {
-            "allergy": "allergy 2",
-            "socialdrug": "drug2",
-            "otherdetail": "other2",
-            "id": 3
-        },
-        {
-            "allergy": "A1",
-            "socialdrug": "D1",
-            "otherdetail": "o1",
-            "id": 4
-        },
-        {
-            "allergy": "aa",
-            "socialdrug": "dd",
-            "otherdetail": "oo",
-            "id": 5
-        },
-        {
-            "allergy": "Fever",
-            "socialdrug": "dolo",
-            "otherdetail": "high fever",
-            "id": 6
-        },
-        {
-            "allergy": "Fever",
-            "socialdrug": "dolo",
-            "otherdetail": "dolo1",
-            "id": 7
-        },
-        {
-            "allergy": "Allergy101",
-            "socialdrug": "Drug101",
-            "otherdetail": "Other101",
-            "id": 8
-        },
-        {
-            "allergy": "a1",
-            "socialdrug": "s1",
-            "otherdetail": "o1",
-            "id": 9
-        },
-        {
-            "allergy": "a1",
-            "socialdrug": "s1",
-            "otherdetail": "o1",
-            "id": 10
-        },
-        {
-            "allergy": "C11",
-            "socialdrug": "O11",
-            "otherdetail": "H11",
-            "id": 11
-        },
-        {
-            "allergy": "C11",
-            "socialdrug": "O11",
-            "otherdetail": "H11",
-            "id": 12
-        },
-        {
-            "allergy": "Allergy",
-            "socialdrug": "OTC",
-            "otherdetail": "Herbs",
-            "id": 13
-        },
-        {
-            "allergy": "Current Medication",
-            "socialdrug": "Social Drug",
-            "otherdetail": "Other",
-            "currentmedication": "Medication",
-            "overthecounter": "Counter",
-            "HVMA": "Herbs",
-            "id": 14
-        }
-    ],
-    "immunization_details": [{
-            "id": 1,
-            "vaccineName": "Covid-19",
-            "doses": "2",
-            "date": "10/09/2021"
-        },
-        {
-            "vaccineName": "aa",
-            "doses": "aa",
-            "date": "2022-02-16T18:30:00.000Z",
-            "id": 2
-        },
-        {
-            "vaccineName": "aaaaa",
-            "doses": "ssss",
-            "date": "2022-02-21T18:30:00.000Z",
-            "id": 3
-        },
-        {
-            "vaccineName": "Flu-Dengue",
-            "doses": "aa",
-            "date": "2022-02-24T18:30:00.000Z",
-            "id": 4
-        },
-        {
-            "vaccineName": "aaaa",
-            "doses": "aaa",
-            "date": "2022-02-11T18:30:00.000Z",
-            "id": 5
-        },
-        {
-            "vaccineName": "Maleria",
-            "doses": "1",
-            "date": "2021-11-18T18:30:00.000Z",
-            "id": 6
-        },
-        {
-            "vaccineName": "aaa",
-            "doses": "aaa",
-            "date": "2021-12-22T18:30:00.000Z",
-            "id": 7
-        },
-        {
-            "vaccineName": "bbb",
-            "doses": "bbb",
-            "date": "2021-12-22T18:30:00.000Z",
-            "id": 8
-        },
-        {
-            "vaccineName": "Uday",
-            "doses": "4",
-            "date": "2022-02-03T18:30:00.000Z",
-            "id": 9
-        },
-        {
-            "vaccineName": "xxxx",
-            "doses": "2",
-            "date": "2022-02-02T18:30:00.000Z",
-            "id": 10
-        }
-    ],
-    "comments": [{
-        "id": 1,
-        "body": "some comment",
-        "postId": 1
-    }],
-    "profile": {
-        "name": "typicode"
+  "registerUsers": [
+    {
+      "firstName": "sandhya",
+      "lastName": "Reddy",
+      "email": "s@gmail.com",
+      "dob": "2001-02-07T18:30:00.000Z",
+      "phone": "9100681281",
+      "password": "sandhya",
+      "confirmPassword": "sandhya",
+      "address": "",
+      "id": 1
     }
+  ],
+  "users": [
+    {
+      "fName": "",
+      "lName": "",
+      "dob": "",
+      "username": "",
+      "role": "",
+      "email": "",
+      "mobile": "",
+      "password": "",
+      "isAuthenticated": false
+    }
+  ],
+  "physician": [
+    {
+      "bp": "180 / 110",
+      "pulse": "Normal",
+      "resp": "Normal",
+      "temp": "96 deg",
+      "height": "180 cm",
+      "weight": "80kg",
+      "id": 1
+    }
+  ],
+  "patientdemo": [
+    {
+      "firstName": "Seema",
+      "lastName": "Patil",
+      "dob": "",
+      "gender": "",
+      "ethnicity": "",
+      "education": "BE",
+      "occupation": "",
+      "address": "mumbai",
+      "contact": "8787887865",
+      "medHist": "",
+      "fmMedHist": "",
+      "surgery": "",
+      "insurance": "",
+      "id": 1
+    }
+  ],
+  "medicationList": [
+   
+    {
+    "currentmedications": "Medication",
+     "otc": "Counter",
+      "hvma": "Herbs",
+      "socialdrugs": "Social Drug",
+      "drugsallergies": "Current Medication",
+      "otherallergies": "Other",
+      "id": 14
+    }
+  ],
+  "immunization_details": [
+    {
+      "id": 1,
+      "vaccineName": "Covid-19",
+      "doses": "2",
+      "date": "10/09/2021"
+    },
+    {
+      "vaccineName": "aa",
+      "doses": "aa",
+      "date": "2022-02-16T18:30:00.000Z",
+      "id": 2
+    },
+    {
+      "vaccineName": "aaaaa",
+      "doses": "ssss",
+      "date": "2022-02-21T18:30:00.000Z",
+      "id": 3
+    },
+    {
+      "vaccineName": "Flu-Dengue",
+      "doses": "aa",
+      "date": "2022-02-24T18:30:00.000Z",
+      "id": 4
+    },
+    {
+      "vaccineName": "aaaa",
+      "doses": "aaa",
+      "date": "2022-02-11T18:30:00.000Z",
+      "id": 5
+    },
+    {
+      "vaccineName": "Maleria",
+      "doses": "1",
+      "date": "2021-11-18T18:30:00.000Z",
+      "id": 6
+    },
+    {
+      "vaccineName": "aaa",
+      "doses": "aaa",
+      "date": "2021-12-22T18:30:00.000Z",
+      "id": 7
+    },
+    {
+      "vaccineName": "bbb",
+      "doses": "bbb",
+      "date": "2021-12-22T18:30:00.000Z",
+      "id": 8
+    },
+    {
+      "vaccineName": "Uday",
+      "doses": "4",
+      "date": "2022-02-03T18:30:00.000Z",
+      "id": 9
+    },
+    {
+      "vaccineName": "xxxx",
+      "doses": "2",
+      "date": "2022-02-02T18:30:00.000Z",
+      "id": 10
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
 }
