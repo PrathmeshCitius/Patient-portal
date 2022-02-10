@@ -2,43 +2,36 @@
     <div class="side-bar-sec">
         <ul>
             <li>
-                <a [routerLink]="['./dashboard']">Dashboard</a>
+                <a [routerLink]="['./dashboard']">
+                    <i class="fa-solid fa-gauge"></i>
+                    Dashboard</a>
             </li>
-            <mat-divider></mat-divider>
             <li>
-                <a [routerLink]="['./myprofile']">My Profile</a>
+                <a [routerLink]="['./myprofile']"><i class="fa-solid fa-user"></i>My Profile</a>
             </li>
-            <mat-divider></mat-divider>
-            <li>
+            <!-- <li>
                 <a [routerLink]="['./orders']">Orders</a>
-            </li>
-            <mat-divider></mat-divider>
+            </li> -->
             <li>
-                <a [routerLink]="['./patient-education']">patient-education</a>
+                <a [routerLink]="['./patient-education']"><i class="fa-solid fa-building-columns"></i>patient-education</a>
             </li>
-            <mat-divider></mat-divider>
             <li>
-                <a [routerLink]="['./patient-vitals']">patient-vitals</a>
+                <a [routerLink]="['./patient-vitals']"><i class="fa-solid fa-heart-pulse"></i>patient-vitals</a>
             </li>
-            <mat-divider></mat-divider>
             <li>
-                <a [routerLink]="['./schedule-appointment']">schedule-appointment</a>
+                <a [routerLink]="['./schedule-appointment']"><i class="fa-solid fa-calendar-check"></i>schedule-appointment</a>
             </li>
-            <mat-divider></mat-divider>
             <li>
-                <a [routerLink]="['./medication-and-allergies']">medication-and-allergies</a>
+                <a [routerLink]="['./medication-and-allergies']"><i class="fa-solid fa-file-prescription"></i>medication-and-allergies</a>
             </li>
-            <mat-divider></mat-divider>
             <li>
-                <a [routerLink]="['./immunization-details']">immunization-details</a>
+                <a [routerLink]="['./immunization-details']"><i class="fa-solid fa-syringe"></i>immunization-details</a>
             </li>
-            <mat-divider></mat-divider>
             <li>
-                <a [routerLink]="['./demographics',patientId]">demographics</a>
+                <a [routerLink]="['./demographics',patientId]"><i class="fa-solid fa-chart-area"></i>demographics</a>
             </li>
-            <mat-divider></mat-divider>
             <li>
-                <a [routerLink]="['./appointment-history']">appointment-history</a>
+                <a [routerLink]="['./appointment-history']"><i class="fa-solid fa-clock-rotate-left"></i>appointment-history</a>
             </li>
         </ul>
     </div>
