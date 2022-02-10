@@ -20,6 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 
+
 @NgModule({
   declarations: [
     PatientComponent,
@@ -43,7 +44,9 @@ import { RouterModule } from '@angular/router';
     PatientRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule, 
+
+
   ],
   schemas: [],
 

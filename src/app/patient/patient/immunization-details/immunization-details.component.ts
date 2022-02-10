@@ -34,9 +34,9 @@ export class ImmunizationDetailsComponent implements OnInit {
     })
     this.getImmunizationDetail();
     
-    // this.api.getPhysicianData().subscribe(res =>{
-    //     console.log("Physician data into patient: ", res);
-    // }); 
+    this.api.getPhysicianData().subscribe(res =>{
+        console.log("Physician data into patient: ", res);
+    }); 
   }
   // addImmunizationDetails(){
   //   console.log(this.immunizationForm.value)

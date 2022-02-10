@@ -1,49 +1,42 @@
 {
     "registerUsers": [],
-    "users": [
-        {
-            "fName": "",
-            "lName": "",
-            "dob": "",
-            "username": "",
-            "role": "",
-            "email": "",
-            "mobile": "",
-            "password": "",
-            "isAuthenticated": false
-        }
-    ],
-    "physician": [
-        {
-            "bp": "180 / 110",
-            "pulse": "Normal",
-            "resp": "Normal",
-            "temp": "96 deg",
-            "height": "180 cm",
-            "weight": "80kg",
-            "id": 1
-        }
-    ],
-    "patientdemo": [
-        {
-            "firstName": "Seema",
-            "lastName": "Patil",
-            "dob": "",
-            "gender": "",
-            "ethnicity": "",
-            "education": "BE",
-            "occupation": "",
-            "address": "mumbai",
-            "contact": "8787887865",
-            "medHist": "",
-            "fmMedHist": "",
-            "surgery": "",
-            "insurance": "",
-            "id": 1
-        }
-    ],
-    "medicationList": [
-        {
+    "users": [{
+        "fName": "",
+        "lName": "",
+        "dob": "",
+        "username": "",
+        "role": "",
+        "email": "",
+        "mobile": "",
+        "password": "",
+        "isAuthenticated": false
+    }],
+    "physician": [{
+        "bp": "180 / 110",
+        "pulse": "Normal",
+        "resp": "Normal",
+        "temp": "96 deg",
+        "height": "180 cm",
+        "weight": "80kg",
+        "id": 1
+    }],
+    "patientdemo": [{
+        "firstName": "Seema",
+        "lastName": "Patil",
+        "dob": "",
+        "gender": "",
+        "ethnicity": "",
+        "education": "BE",
+        "occupation": "",
+        "address": "mumbai",
+        "contact": "8787887865",
+        "medHist": "",
+        "fmMedHist": "",
+        "surgery": "",
+        "insurance": "",
+        "id": 1
+    }],
+    "medicationList": [{
             "allergy": "Allergy",
             "socialdrug": "Drug",
             "otherdetail": "Other",
@@ -131,8 +124,7 @@
             "id": 14
         }
     ],
-    "immunization_details": [
-        {
+    "immunization_details": [{
             "id": 1,
             "vaccineName": "Covid-19",
             "doses": "2",
@@ -193,13 +185,11 @@
             "id": 10
         }
     ],
-    "comments": [
-        {
-            "id": 1,
-            "body": "some comment",
-            "postId": 1
-        }
-    ],
+    "comments": [{
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+    }],
     "profile": {
         "name": "typicode"
     }
