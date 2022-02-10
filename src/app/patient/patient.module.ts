@@ -18,7 +18,14 @@ import { DialogComponent } from './patient/immunization-details/dialog/dialog.co
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-
+import { BrowserModule } from '@angular/platform-browser';
+import { FullCalendarModule } from '@fullcalendar/angular';
+import interactionPlugin from '@fullcalendar/interaction';
+import dayGridPlugin from '@fullcalendar/daygrid';
+FullCalendarModule.registerPlugins([ 
+  interactionPlugin,
+  dayGridPlugin
+]);
 
 @NgModule({
   declarations: [
@@ -34,7 +41,10 @@ import { RouterModule } from '@angular/router';
     OrdersComponent,
     PatientEducationComponent,
     SideNavbarComponent,
-    DialogComponent
+    DialogComponent,
+  
+    
+  
 
   ],
   imports: [
@@ -43,7 +53,10 @@ import { RouterModule } from '@angular/router';
     PatientRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FullCalendarModule,
+    BrowserModule,
+
   ],
   schemas: [],
 
