@@ -1,4 +1,20 @@
-<app-side-nav-bar></app-side-nav-bar>
-<p>admin works!</p>
-<router-outlet></router-outlet>
+<!-- 
+<app-header></app-header> -->
+<div class="container-fluid">
+  <app-toolbar [inputSideNav]="sideNav"></app-toolbar>
+  <mat-sidenav-container>
+    <mat-sidenav #sideNav mode="side" opened>      <!-- <mat-nav-list> -->
+        <app-side-nav-bar>
+     
+        </app-side-nav-bar>
+      <!-- </mat-nav-list> -->
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <!-- <div class=""> -->
+            <router-outlet></router-outlet>
+        <!-- </div> -->
+     
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  </div>
 
