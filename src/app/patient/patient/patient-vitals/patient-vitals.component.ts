@@ -16,7 +16,7 @@ export class PatientVitalsComponent implements OnInit {
   name = "John Doe";
   dataSource!: MatTableDataSource<any>;
   
-  displayedColumns: string[] = ['bp', 'pulse', 'resp', 'temp', 'height', 'weight', 'action'];
+  displayedColumns: string[] = ['name','bp', 'pulse', 'resp', 'temp', 'height', 'weight', 'action'];
   patient_details = [{
     patient_name: 'John Doe',
     email: 'john@gmail.com',
