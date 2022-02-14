@@ -10,12 +10,10 @@ export class FakeBackendInterceptor implements HttpInterceptor {
 
         const authHeader = request.headers.get('Authorization');
         const isLoggedIn = authHeader && authHeader.startsWith('Bearer');
-        console.log(isLoggedIn);
-
+       
 
         // get all users
         if (request.url.endsWith('/patientdemo/1') && request.method === 'GET') {
-            console.log("hi");
             if (!isLoggedIn) return unauthorised();
             // return next.handle(request);
         }
