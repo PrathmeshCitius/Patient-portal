@@ -21,9 +21,17 @@ import { RouterModule } from '@angular/router';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
+
 import timeGridPlugin from '@fullcalendar/timegrid';
 
 import { AppointmentDialogComponent } from './patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
+
+//import { YouTubePlayerModule } from "@angular/youtube-player";
+import {MatIconModule} from '@angular/material/icon';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+
+
+
 FullCalendarModule.registerPlugins([ 
   interactionPlugin,
   dayGridPlugin,
@@ -60,6 +68,9 @@ FullCalendarModule.registerPlugins([
     ReactiveFormsModule,
     FullCalendarModule,
     HttpClientModule, 
+    YouTubePlayerModule,
+    MatIconModule
+    
   ],
   schemas: [],
 

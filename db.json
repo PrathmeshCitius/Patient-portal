@@ -10,6 +10,18 @@
       "confirmPassword": "123456",
       "address": "",
       "id": 1
+    },
+    {
+      "firstName": "Aman",
+      "lastName": "Kumar",
+      "email": "aman@gmail.com",
+      "dob": "2022-02-09T18:30:00.000Z",
+      "phone": "9487021508",
+      "password": "Aman@123",
+      "confirmPassword": "Aman@123",
+      "address": "Ranchi",
+      "id": 2
+
     }
   ],
   "users": [
@@ -27,13 +39,25 @@
   ],
   "physician": [
     {
-      "bp": "180 / 110",
-      "pulse": "Normal",
+      "name": "Abc",
+      "bp": "120/11",
+      "pulse": "asd",
+      "resp": "sadf",
+      "temp": "asdf",
+      "height": "asfd",
+      "weight": "asdf",
+      "id": 3
+    },
+    {
+      "name": "Kumar",
+      "bp": "120",
+      "pulse": "201",
       "resp": "Normal",
-      "temp": "96 deg",
+      "temp": "120",
       "height": "180 cm",
-      "weight": "80kg",
-      "id": 1
+      "weight": "60 kg",
+      "id": 4
+
     }
   ],
   "patientdemo": [
@@ -228,4 +252,5 @@
       "id": 10
     }
   ]
-}
+  }
+
