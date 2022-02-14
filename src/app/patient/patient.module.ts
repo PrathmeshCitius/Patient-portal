@@ -22,6 +22,10 @@ import { RouterModule } from '@angular/router';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import { YouTubePlayerModule } from "@angular/youtube-player";
+import {MatIconModule} from '@angular/material/icon';
+
+
 FullCalendarModule.registerPlugins([ 
   interactionPlugin,
   dayGridPlugin
@@ -57,6 +61,9 @@ FullCalendarModule.registerPlugins([
     FullCalendarModule,
     //BrowserModule,
     HttpClientModule, 
+    YouTubePlayerModule, 
+    MatIconModule
+    
   ],
   schemas: [],
 

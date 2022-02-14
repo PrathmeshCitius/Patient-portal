@@ -25,9 +25,14 @@
 <!-- </div> -->
 
 <div class="mat-elevation-z8" class="display_res">
-    <table mat-table [dataSource]="dataSource" matSort >
+    <table mat-table [dataSource]="dataSource" matSort style="margin-top:15px; width: 120%">
 
         <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header>Patient Name</th>
+            <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+        </ng-container>
+
         <ng-container matColumnDef="bp">
             <th mat-header-cell *matHeaderCellDef mat-sort-header> Bloop Pressure</th>
             <td mat-cell *matCellDef="let row"> {{row.bp}} </td>

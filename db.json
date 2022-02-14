@@ -1,5 +1,4 @@
 {
-
   "users": [
     {
       "email": "prinu9@gmail.com",
@@ -26,13 +25,24 @@
   ],
   "physician": [
     {
-      "bp": "180 / 110",
-      "pulse": "Normal",
+      "name": "Abc",
+      "bp": "120/11",
+      "pulse": "asd",
+      "resp": "sadf",
+      "temp": "asdf",
+      "height": "asfd",
+      "weight": "asdf",
+      "id": 3
+    },
+    {
+      "name": "Kumar",
+      "bp": "120",
+      "pulse": "201",
       "resp": "Normal",
-      "temp": "96 deg",
+      "temp": "120",
       "height": "180 cm",
-      "weight": "80kg",
-      "id": 1
+      "weight": "60 kg",
+      "id": 4
     }
   ],
   "patientdemo": [
