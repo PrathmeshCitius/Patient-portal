@@ -1,3 +1,13 @@
 <div class="container">
-    <full-calendar [options]="calendarOptions"></full-calendar>
-  </div>
+
+    <mat-card>
+        <div class="d-flex justify-content-start pb-3">
+         <button mat-raised-button color="primary" style="margin-right:10px" (click)="openDialog()" >Book
+                Appointment</button>
+        </div>
+        <hr><div #calendar>
+        </div>
+        <!-- <full-calendar [options]="calendarOptions" #calendar></full-calendar> -->
+        <!-- <full-calendar [options]="calendarOptions" #calendar></full-calendar> -->
+    </mat-card>
+</div>

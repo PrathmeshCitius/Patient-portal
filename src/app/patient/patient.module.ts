@@ -18,13 +18,16 @@ import { DialogComponent } from './patient/immunization-details/dialog/dialog.co
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-//import { BrowserModule } from '@angular/platform-browser';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
+import timeGridPlugin from '@fullcalendar/timegrid';
+
+import { AppointmentDialogComponent } from './patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
 FullCalendarModule.registerPlugins([ 
   interactionPlugin,
-  dayGridPlugin
+  dayGridPlugin,
+  timeGridPlugin
 ]);
 
 
@@ -36,6 +39,7 @@ FullCalendarModule.registerPlugins([
     ScheduleAppointmentComponent,
     AppointmentHistoryComponent,
     DemographicsComponent,
+    AppointmentDialogComponent,
     MedicationAndAllergiesComponent,
     ImmunizationDetailsComponent,
     PatientVitalsComponent,
@@ -43,11 +47,11 @@ FullCalendarModule.registerPlugins([
     PatientEducationComponent,
     SideNavbarComponent,
     DialogComponent,
-  
-    
-  
-
+    AppointmentDialogComponent,
   ],
+  entryComponents:[
+    AppointmentDialogComponent
+  ]  ,
   imports: [
     CommonModule,
     RouterModule,
@@ -55,7 +59,6 @@ FullCalendarModule.registerPlugins([
     SharedModule,
     ReactiveFormsModule,
     FullCalendarModule,
-    //BrowserModule,
     HttpClientModule, 
   ],
   schemas: [],
@@ -65,7 +68,7 @@ FullCalendarModule.registerPlugins([
     ImmunizationDetailsComponent,
     MedicationAndAllergiesComponent,
     DialogComponent,
-    ScheduleAppointmentComponent
+    ScheduleAppointmentComponent,
   ]
 })
 export class PatientModule {

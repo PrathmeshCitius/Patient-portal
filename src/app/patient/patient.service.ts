@@ -31,5 +31,11 @@ export class PatientService {
   deleteMedication(id:number){
     return this.http.delete<any>("http://localhost:3000/medicationList/"+id)
   }
-  
+  //Snehals code for Event
+  postEvent(data:any){
+    return this.http.post<any>('http://localhost:3000/eventList', data);
+  }
+  getEvent(){
+    return this.http.get<any>('http://localhost:3000/eventList');
+  }
 }

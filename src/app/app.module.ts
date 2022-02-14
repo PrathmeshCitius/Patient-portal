@@ -14,7 +14,7 @@ import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLL
 import { PhysicianService } from './physician/physician.service';
 
 import { ToastrModule } from 'ngx-toastr';
-
+import { AppointmentDialogComponent } from './patient/patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
 const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
   suppressScrollX: true,
@@ -25,7 +25,7 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   schemas: [],
 
