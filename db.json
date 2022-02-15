@@ -1,39 +1,26 @@
 {
-  "registerUsers": [
+  "users": [
     {
-      "firstName": "Snehal",
-      "lastName": "T",
-      "email": "umratkar.snehal87@gmail.com",
-      "dob": "2022-02-07T18:30:00.000Z",
-      "phone": "9035416239",
-      "password": "123456",
-      "confirmPassword": "123456",
+      "email": "prinu9@gmail.com",
+      "password": "$2a$10$E0L.vBvxQO6lLUPN9moYVeh1.FYYJu.j.M8R8UjmZlvP./CNiDE.u",
+      "firstName": "prinu",
+      "lastName": "pillai",
+      "dob": "1993-09-14T18:30:00.000Z",
+      "phone": "9823457234",
+      "confirmPassword": "P@1234",
       "address": "",
       "id": 1
     },
     {
-      "firstName": "Aman",
-      "lastName": "Kumar",
-      "email": "aman@gmail.com",
-      "dob": "2022-02-09T18:30:00.000Z",
-      "phone": "9487021508",
-      "password": "Aman@123",
-      "confirmPassword": "Aman@123",
-      "address": "Ranchi",
+      "email": "p.p@yahoo.com",
+      "password": "$2a$10$anoXhfknXVki2H/jAwxR8.KxLgDpP/Aj0W6SlFminQougsQztnsAm",
+      "firstName": "prinu",
+      "lastName": "pillai",
+      "dob": "1993-09-14T18:30:00.000Z",
+      "phone": "9232235464",
+      "confirmPassword": "P#1234",
+      "address": "mumbai",
       "id": 2
-    }
-  ],
-  "users": [
-    {
-      "fName": "",
-      "lName": "",
-      "dob": "",
-      "username": "",
-      "role": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "isAuthenticated": false
     }
   ],
   "physician": [

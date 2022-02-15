@@ -24,19 +24,19 @@ export class RegistrationComponent implements OnInit {
   submitted = false;
   hide = true;
   registerForm = new FormGroup({
-    firstName: new FormControl('',Validators.required),
-    lastName: new FormControl('',Validators.required),
-    email: new FormControl('',[Validators.email,Validators.required]),
-    dob: new FormControl('',Validators.required),
-    phone:new FormControl('',[Validators.required, Validators.minLength(10)]),
+    firstName: new FormControl('', Validators.required),
+    lastName: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.email, Validators.required]),
+    dob: new FormControl('', Validators.required),
+    phone: new FormControl('', [Validators.required, Validators.minLength(10)]),
     password: new FormControl('', [Validators.required, Validators.minLength(6)]),
-    confirmPassword: new FormControl('',Validators.required),
+    confirmPassword: new FormControl('', Validators.required),
     address: new FormControl(''),
- },
- { validators: passwordsMatchValidator() }
- )
-  
-  constructor(private http:HttpClient,private router:Router) { }
+  },
+    { validators: passwordsMatchValidator() }
+  )
+
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -66,19 +66,22 @@ export class RegistrationComponent implements OnInit {
   get address() {
     return this.registerForm.get('address');
   }
-  submit()
-  {
+  submit() {
     if (this.registerForm.invalid) {
       return;
-  }
-  this.http.post<any>("http://localhost:3000/registerUsers",this.registerForm.value)
-  .subscribe(res=>{
-    alert("resistered successfully");
-    this.registerForm.reset();
-    this.router.navigate(['auth/login'])
-  },err=>{
-    alert("something went wrong");
-  })
+    }
+
+
+    this.http.post<any>("http://localhost:3000/users", this.registerForm.value)
+      .subscribe(res => {
+
+
+        alert("resistered successfully");
+        this.registerForm.reset();
+        this.router.navigate(['auth/login'])
+      }, err => {
+        alert("something went wrong");
+      })
   }
   onReset() {
     this.submitted = false;
