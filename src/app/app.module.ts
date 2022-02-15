@@ -14,8 +14,11 @@ import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLL
 import { PhysicianService } from './physician/physician.service';
 
 import { ToastrModule } from 'ngx-toastr';
+
+import { AppointmentDialogComponent } from './patient/patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { FakeBackendInterceptor } from './helpers/fakebackend.interceptor';
+
 
 const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
