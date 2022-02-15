@@ -8,15 +8,15 @@ export class AuthService {
 
   constructor( private http: HttpClient) { }
 
-  authenticateUser() {
-    return this.http.get<any>('http://localhost:3000/registerUsers');
-  }
+  // authenticateUser() {
+  //   return this.http.get<any>('http://localhost:3000/users');
+  // }
 
    currentUserValue() {
-    return localStorage.getItem('currentUser');
+    return JSON.parse(localStorage.getItem('currentUser'));
 }
 
-  // login(data: Login): Observable<ServerResponse<User>> {
-  //   return this.http.post<ServerResponse<User>>(`${this.API_URL}/login`, data);
-  // }
+  login(data){
+    return this.http.post<any>('http://localhost:3000/login', data);
+  }
 }

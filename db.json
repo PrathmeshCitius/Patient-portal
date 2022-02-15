@@ -1,39 +1,26 @@
 {
-  "registerUsers": [
+  "users": [
     {
-      "firstName": "Snehal",
-      "lastName": "T",
-      "email": "umratkar.snehal87@gmail.com",
-      "dob": "2022-02-07T18:30:00.000Z",
-      "phone": "9035416239",
-      "password": "123456",
-      "confirmPassword": "123456",
+      "email": "prinu9@gmail.com",
+      "password": "$2a$10$E0L.vBvxQO6lLUPN9moYVeh1.FYYJu.j.M8R8UjmZlvP./CNiDE.u",
+      "firstName": "prinu",
+      "lastName": "pillai",
+      "dob": "1993-09-14T18:30:00.000Z",
+      "phone": "9823457234",
+      "confirmPassword": "P@1234",
       "address": "",
       "id": 1
     },
     {
-      "firstName": "Aman",
-      "lastName": "Kumar",
-      "email": "aman@gmail.com",
-      "dob": "2022-02-09T18:30:00.000Z",
-      "phone": "9487021508",
-      "password": "Aman@123",
-      "confirmPassword": "Aman@123",
-      "address": "Ranchi",
+      "email": "p.p@yahoo.com",
+      "password": "$2a$10$anoXhfknXVki2H/jAwxR8.KxLgDpP/Aj0W6SlFminQougsQztnsAm",
+      "firstName": "prinu",
+      "lastName": "pillai",
+      "dob": "1993-09-14T18:30:00.000Z",
+      "phone": "9232235464",
+      "confirmPassword": "P#1234",
+      "address": "mumbai",
       "id": 2
-    }
-  ],
-  "users": [
-    {
-      "fName": "",
-      "lName": "",
-      "dob": "",
-      "username": "",
-      "role": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "isAuthenticated": false
     }
   ],
   "physician": [
@@ -167,95 +154,5 @@
   ],
   "profile": {
     "name": "typicode"
-  },
-  "eventList": [
-    {
-      "meetingtitle": "aas",
-      "selectphysician": "one",
-      "discription": "asa",
-      "time": "10:48",
-      "date": "2022-02-11T18:30:00.000Z",
-      "id": 1
-    },
-    {
-      "meetingtitle": "Fever",
-      "selectphysician": "one",
-      "discription": "103 fever",
-      "time": "13:45",
-      "date": "2022-02-10T18:30:00.000Z",
-      "id": 2
-    },
-    {
-      "meetingtitle": "Sujith has Fever",
-      "selectphysician": "one",
-      "discription": "102 fever",
-      "time": "19:50",
-      "date": "2022-02-10T18:30:00.000Z",
-      "id": 3
-    },
-    {
-      "meetingtitle": "Neha has cold",
-      "selectphysician": "two",
-      "discription": "too much cold",
-      "time": "17:00",
-      "date": "2022-02-12T18:30:00.000Z",
-      "id": 4
-    },
-    {
-      "meetingtitle": "Prinu had cough",
-      "selectphysician": "two",
-      "discription": "Sever dry cough",
-      "time": "18:00",
-      "date": "2022-02-13T18:30:00.000Z",
-      "id": 5
-    },
-    {
-      "meetingtitle": "Prathmesh is not well",
-      "selectphysician": "two",
-      "discription": "cough and cold",
-      "time": "19:30",
-      "date": "2022-02-18T18:30:00.000Z",
-      "id": 6
-    },
-    {
-      "meetingtitle": "Amol is not well",
-      "selectphysician": "one",
-      "discription": "sdsds",
-      "time": "19:53",
-      "date": "2022-02-15T18:30:00.000Z",
-      "id": 7
-    },
-    {
-      "meetingtitle": "Sandhya is not well",
-      "selectphysician": "two",
-      "discription": "Cough and cold",
-      "time": "21:31",
-      "date": "2022-02-25T18:30:00.000Z",
-      "id": 8
-    },
-    {
-      "meetingtitle": "Ruchi not well",
-      "selectphysician": "two",
-      "discription": "headache",
-      "time": "23:15",
-      "date": "2022-02-12T18:30:00.000Z",
-      "id": 9
-    },
-    {
-      "meetingtitle": "Priti is not well",
-      "selectphysician": "two",
-      "discription": "pain",
-      "time": "20:19",
-      "date": "2022-02-19T18:30:00.000Z",
-      "id": 10
-    },
-    {
-      "meetingtitle": "sasa",
-      "selectphysician": "one",
-      "discription": "sne",
-      "time": "00:10",
-      "date": "2022-02-15T18:30:00.000Z",
-      "id": 11
-    }
-  ]
+  }
 }

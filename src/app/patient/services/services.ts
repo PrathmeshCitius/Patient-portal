@@ -1,6 +1,7 @@
 import { Injectable, OnInit } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { PhysicianService } from "src/app/physician/physician.service";
+import { AuthService } from "src/app/auth/auth.service";
 
 @Injectable({
     providedIn: 'root'
@@ -9,7 +10,7 @@ export class ApiService implements OnInit {
     getPatientVital() {
       throw new Error('Method not implemented.');
     }
-    constructor(private http: HttpClient, private physicianService: PhysicianService) {
+    constructor(private http: HttpClient, private physicianService: PhysicianService, private authService:AuthService) {
 
     }
     ngOnInit(): void {
@@ -33,7 +34,15 @@ export class ApiService implements OnInit {
     getPhysicianData() {
         return this.physicianService.getPatientVital();
     }
+//code for user profile
 
+getUserById(id:any){
+    return this.http.get('http://localhost:3000/registerUsers/'+id)
+
+}
+updateUserById(id:any, data:any){
+    return this.http.put<any>("http://localhost:3000/registerUsers/"+ id, data)
+}
 
 
 }
