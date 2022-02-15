@@ -1,37 +1,37 @@
-
-    <div class="side-bar-sec">
-        <ul>
-            <li>
-                <a [routerLink]="['./dashboard']">
-                    <i class="fa-solid fa-gauge"></i>
-                    Dashboard</a>
-            </li>
-            <li>
-                <a [routerLink]="['./myprofile']"><i class="fa-solid fa-user"></i>My Profile</a>
-            </li>
-            <!-- <li>
+<div class="side-bar-sec">
+    <ul>
+        <li>
+            <a [routerLink]="['./dashboard']">
+                <i class="fa-solid fa-gauge"></i> Dashboard
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['./myprofile',patientId]"><i class="fa-solid fa-user"></i>My Profile</a>
+        </li>
+        <!-- <li>
                 <a [routerLink]="['./orders']">Orders</a>
+                myprofile
             </li> -->
-            <li>
-                <a [routerLink]="['./patient-education']"><i class="fa-solid fa-building-columns"></i>patient-education</a>
-            </li>
-            <li>
-                <a [routerLink]="['./patient-vitals']"><i class="fa-solid fa-heart-pulse"></i>patient-vitals</a>
-            </li>
-            <li>
-                <a [routerLink]="['./schedule-appointment']"><i class="fa-solid fa-calendar-check"></i>schedule-appointment</a>
-            </li>
-            <li>
-                <a [routerLink]="['./medication-and-allergies']"><i class="fa-solid fa-file-prescription"></i>medication-and-allergies</a>
-            </li>
-            <li>
-                <a [routerLink]="['./immunization-details']"><i class="fa-solid fa-syringe"></i>immunization-details</a>
-            </li>
-            <li>
-                <a [routerLink]="['./demographics',patientId]"><i class="fa-solid fa-chart-area"></i>demographics</a>
-            </li>
-            <li>
-                <a [routerLink]="['./appointment-history']"><i class="fa-solid fa-clock-rotate-left"></i>appointment-history</a>
-            </li>
-        </ul>
-    </div>
+        <li>
+            <a [routerLink]="['./patient-education']"><i class="fa-solid fa-building-columns"></i>patient-education</a>
+        </li>
+        <li>
+            <a [routerLink]="['./patient-vitals']"><i class="fa-solid fa-heart-pulse"></i>patient-vitals</a>
+        </li>
+        <li>
+            <a [routerLink]="['./schedule-appointment']"><i class="fa-solid fa-calendar-check"></i>schedule-appointment</a>
+        </li>
+        <li>
+            <a [routerLink]="['./medication-and-allergies']"><i class="fa-solid fa-file-prescription"></i>medication-and-allergies</a>
+        </li>
+        <li>
+            <a [routerLink]="['./immunization-details']"><i class="fa-solid fa-syringe"></i>immunization-details</a>
+        </li>
+        <li>
+            <a [routerLink]="['./demographics',patientId]"><i class="fa-solid fa-chart-area"></i>demographics</a>
+        </li>
+        <li>
+            <a [routerLink]="['./appointment-history']"><i class="fa-solid fa-clock-rotate-left"></i>appointment-history</a>
+        </li>
+    </ul>
+</div>

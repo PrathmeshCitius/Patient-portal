@@ -12,15 +12,16 @@
       "id": 1
     },
     {
-      "firstName": "Dipali",
-      "lastName": "T",
-      "email": "dipali@gmail.com",
-      "dob": "2022-02-09T18:30:00.000Z",
-      "phone": "8766656543",
+      "firstName": "DipaliD",
+      "lastName": "Tiwaskar",
+      "email": "dips@gmail.com",
+      "dob": "2022-02-17T18:30:00.000Z",
+      "phone": "888888888",
       "password": "123456",
       "confirmPassword": "123456",
-      "address": "pune",
-      "id": 2
+      "address": "pune1234",
+      "image": "",
+      "id": 3
     }
   ],
   "users": [

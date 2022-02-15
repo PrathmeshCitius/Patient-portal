@@ -23,7 +23,7 @@ const routes: Routes = [
             path: 'dashboard', component: DashboardComponent,
          },
          {
-            path: 'myprofile', component: MyprofileComponent,
+            path: 'myprofile/:id', component: MyprofileComponent,
          },    
          {
             path: 'orders', component: OrdersComponent,

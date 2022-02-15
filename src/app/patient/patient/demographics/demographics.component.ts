@@ -27,7 +27,7 @@ export class DemographicsComponent implements OnInit {
 
   ) {
     this.pId = this.activeRoute.snapshot.paramMap.get('id')
-    console.log(this.pId);
+    console.log("demog PID",this.pId);
       if (this.pId) {
         this.getPatientById();
 
