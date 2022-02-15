@@ -14,6 +14,8 @@ import { ImmunizationDetailsComponent } from './patient/immunization-details/imm
 import { MedicationAndAllergiesComponent } from './patient/medication-and-allergies/medication-and-allergies.component';
 import { PatientVitalsComponent } from './patient/patient-vitals/patient-vitals.component';
 import { ScheduleAppointmentComponent } from './patient/schedule-appointment/schedule-appointment.component';
+import { FakeBackendInterceptor } from '../helpers/fakebackend.interceptor';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 const routes: Routes = [
 
@@ -61,7 +63,8 @@ const routes: Routes = [
 
     imports: [RouterModule.forChild(routes)],
 
-    exports: [RouterModule]
+    exports: [RouterModule],
+    
 
 })
 

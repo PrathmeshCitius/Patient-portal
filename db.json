@@ -1,161 +1,150 @@
 {
-  "registerUsers": [
-    {
-      "firstName": "Snehal",
-      "lastName": "T",
-      "email": "umratkar.snehal87@gmail.com",
-      "dob": "2022-02-07T18:30:00.000Z",
-      "phone": "9035416239",
-      "password": "123456",
-      "confirmPassword": "123456",
-      "address": "",
-      "id": 1
-    },
-    {
-      "firstName": "DipaliD",
-      "lastName": "Tiwaskar",
-      "email": "dips@gmail.com",
-      "dob": "2022-02-17T18:30:00.000Z",
-      "phone": "888888888",
-      "password": "123456",
-      "confirmPassword": "123456",
-      "address": "pune1234",
-      "image": "",
-      "id": 3
+    "users": [{
+            "email": "prinu9@gmail.com",
+            "password": "$2a$10$E0L.vBvxQO6lLUPN9moYVeh1.FYYJu.j.M8R8UjmZlvP./CNiDE.u",
+            "firstName": "prinu",
+            "lastName": "pillai",
+            "dob": "1993-09-14T18:30:00.000Z",
+            "phone": "9823457234",
+            "confirmPassword": "P@1234",
+            "address": "",
+            "id": 1
+        },
+        {
+            "email": "p.p@yahoo.com",
+            "password": "$2a$10$anoXhfknXVki2H/jAwxR8.KxLgDpP/Aj0W6SlFminQougsQztnsAm",
+            "firstName": "prinu",
+            "lastName": "pillai",
+            "dob": "1993-09-14T18:30:00.000Z",
+            "phone": "9232235464",
+            "confirmPassword": "P#1234",
+            "address": "mumbai",
+            "id": 2
+        }
+    ],
+    "physician": [{
+            "name": "Abc",
+            "bp": "120/11",
+            "pulse": "asd",
+            "resp": "sadf",
+            "temp": "asdf",
+            "height": "asfd",
+            "weight": "asdf",
+            "id": 3
+        },
+        {
+            "name": "Kumar",
+            "bp": "120",
+            "pulse": "201",
+            "resp": "Normal",
+            "temp": "120",
+            "height": "180 cm",
+            "weight": "60 kg",
+            "id": 4
+        }
+    ],
+    "patientdemo": [{
+        "firstName": "Seema",
+        "lastName": "Patil",
+        "dob": "2022-02-16T18:30:00.000Z",
+        "gender": "female",
+        "ethnicity": "mlk",
+        "education": "`llnl",
+        "occupation": "lknk",
+        "address": "n",
+        "contact": "8787887865",
+        "medHist": "lknk",
+        "fmMedHist": "kn",
+        "surgery": "kn",
+        "insurance": "kjn",
+        "id": 1
+    }],
+    "medicationList": [{
+            "id": 15,
+            "currentmedications": "combiflame123",
+            "otc": "none",
+            "hvma": "vitamin c",
+            "socialdrugs": "dolo",
+            "drugsallergies": "none",
+            "otherallergies": "none"
+        },
+        {
+            "currentmedications": "c1",
+            "otc": "c",
+            "hvma": "cc",
+            "socialdrugs": "c",
+            "drugsallergies": "c",
+            "otherallergies": "c",
+            "id": 16
+        }
+    ],
+    "immunization_details": [{
+            "id": 1,
+            "vaccineName": "Covid-19",
+            "doses": "2",
+            "date": "10/09/2021"
+        },
+        {
+            "vaccineName": "aa",
+            "doses": "aa",
+            "date": "2022-02-16T18:30:00.000Z",
+            "id": 2
+        },
+        {
+            "vaccineName": "aaaaa",
+            "doses": "ssss",
+            "date": "2022-02-21T18:30:00.000Z",
+            "id": 3
+        },
+        {
+            "vaccineName": "Flu-Dengue",
+            "doses": "aa",
+            "date": "2022-02-24T18:30:00.000Z",
+            "id": 4
+        },
+        {
+            "vaccineName": "aaaa",
+            "doses": "aaa",
+            "date": "2022-02-11T18:30:00.000Z",
+            "id": 5
+        },
+        {
+            "vaccineName": "Maleria",
+            "doses": "1",
+            "date": "2021-11-18T18:30:00.000Z",
+            "id": 6
+        },
+        {
+            "vaccineName": "aaa",
+            "doses": "aaa",
+            "date": "2021-12-22T18:30:00.000Z",
+            "id": 7
+        },
+        {
+            "vaccineName": "bbb",
+            "doses": "bbb",
+            "date": "2021-12-22T18:30:00.000Z",
+            "id": 8
+        },
+        {
+            "id": 7,
+            "vaccineName": "fff",
+            "doses": "ff",
+            "date": "2022-02-07T18:30:00.000Z"
+        },
+        {
+            "vaccineName": "VN",
+            "doses": "12",
+            "date": "2022-02-19T18:30:00.000Z",
+            "id": 8
+        }
+    ],
+    "comments": [{
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+    }],
+    "profile": {
+        "name": "typicode"
     }
-  ],
-  "users": [
-    {
-      "fName": "",
-      "lName": "",
-      "dob": "",
-      "username": "",
-      "role": "",
-      "email": "",
-      "mobile": "",
-      "password": "",
-      "isAuthenticated": false
-    }
-  ],
-  "physician": [
-    {
-      "bp": "180 / 110",
-      "pulse": "Normal",
-      "resp": "Normal",
-      "temp": "96 deg",
-      "height": "180 cm",
-      "weight": "80kg",
-      "id": 1
-    }
-  ],
-  "patientdemo": [
-    {
-      "firstName": "Seema",
-      "lastName": "Patil",
-      "dob": "2022-02-16T18:30:00.000Z",
-      "gender": "female",
-      "ethnicity": "mlk",
-      "education": "`llnl",
-      "occupation": "lknk",
-      "address": "n",
-      "contact": "8787887865",
-      "medHist": "lknk",
-      "fmMedHist": "kn",
-      "surgery": "kn",
-      "insurance": "kjn",
-      "id": 1
-    }
-  ],
-  "medicationList": [
-    {
-      "id": 15,
-      "currentmedications": "combiflame123",
-      "otc": "none",
-      "hvma": "vitamin c",
-      "socialdrugs": "dolo",
-      "drugsallergies": "none",
-      "otherallergies": "none"
-    },
-    {
-      "currentmedications": "c1",
-      "otc": "c",
-      "hvma": "cc",
-      "socialdrugs": "c",
-      "drugsallergies": "c",
-      "otherallergies": "c",
-      "id": 16
-    }
-  ],
-  "immunization_details": [
-    {
-      "id": 1,
-      "vaccineName": "Covid-19",
-      "doses": "2",
-      "date": "10/09/2021"
-    },
-    {
-      "vaccineName": "aa",
-      "doses": "aa",
-      "date": "2022-02-16T18:30:00.000Z",
-      "id": 2
-    },
-    {
-      "vaccineName": "aaaaa",
-      "doses": "ssss",
-      "date": "2022-02-21T18:30:00.000Z",
-      "id": 3
-    },
-    {
-      "vaccineName": "Flu-Dengue",
-      "doses": "aa",
-      "date": "2022-02-24T18:30:00.000Z",
-      "id": 4
-    },
-    {
-      "vaccineName": "aaaa",
-      "doses": "aaa",
-      "date": "2022-02-11T18:30:00.000Z",
-      "id": 5
-    },
-    {
-      "vaccineName": "Maleria",
-      "doses": "1",
-      "date": "2021-11-18T18:30:00.000Z",
-      "id": 6
-    },
-    {
-      "vaccineName": "aaa",
-      "doses": "aaa",
-      "date": "2021-12-22T18:30:00.000Z",
-      "id": 7
-    },
-    {
-      "vaccineName": "bbb",
-      "doses": "bbb",
-      "date": "2021-12-22T18:30:00.000Z",
-      "id": 8
-    },
-    {
-      "id": 7,
-      "vaccineName": "fff",
-      "doses": "ff",
-      "date": "2022-02-07T18:30:00.000Z"
-    },
-    {
-      "vaccineName": "VN",
-      "doses": "12",
-      "date": "2022-02-19T18:30:00.000Z",
-      "id": 8
-    }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
 }

@@ -1,0 +1,18 @@
+.mat-icon {
+    font-size: 120px;
+    margin-left: 45px;
+  }
+
+.top-panel {
+    /* width: 70%; */
+    margin: 1% 0;
+}
+
+mat-grid-tile a{
+    color: blueviolet;
+    text-decoration: none;
+}
+
+/* mat-grid-tile {
+    background: lightblue;
+  } */
