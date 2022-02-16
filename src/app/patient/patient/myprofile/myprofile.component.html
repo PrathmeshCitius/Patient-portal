@@ -6,12 +6,18 @@
 </div>
 
 <mat-card class="">
+    <form [formGroup]="profileForm">
     <div class="row">
         <div class="col-md-2">
-            <input type="file" (change)="onFileSelected($event)">
+            <img src="{{profileForm.controls['image'].value}}" alt="" style="width:100px;height:100px">
+        
+                <input type="file" name="file" class="inputFile pt-2" (change)="onFileSelected($event)" *ngIf="editMode" >
+                      
+           
+           
         </div>
         <div class="col-md-10 ">
-            <form [formGroup]="profileForm">
+           
                 <div class="row">
                     <div class="col-md-4">
                         <div *ngIf="!editMode" class="card-field"> First Name: {{profileForm.controls['firstName'].value}}</div>
@@ -82,7 +88,8 @@
                 </div>
 
 
-            </form>
+            
         </div>
     </div>
+</form>
 </mat-card>
