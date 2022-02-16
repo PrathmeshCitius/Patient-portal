@@ -8,16 +8,16 @@
 <mat-card class="">
     <form [formGroup]="profileForm">
     <div class="row">
-        <div class="col-md-2">
-            <img src="{{profileForm.controls['image'].value}}" alt="" style="width:100px;height:100px">
+        <div class="col-md-3 d-flex flex-column">
+            <img src="{{profileForm.controls['image'].value}}" alt="" style="width:100px;height:100px;margin-right:auto;margin-left:auto">
         
-                <input type="file" name="file" class="inputFile pt-2" (change)="onFileSelected($event)" *ngIf="editMode" >
+                <input type="file" name="file" class="inputFile mt-2" (change)="onFileSelected($event)" *ngIf="editMode" >
+                
                       
            
            
         </div>
-        <div class="col-md-10 ">
-           
+        <div class="col-md-9 ">           
                 <div class="row">
                     <div class="col-md-4">
                         <div *ngIf="!editMode" class="card-field"> First Name: {{profileForm.controls['firstName'].value}}</div>
@@ -29,10 +29,10 @@
 
                     </div>
                     <div class="col-md-4">
-                        <div *ngIf="!editMode" class="card-field"> Last Name: {{profileForm.controls['lastName'].value}}</div>
+                        <div *ngIf="!editMode" class="card-field"> Last Name: {{profileForm.controls['email'].value}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>Last Name</mat-label>
-                            <input matInput placeholder="Placeholder" formControlName="lastName">
+                            <input matInput placeholder="Placeholder" formControlName="email">
                             <mat-hint>Hint</mat-hint>
                         </mat-form-field>
                     </div>
