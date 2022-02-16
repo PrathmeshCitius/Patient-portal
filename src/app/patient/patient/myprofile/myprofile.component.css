@@ -9,3 +9,26 @@
 .material-icons {
     font-size: 20px;
 }
+.inputFile{
+    font-size: 12px;
+    background: white;
+    border-radius: 3px;
+    box-shadow: 5px 5px 10px #5c585861;
+    width: 180px;
+    outline: none;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+::-webkit-file-upload-button{
+    color:white;
+    background: rgb(178, 177, 179);
+    border:none;
+    border-radius:3px;
+    box-shadow: 1px 0 1px 1px rgb(178, 177, 179);
+    height:30px
+}
+::-webkit-file-upload-button:hover{
+    background: rgb(127, 127, 128);
+}
