@@ -1,0 +1,68 @@
+
+<div class="container px-5">
+<mat-card>
+<form [formGroup]="appointmentForm">
+<h1 mat-dialog-title><strong>Add Event</strong> </h1>
+
+    <div class="row">
+      <div class="col-md-12">
+      <div mat-dialog-content> 
+        <mat-form-field appearance="fill" [style.width.%]="100">
+            <mat-label>Meeting Title</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="meetingtitle">      
+        </mat-form-field>
+      </div> 
+    </div>
+ </div>
+ <div class="row">
+    <div class="col-md-6   ">
+         <mat-form-field appearance="fill">
+        <mat-label>Physician</mat-label>
+        <mat-select matInput placeholder="Placeholder" formControlName="selectphysician">
+          <mat-option value="one">Dr Chetan Jaiswal</mat-option>
+          <mat-option value="two">Dr Satish Shah</mat-option>
+        </mat-select>
+    </mat-form-field>
+    </div>
+  
+  
+    <div class="col-md-6">
+        <mat-form-field appearance="fill">
+        <mat-label>Add discription</mat-label>
+        <input matInput placeholder="Placeholder" formControlName="discription">      
+        </mat-form-field>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <mat-form-field appearance="fill">
+        <mat-label>Time</mat-label>
+        <input matInput   type="time" placeholder="Placeholder" formControlName="time">      
+        </mat-form-field>
+      </div>
+  
+
+  <div class="col-md-6">
+    <mat-form-field  appearance="fill">
+      <mat-label>Choose a date</mat-label>
+     // <input matInput [matDatepicker]="datepicker" formControlName="date">
+     <input matInput type="datetime-local" formControlName="date" >
+     <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+      <mat-datepicker #datepicker>
+        <mat-datepicker-actions>
+          <button mat-button matDatepickerCancel>Cancel</button>
+          <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+        </mat-datepicker-actions>
+      </mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
+<mat-dialog-actions>
+<button mat-raised-button mat-dialog-close  color="primary" mat-dialog-close="false" style="margin-right:10px">Cancle</button>
+<button mat-raised-button mat-dialog-close color="primary" mat-dialog-close="true" style="margin-right:10px" (click)="onEvent()">Add</button>
+</mat-dialog-actions>
+
+</form>
+</mat-card>
+</div>
+

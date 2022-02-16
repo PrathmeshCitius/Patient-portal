@@ -18,18 +18,11 @@ import { DialogComponent } from './patient/immunization-details/dialog/dialog.co
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-//import { BrowserModule } from '@angular/platform-browser';
-import { FullCalendarModule } from '@fullcalendar/angular';
-import interactionPlugin from '@fullcalendar/interaction';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import { YouTubePlayerModule } from "@angular/youtube-player";
-import {MatIconModule} from '@angular/material/icon';
+//import {ChartModule} from '@syncfusion/'
+import { ChartsModule } from 'ng2-charts';
+import { AppointmentDialogComponent } from './patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
-
-FullCalendarModule.registerPlugins([ 
-  interactionPlugin,
-  dayGridPlugin
-]);
 
 
 @NgModule({
@@ -40,27 +33,28 @@ FullCalendarModule.registerPlugins([
     ScheduleAppointmentComponent,
     AppointmentHistoryComponent,
     DemographicsComponent,
+    AppointmentDialogComponent,
     MedicationAndAllergiesComponent,
     ImmunizationDetailsComponent,
     PatientVitalsComponent,
     OrdersComponent,
     PatientEducationComponent,
     SideNavbarComponent,
-    DialogComponent
-
+    DialogComponent,
+    AppointmentDialogComponent,
   ],
+  entryComponents:[
+    AppointmentDialogComponent
+  ]  ,
   imports: [
     CommonModule,
     RouterModule,
     PatientRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    FullCalendarModule,
-    //BrowserModule,
-    HttpClientModule, 
-    YouTubePlayerModule, 
-    MatIconModule
-    
+    HttpClientModule,
+    ChartsModule,
+    YouTubePlayerModule
   ],
   schemas: [],
 
@@ -68,7 +62,8 @@ FullCalendarModule.registerPlugins([
     PatientComponent,
     ImmunizationDetailsComponent,
     MedicationAndAllergiesComponent,
-    DialogComponent
+    DialogComponent,
+    ScheduleAppointmentComponent,
   ]
 })
 export class PatientModule {
