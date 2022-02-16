@@ -5,6 +5,7 @@ import { Observable, Observer } from 'rxjs';
 import { ApiService } from '../../services/services';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-patient-vitals',
@@ -16,7 +17,7 @@ export class PatientVitalsComponent implements OnInit {
   name = "John Doe";
   dataSource!: MatTableDataSource<any>;
   
-  displayedColumns: string[] = ['name','bp', 'pulse', 'resp', 'temp', 'height', 'weight', 'action'];
+  displayedColumns: string[] = ['date','email', 'name','bp', 'pulse', 'resp', 'temp', 'height', 'weight', 'action'];
   patient_details = [{
     patient_name: 'John Doe',
     email: 'john@gmail.com',
@@ -24,13 +25,23 @@ export class PatientVitalsComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor(private api:ApiService) { }
-
+  constructor(private api:ApiService, private authService: AuthService) { }
+  
   ngOnInit(): void {
     
     this.api.getPhysicianData().subscribe(res => {
       console.log("Physician data into patient: ", res);
-      this.dataSource = res;
+      
+      //current login user email 
+      var current_user: string = this.authService.currentUserValue().user.email;
+      console.log(this.authService.currentUserValue().user.email)
+      
+      var result = res.filter(function(abc){
+        return abc.email == current_user;
+      })
+
+      this.dataSource = result;
+
     });
   }
 

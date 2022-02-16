@@ -21,28 +21,102 @@
       "confirmPassword": "P#1234",
       "address": "mumbai",
       "id": 2
+    },
+    {
+      "email": "aman@gmail.com",
+      "password": "$2a$10$77f.CBXpfAhVb.gbLR2GHOS/mRdr.wmWq0N7ri3CMqPQRRdoOsnRW",
+      "firstName": "Aman",
+      "lastName": "Kumar",
+      "dob": "2022-01-31T18:30:00.000Z",
+      "phone": "9898989898",
+      "confirmPassword": "Aman@123",
+      "address": "Ranchi",
+      "id": 3
+    },
+    {
+      "email": "sonia@gmail.com",
+      "password": "$2a$10$tW20n2iwU2AKQkJUxEms5uxC0r1gqqvWrspOykG2mrahGDZ.XnQ..",
+      "firstName": "Sonia",
+      "lastName": "Jones",
+      "dob": "2022-02-14T18:30:00.000Z",
+      "phone": "9898989898",
+      "confirmPassword": "Sonia@123",
+      "address": "New York City",
+      "id": 4
     }
   ],
   "physician": [
     {
-      "name": "Abc",
-      "bp": "120/11",
-      "pulse": "asd",
-      "resp": "sadf",
-      "temp": "asdf",
-      "height": "asfd",
-      "weight": "asdf",
-      "id": 3
+      "date": "2022-02-01",
+      "email": "jen@gmail.com",
+      "name": "Jen",
+      "bp": "110/110",
+      "pulse": "80 bpm",
+      "resp": "Normal",
+      "temp": "98 deg",
+      "height": "180 cm",
+      "weight": "78 kg",
+      "id": 7
     },
     {
-      "name": "Kumar",
-      "bp": "120",
-      "pulse": "201",
+      "date": "2022-02-07",
+      "email": "der@gmail.com",
+      "name": "Der",
+      "bp": "130/110",
+      "pulse": "80 bpm",
       "resp": "Normal",
-      "temp": "120",
+      "temp": "98 deg",
+      "height": "176 cm",
+      "weight": "80 kg",
+      "id": 8
+    },
+    {
+      "date": "2022-02-17",
+      "email": "sonia@gmail.com",
+      "name": "Sonia",
+      "bp": "140/110",
+      "pulse": "90 bpm",
+      "resp": "Normal",
+      "temp": "95 deg",
       "height": "180 cm",
-      "weight": "60 kg",
-      "id": 4
+      "weight": "80 kg",
+      "id": 9
+    },
+    {
+      "date": "2022-02-02",
+      "email": "aman@gmail.com",
+      "name": "AK",
+      "bp": "120/110",
+      "pulse": "60 bps",
+      "resp": "Normal",
+      "temp": "96 deg",
+      "height": "180 cm",
+      "weight": "80 kg",
+      "id": 10
+    },
+    {
+      "date": "2022-02-25",
+      "email": "aman@gmail.com",
+      "name": "Kumar",
+      "bp": "130/110",
+      "pulse": "Normal",
+      "resp": "Normal",
+      "temp": "97 deg",
+      "height": "180 cm",
+      "weight": "98 kg",
+      "id": 11
+    },
+    {
+      "date": "2021-11-11",
+      "email": "sonia@gmail.com",
+      "name": "Sonia ",
+      "bp": "135/110",
+      "pulse": "70 bpm",
+      "resp": "Normal",
+      "temp": "98 deg",
+      "height": "180cm",
+      "weight": "78 kg",
+      "id": 12
     }
   ],
   "patientdemo": [

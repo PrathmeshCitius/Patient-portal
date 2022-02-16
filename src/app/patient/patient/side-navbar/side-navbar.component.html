@@ -1,5 +1,8 @@
 
-    <div class="side-bar-sec">
+<div>
+
+    <div *ngIf="showMe" class="side-bar-sec">
+        <button (click)="toggleSidebar()" style="float: right; background-color: gray; color: #fff"><i class="fa-solid fa-close"></i></button>
         <ul>
             <li>
                 <a [routerLink]="['./dashboard']">
@@ -35,3 +38,4 @@
             </li>
         </ul>
     </div>
+</div>
