@@ -36,8 +36,8 @@ export class PatientVitalsComponent implements OnInit {
       var current_user: string = this.authService.currentUserValue().user.email;
       console.log(this.authService.currentUserValue().user.email)
       
-      var result = res.filter(function(abc){
-        return abc.email == current_user;
+      var result = res.filter(function(res_arg){
+        return res_arg.email == current_user;
       })
 
       this.dataSource = result;
