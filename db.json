@@ -21,28 +21,51 @@
       "confirmPassword": "P#1234",
       "address": "mumbai",
       "id": 2
+    },
+    {
+      "email": "chetanjaiswal@gmail.com.com",
+      "password": "$2a$10$anoXhfknXVki2H/jAwxR8.KxLgDpP/Aj0W6SlFminQougsQztnsAm",
+      "firstName": "Chetan",
+      "lastName": "Jaiswal",
+      "dob": "1993-09-14T18:30:00.000Z",
+      "phone": "9232235464",
+      "confirmPassword": "P#1234",
+      "address": "Nagpur",
+      "role": "physician",
+      "id": 3
     }
   ],
   "physician": [
     {
-      "name": "Abc",
-      "bp": "120/11",
-      "pulse": "asd",
-      "resp": "sadf",
-      "temp": "asdf",
-      "height": "asfd",
-      "weight": "asdf",
-      "id": 3
+      "name": "Prathmesh",
+      "bp": "120/80",
+      "pulse": "93",
+      "resp": "72",
+      "temp": "98",
+      "height": "170",
+      "weight": "70",
+      "id": 1
     },
     {
-      "name": "Kumar",
-      "bp": "120",
-      "pulse": "201",
-      "resp": "Normal",
-      "temp": "120",
-      "height": "180 cm",
-      "weight": "60 kg",
-      "id": 4
+      "name": "Prathmesh K",
+      "bp": "120/80",
+      "pulse": "93",
+      "resp": "72",
+      "temp": "98",
+      "height": "170",
+      "weight": "70",
+      "id": 2
+    },
+    {
+      
+      "name": "",
+      "bp": "",
+      "pulse": "",
+      "resp": "",
+      "temp": "",
+      "height": "",
+      "weight": "",
+      "id": 3
     }
   ],
   "patientdemo": [
@@ -63,26 +86,7 @@
       "id": 1
     }
   ],
-  "medicationList": [
-    {
-      "id": 15,
-      "currentmedications": "combiflame123",
-      "otc": "none",
-      "hvma": "vitamin c",
-      "socialdrugs": "dolo",
-      "drugsallergies": "none",
-      "otherallergies": "none"
-    },
-    {
-      "currentmedications": "c1",
-      "otc": "c",
-      "hvma": "cc",
-      "socialdrugs": "c",
-      "drugsallergies": "c",
-      "otherallergies": "c",
-      "id": 16
-    }
-  ],
+  "medicationList": [],
   "immunization_details": [
     {
       "id": 1,

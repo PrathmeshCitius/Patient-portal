@@ -37,12 +37,20 @@ export class ApiService implements OnInit {
 //code for user profile
 
 getUserById(id:any){
-    return this.http.get('http://localhost:3000/registerUsers/'+id)
+    return this.http.get('http://localhost:3000/users/'+id)
 
 }
 updateUserById(id:any, data:any){
-    return this.http.put<any>("http://localhost:3000/registerUsers/"+ id, data)
+    return this.http.put<any>("http://localhost:3000/users/"+ id, data)
 }
 
+//code for appointment history
 
+getAppointmentHistory(){
+    return this.http.get<any>("http://localhost:3000/appointment-history/")
+}
+getDetailById(id:any){
+    return this.http.get("http://localhost:3000/appointment-history/"+id)
+    
+}
 }

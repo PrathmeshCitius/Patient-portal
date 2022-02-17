@@ -1,3 +1,5 @@
+<body>
+  <div class="formparent">
 <div class="form-container mat-elevation-z5">
   <h3>Log into Patient Portal</h3>
   <form [formGroup]="loginForm" (ngSubmit)="login()" >
@@ -24,9 +26,11 @@
             <button mat-raised-button color="primary" type="submit">Login</button>
         </div>
       
-       <span class="center margin-top">Iam new here </span>
+       <span class="center margin-top">I am new here </span>
        <div class="center margin-top">
        <button mat-raised-button routerLink="/auth/registration" type="submit">Create Account</button>
        </div>
    </form>
 </div>
+</div>
+</body>
