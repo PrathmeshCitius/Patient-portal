@@ -32,6 +32,7 @@ export class RegistrationComponent implements OnInit {
     password: new FormControl('', [Validators.required, Validators.minLength(6)]),
     confirmPassword: new FormControl('', Validators.required),
     address: new FormControl(''),
+    image:new FormControl('')
   },
     { validators: passwordsMatchValidator() }
   )
@@ -65,6 +66,9 @@ export class RegistrationComponent implements OnInit {
   }
   get address() {
     return this.registerForm.get('address');
+  }
+  get image() {
+    return this.registerForm.get('image');
   }
   submit() {
     if (this.registerForm.invalid) {

@@ -15,7 +15,7 @@ import { ViewChild } from '@angular/core';
 export class PatientDetailsComponent implements OnInit {
 
   patientVitalForm: FormGroup
-  displayedColumns: string[] = ['name', 'bp', 'pulse', 'resp', 'temp', 'height', 'weight', 'action'];
+  displayedColumns: string[] = ['date','email', 'name', 'bp', 'pulse', 'resp', 'temp', 'height', 'weight', 'action'];
   dataSource!: MatTableDataSource<any>;
   onedit = false;
   onAdd = true;
@@ -27,6 +27,7 @@ export class PatientDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.patientVitalForm = this.fb.group({
+      
       name: [''],
       bp: [''],
       pulse: [''],
@@ -61,6 +62,7 @@ export class PatientDetailsComponent implements OnInit {
   onEdit(data: any) {
     this.onedit = true;
     this.onAdd = true;
+  
     this.patientVitalForm.controls['name'].setValue(data.name);
     this.patientVitalForm.controls['bp'].setValue(data.bp);
     this.patientVitalForm.controls['pulse'].setValue(data.pulse);

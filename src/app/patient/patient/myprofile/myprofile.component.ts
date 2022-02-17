@@ -14,6 +14,8 @@ export class MyprofileComponent implements OnInit {
   profileForm:FormGroup;
   userData:any;
   pId:any;
+ selectedFile:File;
+ imageURL:any='';
   constructor(private fb:FormBuilder, 
               private router:Router, 
               private apiService:ApiService,
@@ -37,7 +39,7 @@ export class MyprofileComponent implements OnInit {
       password:[''],
       confirmPassword:[''],
       address:['', Validators.required],      
-      image:['',Validators.required],
+      image:[''],
     })
  
     this.activatedRoute.queryParamMap.subscribe(res=>{
@@ -71,8 +73,7 @@ export class MyprofileComponent implements OnInit {
       this.userData=res;
       console.log("userData", this.userData)
       this.patchUserData();
-    })    
-    
+    })        
   }
   patchUserData(){
     this.profileForm.patchValue({
@@ -83,19 +84,49 @@ export class MyprofileComponent implements OnInit {
       phone:this.userData.phone,
       address:this.userData.address,
       password:this.userData.password,
-      confirmPassword:this.userData.confirmPassword
+      confirmPassword:this.userData.confirmPassword,
+      image:this.userData.image
+      
     })
     console.log("updated profile form value",this.profileForm.value)
   }
   
   upadteUserData(){
+     //code for upload image
+     this.profileForm.controls['image'].setValue(this.imageURL)
+     //update userData
+     if(this.profileForm.value.image!=''){
     this.apiService.updateUserById(this.pId,this.profileForm.value).subscribe(res=>{
       alert("user Updated Successfully");
       this.getPatientData();
       this.router.navigate([],{queryParams:{EditMode:null}})
     })
+  }else{
+    alert('image required');
   }
-  onFileSelected(event:any){
-    console.log("111111111111",event)
   }
+  onFileSelected(event){
+    console.log('onchange event values', event)
+    // this.selectedFile=<File>event.target.files[0];
+    if (event.target.files.length > 0) {
+      this.selectedFile = event.target.files[0];
+      if(this.selectedFile){
+        var reader =new FileReader();
+        reader.readAsDataURL(this.selectedFile);
+        reader.onload=(event)=>{
+          this.imageURL=(<FileReader>event.target).result;
+        }
+      }
+    //   // console.log("selected event value",this.selectedFile)
+    //   // this.profileForm.patchValue({
+    //   //   image: this.selectedFile.name        
+    //   });
+    //   console.log("image value",this.profileForm.value)
+    // this.imageURL=this.selectedFile.name;
+    }
+  
+  }
+
+ 
+
 }

@@ -1,0 +1,17 @@
+<div class="d-flex flex-row justify-content-between my-4">
+  <h1>Appointment Details</h1>
+ 
+</div>
+<mat-card>
+  <div class="row">
+    <div class="col-md-4 p-3">Appointment Date: {{appointmentDetail.apppintmentDate}}</div>
+    <div class="col-md-4 p-3">Physician Detail: {{appointmentDetail.physician}}</div>
+    <div class="col-md-4 p-3">Status: {{appointmentDetail.status}}</div>
+  </div>
+  <div class="row">
+    <div class="col p-3">
+      Notes: <br/>
+      {{appointmentDetail.notes}}
+    </div>
+  </div>
+</mat-card>

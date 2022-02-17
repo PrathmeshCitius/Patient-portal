@@ -11,12 +11,12 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { ChartsModule } from 'ng2-charts';
 import { PhysicianService } from './physician/physician.service';
 import { ToastrModule } from 'ngx-toastr';
 import { AppointmentDialogComponent } from './patient/patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { FakeBackendInterceptor } from './helpers/fakebackend.interceptor';
-import { ChartsModule } from 'ng2-charts';
 import { PhysicianComponent } from './physician/physician/physician.component';
 import { PhysicianSidebarComponent } from './physician/physician-sidebar/physician-sidebar.component';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
@@ -55,11 +55,8 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BrowserAnimationsModule,
     AdminModule,
     PerfectScrollbarModule,
-    ToastrModule.forRoot(),
-    ChartsModule,
-  
-    BrowserAnimationsModule,
-    MatToolbarModule
+    ChartsModule, 
+    ToastrModule.forRoot()
   ],
 
   providers: [PhysicianService, {

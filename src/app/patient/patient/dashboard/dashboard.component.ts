@@ -1,19 +1,14 @@
- import 'chartjs-plugin-annotation';
+import 'chartjs-plugin-annotation';
 
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ChartDataSets } from 'chart.js';
 import { Label , Color} from 'ng2-charts';
-import * as XLSX from 'xlsx'
-
-
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent  {
-  
-  @ViewChild("lineChart", { static: false }) lineChart: any;
 lineChartData: ChartDataSets[] = [
   { data: [0,3,4,6,1,2,1], label: 'Patient visits' },
 ];
@@ -60,12 +55,12 @@ lineChartOptions2 = {
 lineChartColors2: Color[] = [
   {
     borderColor: 'black',
-    backgroundColor: 'rgb(127,255,0)',
+    backgroundColor: '#eee',
   },
 ];
 lineChartLegend2 = true;
 lineChartPlugins2 = [];
-lineChartType2 = 'line';
+lineChartType2 = 'doughnut';
 
 
 /////////////////////////////////////////////////////////
@@ -85,11 +80,5 @@ lineChartColors3: Color[] = [
 lineChartLegend3 = true;
 lineChartPlugins3 = [];
 lineChartType3 = 'pie';
-
-
-
-export(e){
-  this.lineChart.chart.downloadXLS();
-}
 }
 //////////////////////////////////////////////////////

@@ -21,8 +21,19 @@
       "confirmPassword": "P#1234",
       "address": "mumbai",
       "id": 2
+    },
+    {
+      "email": "chetanjaiswal@gmail.com.com",
+      "password": "$2a$10$anoXhfknXVki2H/jAwxR8.KxLgDpP/Aj0W6SlFminQougsQztnsAm",
+      "firstName": "Chetan",
+      "lastName": "Jaiswal",
+      "dob": "1993-09-14T18:30:00.000Z",
+      "phone": "9232235464",
+      "confirmPassword": "P#1234",
+      "address": "Nagpur",
+      "role": "physician",
+      "id": 3
     }
-   
   ],
   "physician": [
     {
@@ -44,6 +55,17 @@
       "height": "170",
       "weight": "70",
       "id": 2
+    },
+    {
+      
+      "name": "",
+      "bp": "",
+      "pulse": "",
+      "resp": "",
+      "temp": "",
+      "height": "",
+      "weight": "",
+      "id": 3
     }
   ],
   "patientdemo": [

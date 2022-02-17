@@ -18,20 +18,12 @@ import { DialogComponent } from './patient/immunization-details/dialog/dialog.co
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { FullCalendarModule } from '@fullcalendar/angular';
-import interactionPlugin from '@fullcalendar/interaction';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import timeGridPlugin from '@fullcalendar/timegrid';
-import { AppointmentDialogComponent } from './patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
-import {MatIconModule} from '@angular/material/icon';
-import { YouTubePlayerModule } from '@angular/youtube-player';
-
+//import {ChartModule} from '@syncfusion/'
 import { ChartsModule } from 'ng2-charts';
-FullCalendarModule.registerPlugins([ 
-  interactionPlugin,
-  dayGridPlugin,
-  timeGridPlugin
-]);
+import { AppointmentDialogComponent } from './patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { AppointmentDetailsComponent } from './patient/appointment-history/appointment-details/appointment-details.component';
+
 
 
 @NgModule({
@@ -51,6 +43,7 @@ FullCalendarModule.registerPlugins([
     SideNavbarComponent,
     DialogComponent,
     AppointmentDialogComponent,
+    AppointmentDetailsComponent,
   ],
   entryComponents:[
     AppointmentDialogComponent
@@ -61,12 +54,9 @@ FullCalendarModule.registerPlugins([
     PatientRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    FullCalendarModule,
-    HttpClientModule, 
-    YouTubePlayerModule,
-    MatIconModule,
- ChartsModule
-    
+    HttpClientModule,
+    ChartsModule,
+    YouTubePlayerModule
   ],
   schemas: [],
 
@@ -76,7 +66,7 @@ FullCalendarModule.registerPlugins([
     MedicationAndAllergiesComponent,
     DialogComponent,
     ScheduleAppointmentComponent,
-    DashboardComponent
+    AppointmentDetailsComponent,
   ]
 })
 export class PatientModule {
