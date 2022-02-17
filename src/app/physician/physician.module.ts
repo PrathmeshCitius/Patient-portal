@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from '../shared/navigation/header/header.component';
 import { ChartsModule } from 'ng2-charts';
 import { PhysicianDashbardComponent } from './physician-dashbard/physician-dashbard.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
   declarations: [PhysicianComponent,
      //HeaderComponent,
@@ -22,7 +23,8 @@ import { PhysicianDashbardComponent } from './physician-dashbard/physician-dashb
     SharedModule,
     PhysicianRoutingModule, 
     ReactiveFormsModule,
-    ChartsModule
+    ChartsModule,
+    RouterModule
   ],
   exports: [
     PhysicianDashbardComponent,
