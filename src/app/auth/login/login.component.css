@@ -1,16 +1,25 @@
 .form-container{
   display:block;
   max-width: 350px;
-  margin: auto;
+  margin-right:10rem;
   background: #fbfdfd;;
   padding: 48px;
   border-radius: 16px;
-  margin-top: 100px;
 }
 mat-form-field {
   width: 100%;
 }
+body{
+  background: url("../../../assets/images/bg1.jpg") ;
+  background-size: cover;
+}
+.formparent{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100vh;
 
+}
 
 .center {
 display: flex;

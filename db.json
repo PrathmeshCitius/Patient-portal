@@ -44,18 +44,6 @@
       "confirmPassword": "Sonia@123",
       "address": "New York City",
       "id": 4
-    },
-    {
-      "email": "test@gmail.com",
-      "password": "$2a$10$fG524VSwTDg1e85LS5iJhOuxyio/T6qn7IIqPvfrIEhjjMofmKYJ.",
-      "firstName": "test",
-      "lastName": "test",
-      "dob": "2022-01-31T18:30:00.000Z",
-      "phone": "9898989898",
-      "confirmPassword": "Test@1234",
-      "address": "dfasfd",
-      "image": "",
-      "id": 5
     }
   ],
   "physician": [
@@ -207,15 +195,15 @@
       "apppintmentDate": "23/09/2021",
       "physician": "Dr John Kennedy",
       "status": "Pending",
-      "notes": "The blood pressure is normal, vitals are all normal, suggestion of healthy lifestyle changes",
-      "id": 1
+      "notes":"The blood pressure is normal, vitals are all normal, suggestion of healthy lifestyle changes",
+      "id":1
     },
     {
       "apppintmentDate": "25/09/2019",
       "physician": "Dr Jenny Doe",
       "status": "Completed",
-      "notes": "The blood pressure is normal, vitals are all normal, suggestion of healthy lifestyle changes",
-      "id": 2
+      "notes":"The blood pressure is normal, vitals are all normal, suggestion of healthy lifestyle changes",
+      "id":2
     }
   ],
   "comments": [

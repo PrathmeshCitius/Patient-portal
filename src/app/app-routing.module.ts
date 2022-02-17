@@ -9,16 +9,16 @@ import { RegistrationComponent } from "./auth/registration/registration.componen
 import { LandingComponent } from "./shared/navigation/landing/landing.component";
 import { LogoutComponent } from "./auth/logout/logout.component";
 import { PatientDetailsComponent } from "./physician/patient-details/patient-details.component";
-// import { DashboardComponent } from "./patient/patient/dashboard/dashboard.component";
 // import { SideNavbarComponent } from "./patient/patient/side-navbar/side-navbar.component";
 import { AuthGuard } from "./helpers/authguard";
-
+import { PhysicianDashbardComponent } from "./physician/physician-dashbard/physician-dashbard.component";
 const routes: Routes = [
 
 
 
   { path: "", redirectTo: 'auth/login', pathMatch: "full" },
   { path: 'patient-details', component: PatientDetailsComponent },
+  {path:'physician-dashboard', component:PhysicianDashbardComponent},
   {
     path: 'patient',canActivate: [AuthGuard] ,
     loadChildren: () => import('./patient/patient.module').then((m) => m.PatientModule)

@@ -9,7 +9,6 @@ import { Label , Color} from 'ng2-charts';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent  {
-
 lineChartData: ChartDataSets[] = [
   { data: [0,3,4,6,1,2,1], label: 'Patient visits' },
 ];
