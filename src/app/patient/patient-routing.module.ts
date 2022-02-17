@@ -22,7 +22,11 @@ const routes: Routes = [
 
     {
         path: "", component: PatientComponent,
-        children: [{
+        children: [
+         {
+            path: '', component: DashboardComponent,
+         },
+         {
             path: 'dashboard', component: DashboardComponent,
          },
          {
