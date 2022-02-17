@@ -15,6 +15,7 @@ import { ChartsModule } from 'ng2-charts';
 import { PhysicianService } from './physician/physician.service';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { FakeBackendInterceptor } from './helpers/fakebackend.interceptor';
+import { ToastContainerModule, ToastrModule } from 'ngx-toastr';
 
 
 const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -49,7 +50,8 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BrowserAnimationsModule,
     AdminModule,
     PerfectScrollbarModule,
-    ChartsModule
+    ChartsModule,
+    ToastrModule.forRoot()
   ],
 
   providers: [PhysicianService, {
