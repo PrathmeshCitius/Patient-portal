@@ -12,12 +12,11 @@ export class AppComponent implements OnInit {
 
   // users=[{'id':1,"name":"abc"}];
   constructor(
-    private route:Router
+
   ){}
 
   ngOnInit(): void {
   
-    this.route.navigate(['/','physician']);
   }
 
     

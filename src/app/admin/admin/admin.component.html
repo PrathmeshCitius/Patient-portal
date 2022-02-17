@@ -1,20 +1,166 @@
 <!-- 
-<app-header></app-header> -->
-<div class="container-fluid">
-  <app-toolbar [inputSideNav]="sideNav"></app-toolbar>
-  <mat-sidenav-container>
-    <mat-sidenav #sideNav mode="side" opened>      <!-- <mat-nav-list> -->
-        <app-side-nav-bar>
-     
-        </app-side-nav-bar>
-      <!-- </mat-nav-list> -->
-    </mat-sidenav>
-    <mat-sidenav-content>
-        <!-- <div class=""> -->
-            <router-outlet></router-outlet>
-        <!-- </div> -->
-     
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+<mat-toolbar color="primary" class="example-toolbar">
+	<button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
+	<h1 class="example-app-name">Welcome Admin</h1>
+</mat-toolbar>
+<mat-sidenav-container class="example-container" autosize>
+	<mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" >
+		<mat-nav-list>
+			<mat-list-item> 
+				<span class="full-width" *ngIf="isExpanded">
+          <a [routerLink]="['./dashboard']">
+            Dashboard</a>
+    
+        </span>
+				<mat-icon mat-list-icon>home</mat-icon>
+
+        
+			
+			</mat-list-item>
+
+      <mat-list-item>
+
+        <span class="full-width" *ngIf="isExpanded">
+          <a [routerLink]="['./manageuser']">
+    
+            Manage Users</a>
+    
+        </span>
+        <mat-icon mat-list-icon>group</mat-icon>
+      </mat-list-item>
+		
+		</mat-nav-list>
+    <mat-nav-list>
+</mat-nav-list>
+	</mat-sidenav>
+
+	<div class="example-sidenav-content">
+		<router-outlet></router-outlet>
+	</div>
+
+</mat-sidenav-container>
+
+ -->
+<!-- 
+ <mat-toolbar color="primary" >
+  <mat-toolbar-row>
+<button mat-icon-button><mat-icon>menu</mat-icon></button>
+<span>Welcome Admin</span>
+  <div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+      <ul fxLayout="row" fxLayoutGap="20px">
+          <li>
+              <button mat-icon-button>
+              <mat-icon>settings</mat-icon>
+              </button>
+          </li>
+          <li>
+              <button mat-icon-button>
+              <mat-icon>help_outline</mat-icon>
+              </button>
+          </li>
+          <li>
+              <button mat-button [matMenuTriggerFor]="menu">
+              <mat-icon>person_outline</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                  <button mat-menu-item>
+                      <mat-icon>exit_to_app</mat-icon>
+                      Signout
+                  </button>
+              </mat-menu>
+          </li>
+      </ul>
   </div>
+</mat-toolbar-row>
+</mat-toolbar>
+<mat-drawer-container>
+  <mat-drawer mode="side" opened>
+<mat-nav-list>
+  <div class="profile-card">
+    <div class="header">
+      <h2>Patient</h2>
+      
+    </div>
+    <img src="" alt="image">
+  </div>
+  <mat-divider></mat-divider>
+  <!-- <h2 MatSubheader>Pages</h2>
+  <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['./dashboard']">Dashboard</a>
+  <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['./manageuser']">Manage Users</a>
+
+  <mat-divider></mat-divider> -->
+
+    <!-- <h2 MatSubheader> Tools</h2>
+    <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['./dashboard']">
+    <mat-icon>home</mat-icon>
+    Dashboard
+  </a>
+
+   <span class="full-width" *ngIf="isExpanded">
+        <a [routerLink]="['./dashboard']">
+          Dashboard</a>
+  
+      </span>
+      <mat-icon mat-list-icon>home</mat-icon>
+
+  <a mat-list-item routerLinkActive="list-item-active" [routerLink]="['./manageuser']">
+    <mat-icon>group</mat-icon>
+    Manage Users
+  </a>
+  
+  
+</mat-nav-list>
+  </mat-drawer>
+  <mat-drawer-content>
+
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>  -->
+
+<mat-toolbar color="primary" class="example-toolbar">
+	<button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
+	<h1 class="example-app-name">Welcome Admin</h1>
+</mat-toolbar>
+<mat-sidenav-container class="example-container" autosize>
+<mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" >
+  <mat-nav-list>
+    <mat-list-item> 
+      <span class="full-width" *ngIf="isExpanded">
+        <a [routerLink]="['./dashboard']">
+          Dashboard</a>
+  
+      </span>
+      <mat-icon mat-list-icon>home</mat-icon>
+
+      
+    
+    </mat-list-item>
+
+    <mat-list-item>
+
+      <span class="full-width" *ngIf="isExpanded">
+        <a [routerLink]="['./manageuser']">
+  
+          Manage Users</a>
+  
+      </span>
+      <mat-icon mat-list-icon>group</mat-icon>
+    </mat-list-item>
+  
+  </mat-nav-list>
+  <mat-nav-list>
+</mat-nav-list>
+</mat-sidenav>
+
+<div class="example-sidenav-content">
+  <router-outlet></router-outlet>
+</div>
+
+</mat-sidenav-container>
+<mat-divider>
+<footer>
+  &Copy: All rights Reserved
+</footer>
+</mat-divider>
+
 

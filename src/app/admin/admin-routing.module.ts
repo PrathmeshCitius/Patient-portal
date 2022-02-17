@@ -7,6 +7,7 @@ import { ManageAppointmentComponent } from './manage-appointment/manage-appointm
 import { ManagePatientRecordsComponent } from './manage-patient-records/manage-patient-records.component';
 import { ManagePhysicianRecordsComponent } from './manage-physician-records/manage-physician-records.component';
 import { AdminComponent } from './admin/admin.component';
+import { ManageuserComponent } from './manageuser/manageuser.component';
 const routes: Routes = [
     {
         path: "", component: AdminComponent,
@@ -14,6 +15,9 @@ const routes: Routes = [
         
          {
             path: 'dashboard', component: DashboardComponent,
+         },
+         {
+            path: 'manageuser', component: ManageuserComponent,
          },
          {
             path: 'managepatientrecords', component: ManagePatientRecordsComponent,

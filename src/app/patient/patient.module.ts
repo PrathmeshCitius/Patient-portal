@@ -56,7 +56,7 @@ import { AppointmentDetailsComponent } from './patient/appointment-history/appoi
     ReactiveFormsModule,
     HttpClientModule,
     ChartsModule,
-    YouTubePlayerModule
+    YouTubePlayerModule, 
   ],
   schemas: [],
 

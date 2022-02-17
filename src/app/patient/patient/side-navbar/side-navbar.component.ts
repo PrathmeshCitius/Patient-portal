@@ -7,11 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideNavbarComponent implements OnInit {
 
-  showMe:boolean = true;
-  toggleSidebar(){
-    this.showMe = !this.showMe;
-  }
-
   patientId: number;
   showMyContainer;
   constructor() { }

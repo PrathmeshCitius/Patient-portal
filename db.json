@@ -1,14 +1,15 @@
 {
   "users": [
     {
-      "email": "prinu9@gmail.com",
-      "password": "$2a$10$E0L.vBvxQO6lLUPN9moYVeh1.FYYJu.j.M8R8UjmZlvP./CNiDE.u",
       "firstName": "prinu",
       "lastName": "pillai",
+      "email": "prinu9@gmail.com",
       "dob": "1993-09-14T18:30:00.000Z",
       "phone": "9823457234",
+      "password": "$2a$10$s8hw9Poi2GFj/d1Z9DsVUuNrWLNRvecKHUmitKEOGnY/c0keDitGO",
       "confirmPassword": "P@1234",
-      "address": "",
+      "address": "Pune",
+      "image": "",
       "id": 1
     },
     {
@@ -23,49 +24,112 @@
       "id": 2
     },
     {
-      "email": "chetanjaiswal@gmail.com.com",
-      "password": "$2a$10$anoXhfknXVki2H/jAwxR8.KxLgDpP/Aj0W6SlFminQougsQztnsAm",
-      "firstName": "Chetan",
-      "lastName": "Jaiswal",
-      "dob": "1993-09-14T18:30:00.000Z",
-      "phone": "9232235464",
-      "confirmPassword": "P#1234",
-      "address": "Nagpur",
-      "role": "physician",
+      "email": "aman@gmail.com",
+      "password": "$2a$10$77f.CBXpfAhVb.gbLR2GHOS/mRdr.wmWq0N7ri3CMqPQRRdoOsnRW",
+      "firstName": "Aman",
+      "lastName": "Kumar",
+      "dob": "2022-01-31T18:30:00.000Z",
+      "phone": "9898989898",
+      "confirmPassword": "Aman@123",
+      "address": "Ranchi",
       "id": 3
+    },
+    {
+      "email": "sonia@gmail.com",
+      "password": "$2a$10$tW20n2iwU2AKQkJUxEms5uxC0r1gqqvWrspOykG2mrahGDZ.XnQ..",
+      "firstName": "Sonia",
+      "lastName": "Jones",
+      "dob": "2022-02-14T18:30:00.000Z",
+      "phone": "9898989898",
+      "confirmPassword": "Sonia@123",
+      "address": "New York City",
+      "id": 4
+    },
+    {
+      "email": "seema@gmail.com",
+      "password": "$2a$10$ZFTmguMxwCCsfUBuXAynyeFQ12eWZYtyW6E3MJmmY5.mqm6yRQL9C",
+      "firstName": "Seema",
+      "lastName": "H",
+      "dob": "2022-02-02T18:30:00.000Z",
+      "phone": "7866645432",
+      "confirmPassword": "S@1234",
+      "address": "Pune",
+      "image": "",
+      "id": 5
     }
   ],
   "physician": [
     {
-      "name": "Prathmesh",
-      "bp": "120/80",
-      "pulse": "93",
-      "resp": "72",
-      "temp": "98",
-      "height": "170",
-      "weight": "70",
-      "id": 1
+      "date": "2022-02-01",
+      "email": "jen@gmail.com",
+      "name": "Jen",
+      "bp": "110/110",
+      "pulse": "80 bpm",
+      "resp": "Normal",
+      "temp": "98 deg",
+      "height": "180 cm",
+      "weight": "78 kg",
+      "id": 7
     },
     {
-      "name": "Prathmesh K",
-      "bp": "120/80",
-      "pulse": "93",
-      "resp": "72",
-      "temp": "98",
-      "height": "170",
-      "weight": "70",
-      "id": 2
+      "date": "2022-02-07",
+      "email": "der@gmail.com",
+      "name": "Der",
+      "bp": "130/110",
+      "pulse": "80 bpm",
+      "resp": "Normal",
+      "temp": "98 deg",
+      "height": "176 cm",
+      "weight": "80 kg",
+      "id": 8
     },
     {
-      
-      "name": "",
-      "bp": "",
-      "pulse": "",
-      "resp": "",
-      "temp": "",
-      "height": "",
-      "weight": "",
-      "id": 3
+      "date": "2022-02-17",
+      "email": "sonia@gmail.com",
+      "name": "Sonia",
+      "bp": "140/110",
+      "pulse": "90 bpm",
+      "resp": "Normal",
+      "temp": "95 deg",
+      "height": "180 cm",
+      "weight": "80 kg",
+      "id": 9
+    },
+    {
+      "date": "2022-02-02",
+      "email": "aman@gmail.com",
+      "name": "AK",
+      "bp": "120/110",
+      "pulse": "60 bps",
+      "resp": "Normal",
+      "temp": "96 deg",
+      "height": "180 cm",
+      "weight": "80 kg",
+      "id": 10
+    },
+    {
+      "date": "2022-02-25",
+      "email": "aman@gmail.com",
+      "name": "Kumar",
+      "bp": "130/110",
+      "pulse": "Normal",
+      "resp": "Normal",
+      "temp": "97 deg",
+      "height": "180 cm",
+      "weight": "98 kg",
+      "id": 11
+    },
+    {
+      "date": "2021-11-11",
+      "email": "sonia@gmail.com",
+      "name": "Sonia ",
+      "bp": "135/110",
+      "pulse": "70 bpm",
+      "resp": "Normal",
+      "temp": "98 deg",
+      "height": "180cm",
+      "weight": "78 kg",
+      "id": 12
     }
   ],
   "patientdemo": [
@@ -86,7 +150,26 @@
       "id": 1
     }
   ],
-  "medicationList": [],
+  "medicationList": [
+    {
+      "id": 15,
+      "currentmedications": "combiflame123",
+      "otc": "none",
+      "hvma": "vitamin c",
+      "socialdrugs": "dolo",
+      "drugsallergies": "none",
+      "otherallergies": "none"
+    },
+    {
+      "currentmedications": "c1",
+      "otc": "c",
+      "hvma": "cc",
+      "socialdrugs": "c",
+      "drugsallergies": "c",
+      "otherallergies": "c",
+      "id": 16
+    }
+  ],
   "immunization_details": [
     {
       "id": 1,
@@ -95,28 +178,10 @@
       "date": "10/09/2021"
     },
     {
-      "vaccineName": "aa",
-      "doses": "aa",
-      "date": "2022-02-16T18:30:00.000Z",
-      "id": 2
-    },
-    {
-      "vaccineName": "aaaaa",
-      "doses": "ssss",
-      "date": "2022-02-21T18:30:00.000Z",
-      "id": 3
-    },
-    {
       "vaccineName": "Flu-Dengue",
       "doses": "aa",
       "date": "2022-02-24T18:30:00.000Z",
       "id": 4
-    },
-    {
-      "vaccineName": "aaaa",
-      "doses": "aaa",
-      "date": "2022-02-11T18:30:00.000Z",
-      "id": 5
     },
     {
       "vaccineName": "Maleria",
@@ -125,28 +190,32 @@
       "id": 6
     },
     {
-      "vaccineName": "aaa",
-      "doses": "aaa",
-      "date": "2021-12-22T18:30:00.000Z",
-      "id": 7
+      "vaccineName": "Maleria Flu",
+      "doses": "2",
+      "date": "2022-01-31T18:30:00.000Z",
+      "id": 9
     },
     {
-      "vaccineName": "bbb",
-      "doses": "bbb",
-      "date": "2021-12-22T18:30:00.000Z",
-      "id": 8
+      "id": 10,
+      "vaccineName": "Polio Vaccine",
+      "doses": "5",
+      "date": "2022-02-04T18:30:00.000Z"
+    }
+  ],
+  "appointment-history": [
+    {
+      "apppintmentDate": "23/09/2021",
+      "physician": "Dr John Kennedy",
+      "status": "Pending",
+      "notes": "The blood pressure is normal, vitals are all normal, suggestion of healthy lifestyle changes",
+      "id": 1
     },
     {
-      "id": 7,
-      "vaccineName": "fff",
-      "doses": "ff",
-      "date": "2022-02-07T18:30:00.000Z"
-    },
-    {
-      "vaccineName": "VN",
-      "doses": "12",
-      "date": "2022-02-19T18:30:00.000Z",
-      "id": 8
+      "apppintmentDate": "25/09/2019",
+      "physician": "Dr Jenny Doe",
+      "status": "Completed",
+      "notes": "The blood pressure is normal, vitals are all normal, suggestion of healthy lifestyle changes",
+      "id": 2
     }
   ],
   "comments": [
