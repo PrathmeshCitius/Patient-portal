@@ -190,6 +190,22 @@
       "date": "2022-02-04T18:30:00.000Z"
     }
   ],
+  "appointment-history": [
+    {
+      "apppintmentDate": "23/09/2021",
+      "physician": "Dr John Kennedy",
+      "status": "Pending",
+      "notes":"The blood pressure is normal, vitals are all normal, suggestion of healthy lifestyle changes",
+      "id":1
+    },
+    {
+      "apppintmentDate": "25/09/2019",
+      "physician": "Dr Jenny Doe",
+      "status": "Completed",
+      "notes":"The blood pressure is normal, vitals are all normal, suggestion of healthy lifestyle changes",
+      "id":2
+    }
+  ],
   "comments": [
     {
       "id": 1,
