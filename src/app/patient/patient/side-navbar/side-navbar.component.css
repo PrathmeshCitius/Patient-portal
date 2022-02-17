@@ -2,3 +2,9 @@
     list-style-type :none;
     xdisplay: none;
 } */
+/* .side-bar-sec{
+    background-color: rgb(214, 214, 235);
+} */
+.fa-solid {
+    color: blue;
+}

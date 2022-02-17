@@ -21,17 +21,12 @@ import { RouterModule } from '@angular/router';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
-
 import timeGridPlugin from '@fullcalendar/timegrid';
-
 import { AppointmentDialogComponent } from './patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
-
-//import { YouTubePlayerModule } from "@angular/youtube-player";
 import {MatIconModule} from '@angular/material/icon';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 
-
-
+import { ChartsModule } from 'ng2-charts';
 FullCalendarModule.registerPlugins([ 
   interactionPlugin,
   dayGridPlugin,
@@ -69,7 +64,8 @@ FullCalendarModule.registerPlugins([
     FullCalendarModule,
     HttpClientModule, 
     YouTubePlayerModule,
-    MatIconModule
+    MatIconModule,
+ ChartsModule
     
   ],
   schemas: [],
@@ -80,6 +76,7 @@ FullCalendarModule.registerPlugins([
     MedicationAndAllergiesComponent,
     DialogComponent,
     ScheduleAppointmentComponent,
+    DashboardComponent
   ]
 })
 export class PatientModule {

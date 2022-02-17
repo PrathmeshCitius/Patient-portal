@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PhysicianSidebarComponent implements OnInit {
 
   constructor() { }
-  shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
+  //shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
   ngOnInit(): void {
   }
 

@@ -1,7 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@fullcalendar/common/main.css';
-@import '~@fullcalendar/daygrid/main.css';
-@import '~@fullcalendar/timegrid/main.css';
+
 html, body { height: 100%; }
 body { margin: 0;font-family: 'Inter', sans-serif;}
 a, p, div, span {
@@ -14,7 +12,6 @@ a, p, div, span {
     margin:0;
 }
 .side-bar-sec{
-    height: 100vh;
     background-color: #fff;
     height: 100vh;
     width: 90%;
@@ -50,11 +47,46 @@ a, p, div, span {
 .logout{
     border: none;
     line-height: 1.2;
+    text-align: center;
+    margin-right: 10px;
 }
 .logout .fa-solid{
-    color:#fff
+    color:#fff;
+    font-size: 15px;
 }
 .logout p{
     margin: 0;
     color: #fff;
+    font-size: 12px;
+}
+.parent-logout{
+    display: flex;
+    align-items: flex-end;
+}
+.common-container{
+height: 100vh;
+overflow-y: scroll;
+}
+.logout a{
+    text-decoration: none;
+}
+/*Physican css*/
+
+
+
+.physician-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.physician-sidebar {
+  width: 25%;
+}
+
+/* .physician-dashboard {
+    width: 75%;
+} */
+.w75_{
+    width: 75%;
+
 }
