@@ -45,3 +45,37 @@ mat-sidenav {
 mat-sidenav-container {
     height: calc(100vh - 65px);
 }
+
+.sidebar {
+    min-width: 25%;
+    max-width: 25%;
+}
+
+.layout {
+    min-width: 75%;
+    max-width: 75%;
+}
+
+.layout1 {
+    max-width: 100%;
+    min-width: 100%;
+    padding: 10px 100px;
+    /* margin: 50px 50px; */
+}
+
+.toggleMenu {
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    /* text-decoration: none; */
+    outline: none;
+}
+
+.btn-check:focus+.btn, .btn:focus {
+    box-shadow: none;
+    outline: 0;
+}
+
+i {
+    font-size: 26px;
+}

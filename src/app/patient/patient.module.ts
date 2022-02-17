@@ -23,6 +23,7 @@ import { ChartsModule } from 'ng2-charts';
 import { AppointmentDialogComponent } from './patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { AppointmentDetailsComponent } from './patient/appointment-history/appointment-details/appointment-details.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -56,7 +57,8 @@ import { AppointmentDetailsComponent } from './patient/appointment-history/appoi
     ReactiveFormsModule,
     HttpClientModule,
     ChartsModule,
-    YouTubePlayerModule
+    YouTubePlayerModule, 
+    BrowserAnimationsModule
   ],
   schemas: [],
 
