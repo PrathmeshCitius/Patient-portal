@@ -13,10 +13,12 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { ChartsModule } from 'ng2-charts';
 import { PhysicianService } from './physician/physician.service';
+import { ToastrModule } from 'ngx-toastr';
+import { AppointmentDialogComponent } from './patient/patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { FakeBackendInterceptor } from './helpers/fakebackend.interceptor';
-import { ToastrModule } from 'ngx-toastr';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { HeaderComponent } from './shared/navigation/header/header.component';
 
 
 const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -62,8 +64,11 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   },
   { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
   { provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true }
-  
 ],
+ exports:[
+HeaderComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}

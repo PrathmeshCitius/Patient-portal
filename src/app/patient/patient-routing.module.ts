@@ -16,12 +16,17 @@ import { PatientVitalsComponent } from './patient/patient-vitals/patient-vitals.
 import { ScheduleAppointmentComponent } from './patient/schedule-appointment/schedule-appointment.component';
 import { FakeBackendInterceptor } from '../helpers/fakebackend.interceptor';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AppointmentDetailsComponent } from './patient/appointment-history/appointment-details/appointment-details.component';
 
 const routes: Routes = [
 
     {
         path: "", component: PatientComponent,
-        children: [{
+        children: [
+         {
+            path: '', component: DashboardComponent,
+         },
+         {
             path: 'dashboard', component: DashboardComponent,
          },
          {
@@ -32,6 +37,9 @@ const routes: Routes = [
          },
          {
             path: 'appointment-history', component: AppointmentHistoryComponent,
+         },
+         {
+            path: 'appointment-history/appointment-detail/:id', component: AppointmentDetailsComponent,
          },
          {
             path: 'demographics/:id', component: DemographicsComponent,

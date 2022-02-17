@@ -7,18 +7,31 @@ import { PhysicianSidebarComponent } from './physician-sidebar/physician-sidebar
 // import { PatientDetaiYComponent } from './patient-detai-y/patient-detai-y.component';
 import { PatientDetailsComponent } from './patient-details/patient-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
-
+import { HeaderComponent } from '../shared/navigation/header/header.component';
+import { ChartsModule } from 'ng2-charts';
+import { PhysicianDashbardComponent } from './physician-dashbard/physician-dashbard.component';
+import { RouterModule } from '@angular/router';
 @NgModule({
-  declarations: [PhysicianComponent, PhysicianSidebarComponent, PatientDetailsComponent],
+  declarations: [PhysicianComponent,
+     //HeaderComponent,
+      PhysicianSidebarComponent,
+       PatientDetailsComponent,
+      
+       PhysicianDashbardComponent],
   imports: [
     CommonModule,
     SharedModule,
     PhysicianRoutingModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ChartsModule,
+    RouterModule
   ],
   exports: [
+    PhysicianDashbardComponent,
     PhysicianComponent,
+    PhysicianSidebarComponent,
+    HeaderComponent,
+  
   ]
 })
 export class PhysicianModule { }

@@ -15,7 +15,7 @@ import { ViewChild } from '@angular/core';
 export class PatientDetailsComponent implements OnInit {
 
   patientVitalForm: FormGroup
-  displayedColumns: string[] = ['name', 'bp', 'pulse', 'resp', 'temp', 'height', 'weight', 'action'];
+  displayedColumns: string[] = ['date','email', 'name', 'bp', 'pulse', 'resp', 'temp', 'height', 'weight', 'action'];
   dataSource!: MatTableDataSource<any>;
   onedit = false;
   onAdd = true;
@@ -27,6 +27,7 @@ export class PatientDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.patientVitalForm = this.fb.group({
+      
       name: [''],
       bp: [''],
       pulse: [''],
@@ -34,7 +35,7 @@ export class PatientDetailsComponent implements OnInit {
       temp: [''],
       height: [''],
       weight: [''],
-      id: [''],
+     // id: [''],
     })
     this.getPatientVital()
   }
@@ -61,30 +62,32 @@ export class PatientDetailsComponent implements OnInit {
   onEdit(data: any) {
     this.onedit = true;
     this.onAdd = true;
-    this.patientVitalForm.controls['name'].setValue(data.bp);
+  
+    this.patientVitalForm.controls['name'].setValue(data.name);
     this.patientVitalForm.controls['bp'].setValue(data.bp);
     this.patientVitalForm.controls['pulse'].setValue(data.pulse);
     this.patientVitalForm.controls['resp'].setValue(data.resp);
     this.patientVitalForm.controls['temp'].setValue(data.temp);
     this.patientVitalForm.controls['height'].setValue(data.height);
     this.patientVitalForm.controls['weight'].setValue(data.weight);
-    this.patientVitalForm.controls['id'].setValue(data.id);
+    // this.patientVitalForm.controls['id'].setValue(data.id);
   }
 
   updatePostPatientVital1(){
     console.log("Updated Values:", this.patientVitalForm.value)
     this.api.updatePostPatientVital(this.patientVitalForm.value.id,this.patientVitalForm.value).subscribe(res=>{
       this.getPatientVital();
-      this.patientVitalForm.reset();
+      
       // this.onedit=false;
       // this.onAdd=true;
-      alert("data updated successfully");
+      alert("Data updated successfully");
+      this.patientVitalForm.reset();
     })
   }
   onDelete(data: any) {
     this.api.deletePostPatientVital(data.id).subscribe(res => {
       this.getPatientVital();
-      alert("Row Deleted Successfully");
+      alert("Data Deleted Successfully");
     })
   }
 

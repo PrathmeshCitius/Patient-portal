@@ -43,8 +43,8 @@ export class MedicationAndAllergiesComponent implements OnInit {
           this.getAllMedication();
           alert('Added Successfully ');
         })
-        alert('Added Successfully');
-    }  
+    } 
+    this.clearFields(); 
   }
   getAllMedication(){
      this.patientService.getMedication().subscribe(res=>{

@@ -6,15 +6,16 @@
     margin:20px 50px;
 }
 
-.physician-container {
-    display: flex;
-    flex-direction: row;
-}
 
-.physician-sidebar {
-  width: 25%;
-}
+.demo-inline-calendar-card {
+    width: 300px;
+    height: auto;
+  }
+  .btn{
+    float: right;
 
-.physician-dashboard {
-    width: 75%;
-}
+  }
+  
+  .col-lg-6{
+      margin-top: auto;
+  }

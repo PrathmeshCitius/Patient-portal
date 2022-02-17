@@ -1,3 +1,8 @@
 .example-spacer {
     flex: 1 1 auto;
   }
+
+  .p-20 {
+    padding-left: 60px;
+    font-size: 24px;
+  }

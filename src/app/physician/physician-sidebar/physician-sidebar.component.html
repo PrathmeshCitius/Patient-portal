@@ -1,10 +1,16 @@
-<br><br><br>
-<p>physician-sidebar works!</p>
-<h2>physician-sidebar</h2>
 
-<mat-sidenav-container class="example-container" *ngIf="shouldRun">
-    <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
-    <mat-sidenav-content>Main content</mat-sidenav-content>
-  </mat-sidenav-container>
-  
-  <div *ngIf="!shouldRun">Please open on Stackblitz to see result</div>
+  <div class="side-bar-sec">
+    <ul>
+        <li>
+            <a [routerLink]="['./physician-dashboard']">
+                <i class="fa-solid fa-gauge" style="color:#4235f7" ></i><strong> Dashboard</strong>
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['./patient-details']">
+              <i class="fa-solid fa-user"style="color:#4235f7"></i><strong>Patient Details</strong>
+            </a>
+        </li>
+        
+    </ul>
+</div>

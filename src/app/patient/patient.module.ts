@@ -22,6 +22,7 @@ import { RouterModule } from '@angular/router';
 import { ChartsModule } from 'ng2-charts';
 import { AppointmentDialogComponent } from './patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { AppointmentDetailsComponent } from './patient/appointment-history/appointment-details/appointment-details.component';
 
 
 
@@ -42,6 +43,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     SideNavbarComponent,
     DialogComponent,
     AppointmentDialogComponent,
+    AppointmentDetailsComponent,
   ],
   entryComponents:[
     AppointmentDialogComponent
@@ -54,7 +56,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     ReactiveFormsModule,
     HttpClientModule,
     ChartsModule,
-    YouTubePlayerModule
+    YouTubePlayerModule, 
   ],
   schemas: [],
 
@@ -64,6 +66,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     MedicationAndAllergiesComponent,
     DialogComponent,
     ScheduleAppointmentComponent,
+    AppointmentDetailsComponent,
   ]
 })
 export class PatientModule {
