@@ -17,8 +17,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppointmentDialogComponent } from './patient/patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { FakeBackendInterceptor } from './helpers/fakebackend.interceptor';
-import { PhysicianComponent } from './physician/physician/physician.component';
-import { PhysicianSidebarComponent } from './physician/physician-sidebar/physician-sidebar.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './shared/navigation/header/header.component';
 
 
@@ -55,7 +54,8 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AdminModule,
     PerfectScrollbarModule,
     ChartsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    FlexLayoutModule,
   ],
 
   providers: [PhysicianService, {

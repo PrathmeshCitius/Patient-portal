@@ -1,21 +1,22 @@
 <div class="d-flex flex-row justify-content-between my-4">
-    <h1>{{physicianinfoForm.value.firstName}}'s Infrmation</h1>
+    <h1 class="common-title">{{physicianinfoForm.value.firstName}}'s Infrmation</h1>
     <button mat-raised-button color="primary" [routerLink]="['/physician-info', pId]" [queryParams]="{EditMode:true}">
-            Edit Info</button>
+        Edit Info</button>
 </div>
-
 <mat-card class="">
     <form [formGroup]="physicianinfoForm">
-    <div class="row">
-        <div class="col-md-3 d-flex flex-column">
-            <img src="../../../assets/images/doc.png" alt="" style="width:150px;height:150px;margin-right:auto;margin-left:auto">
-        
+        <div class="row">
+            <div class="col-md-3 d-flex flex-column">
+                <img src="../../../assets/images/doc.png" alt=""
+                    style="width:150px;height:150px;margin-right:auto;margin-left:auto">
+
                 <!-- <input type="file" name="file" class="inputFile mt-2" (change)="onFileSelected($event)" *ngIf="editMode" > -->
-        </div>
-        <div class="col-md-9 ">           
+            </div>
+            <div class="col-md-9 ">
                 <div class="row">
                     <div class="col-md-4">
-                        <div *ngIf="!editMode" class="card-field">First Name: {{physicianinfoForm.controls['firstName'].value}}</div>
+                        <div *ngIf="!editMode" class="card-field"><strong>First Name:</strong>
+                            {{physicianinfoForm.controls['firstName'].value}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>First Name</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="firstName">
@@ -25,7 +26,8 @@
 
                     <div class="col-md-4">
 
-                        <div *ngIf="!editMode" class="card-field"> Last Name: {{physicianinfoForm.controls['lastName'].value}}</div>
+                        <div *ngIf="!editMode" class="card-field"> <strong>Last Name:</strong>
+                            {{physicianinfoForm.controls['lastName'].value}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>Last Name:</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="lastName">
@@ -33,17 +35,19 @@
                     </div>
 
                     <div class="col-md-4">
-                        <div *ngIf="!editMode" class="card-field"> eMail: {{physicianinfoForm.controls['email'].value }}</div>
+                        <div *ngIf="!editMode" class="card-field"> <strong>Email: </strong>{{physicianinfoForm.controls['email'].value }}
+                        </div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
-                            <mat-label>eMail</mat-label>
+                            <mat-label>Email</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="email">
                         </mat-form-field>
                     </div>
-                
+
                 </div>
-                <div class="row">
+                <div class="row mt-4">
                     <div class="col-md-4">
-                        <div *ngIf="!editMode" class="card-field"> Date of Birth:{{physicianinfoForm.controls['dob'].value | date:"MM/dd/yy"}}</div>
+                        <div *ngIf="!editMode" class="card-field"> <strong>Date of
+                            Birth:</strong>{{physicianinfoForm.controls['dob'].value | date:"MM/dd/yy"}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>Date of Birth</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="dob">
@@ -52,17 +56,19 @@
 
                     <div class="col-md-4">
 
-                        <div *ngIf="!editMode" class="card-field"> Contact No: {{physicianinfoForm.controls['phone'].value}}</div>
+                        <div *ngIf="!editMode" class="card-field"> <strong>Contact No:</strong>
+                            {{physicianinfoForm.controls['phone'].value}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>Contact No:</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="phone">
                         </mat-form-field>
                     </div>
-                  
+
 
 
                     <div class="col-md-4">
-                        <div *ngIf="!editMode" class="card-field">Address: {{physicianinfoForm.controls['address'].value}}</div>
+                        <div *ngIf="!editMode" class="card-field"><strong>Address:</strong>
+                            {{physicianinfoForm.controls['address'].value}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>Address</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="address">
@@ -75,8 +81,8 @@
                 </div>
 
 
-            
+
+            </div>
         </div>
-    </div>
-</form>
+    </form>
 </mat-card>

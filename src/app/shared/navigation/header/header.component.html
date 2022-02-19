@@ -1,20 +1,21 @@
-<mat-toolbar class="header" color="primary">    
+<mat-toolbar class="header" color="primary">
+    <!-- <button class="toggleMenu btn" (click)="showMeFun()"><i class="fas fa-bars text-white"></i></button>  -->
     <span class="p-20">Patient Portal</span>
     <span class="example-spacer"></span>
-<div class="parent-logout">
-  <div class="logout mr-2"> 
-      <a href="tel:9035416239">
-      <i class="fa-solid fa-truck-medical"></i>
-      <p>Emergancy</p>
-      </a>
-  </div>
-    <button mat-menu-item (click)="logOut()" class="logout">
-      <i class="fa-solid fa-right-from-bracket"></i>
-      <p>Logout</p>
-      <!-- <mat-icon>power_settings_new</mat-icon> -->
-     
-    </button>
-  </div>
+    <div class="parent-logout">
+        <div class="logout mr-2">
+            <a href="tel:9035416239">
+                <i class="fa-solid fa-truck-medical"></i>
+                <p>Emergancy</p>
+            </a>
+        </div>
+        <button mat-menu-item (click)="logOut()" class="logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <p>Logout</p>
+            <!-- <mat-icon>power_settings_new</mat-icon> -->
+
+        </button>
+    </div>
     <!-- <mat-form-field appearance="fill">
         <mat-label>Choose an option</mat-label>
         <mat-select [disabled]="disableSelect.value">
@@ -23,4 +24,4 @@
           <mat-option value="option3">Option 3</mat-option>
         </mat-select>
       </mat-form-field> -->
-  </mat-toolbar>
+</mat-toolbar>
