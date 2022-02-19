@@ -24,24 +24,24 @@
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>First Name</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="firstName">
-                            <mat-hint>Hint</mat-hint>
+                          
                         </mat-form-field>
 
                     </div>
                     <div class="col-md-4">
-                        <div *ngIf="!editMode" class="card-field"> Last Name: {{profileForm.controls['email'].value}}</div>
+                        <div *ngIf="!editMode" class="card-field"> Last Name: {{profileForm.controls['lastName'].value}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>Last Name</mat-label>
-                            <input matInput placeholder="Placeholder" formControlName="email">
-                            <mat-hint>Hint</mat-hint>
+                            <input matInput placeholder="Placeholder" formControlName="lastName">
+                         
                         </mat-form-field>
                     </div>
                     <div class="col-md-4">
-                        <div *ngIf="!editMode" class="card-field"> Date of Birth:{{profileForm.controls['dob'].value}}</div>
+                        <div *ngIf="!editMode" class="card-field"> Date of Birth:{{profileForm.controls['dob'].value  | date:"MM/dd/yy"}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>Date of Birth</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="dob">
-                            <mat-hint>Hint</mat-hint>
+                        
                         </mat-form-field>
                     </div>
 
@@ -59,11 +59,11 @@
                         </mat-form-field>
                     </div> -->
                     <div class="col-md-4">
-                        <div *ngIf="!editMode" class="card-field"> Email: {{profileForm.controls['address'].value}}</div>
+                        <div *ngIf="!editMode" class="card-field"> Address: {{profileForm.controls['address'].value}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>Address</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="address">
-                            <mat-hint>Hint</mat-hint>
+                           
                         </mat-form-field>
                     </div>
                     <div class="col-md-4">
@@ -72,7 +72,7 @@
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>Mobile</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="phone">
-                            <mat-hint>Hint</mat-hint>
+                            
                         </mat-form-field>
                     </div>
 
