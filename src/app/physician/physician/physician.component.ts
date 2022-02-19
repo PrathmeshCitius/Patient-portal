@@ -8,5 +8,15 @@ import { Component} from '@angular/core';
 })
 export class PhysicianComponent 
   {
- 
-}
+    chart:any;
+    state: string = "show";
+     constructor() { }
+  
+    showMe = true;
+  
+    showMeFun() { 
+      setTimeout(() => {
+        this.showMe = !this.showMe;
+      }, 300);
+  
+}}

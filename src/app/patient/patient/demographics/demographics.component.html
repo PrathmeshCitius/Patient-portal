@@ -2,8 +2,9 @@
 	<h1 class="common-title">Patient Demographic</h1>
 </div>
 <div class="row mainContainers">
+	<mat-card>
 	<div class="col-12">
-		<div class="card">
+		<div class="">
 			<div class="card-body">
 				<h4 class="card-title"><span></span></h4>
 
@@ -37,7 +38,7 @@
 								<input matInput [matDatepicker]="picker" formControlName="dob">
 								<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
 								<mat-datepicker #picker></mat-datepicker>
-							  </mat-form-field>
+							</mat-form-field>
 
 							<div *ngIf="!f.dob.valid && (f.dob.dirty ||f.dob.touched || submitted)" class="error-msg">
 								DOB is required
@@ -45,12 +46,12 @@
 						</div>
 
 						<div class="form-group m-b-10 col-lg-6">
-						
+
 							<mat-radio-group aria-label="Select an option" formControlName="gender">
 								<mat-radio-button value="male">Male</mat-radio-button>
 								<mat-radio-button value="female">Female</mat-radio-button>
-							  </mat-radio-group>
-							
+							</mat-radio-group>
+
 
 
 							<div *ngIf="!f.gender.valid && (f.gender.dirty ||f.gender.touched || submitted)"
@@ -150,8 +151,9 @@
 
 						</div>
 
-						<div class="col-md-12 m-b-ft" align="center" style="margin-bottom:200px;">
-							<button type="submit" class="btn btn-success" style="margin:10px;">
+						<div class="col-md-12 m-b-ft">
+							<button mat-raised-button color="primary" style="margin-right:10px" type="submit"
+								style="margin:10px;">
 								<span>Submit</span>
 							</button>
 
@@ -164,4 +166,5 @@
 			</div>
 		</div>
 	</div>
+	</mat-card>
 </div>

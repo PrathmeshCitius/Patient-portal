@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { PhysicianService } from '../physician.service';
-import { MatPaginator } from '@angular/material/paginator';
-import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-import { ViewChild } from '@angular/core';
-import { formatDate } from '@angular/common';
+
+
+
 export interface PeriodicElement {
   appdate: string;
   patientname:string;
@@ -14,10 +13,7 @@ export interface PeriodicElement {
   appointment:string
 }
 
-const ELEMENT_DATA: PeriodicElement[] = [
-  {appdate: "1/1/22", patientname: 'Prathmesh', title: 'Fever check', status: 'Done',appointment:'view'},
 
-];
 @Component({
   selector: 'app-patient-details',
   templateUrl: './patient-details.component.html',
@@ -25,13 +21,26 @@ const ELEMENT_DATA: PeriodicElement[] = [
 })
 
 export class PatientDetailsComponent implements OnInit {
-  date = formatDate(new Date(), 'dd/MM/yyyy', 'en-US');
   displayedColumns: string[] = ['appdate', 'patientname', 'title', 'status', 'appointment'];
-  dataSource = ELEMENT_DATA;
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
-}
+  dataSource!: MatTableDataSource<any>;
+
  
 
+  constructor(private fb: FormBuilder, private physicianService: PhysicianService) {}
+
+  ngOnInit(): void {
+    this.getAllPhysiciandata();
+  }
+
+  
+  getAllPhysiciandata(){
+    // alert();
+     this.physicianService.getPhysician().subscribe(res=>{
+       alert();
+      // console.log("all data:",res);
+     
+       this.dataSource=new MatTableDataSource(res);
+       console.log("all data:",res);
+     })}
+}
 

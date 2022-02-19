@@ -1,9 +1,8 @@
 <div class="d-flex flex-row justify-content-between my-4">
-    <h1>{{physicianinfoForm.value.firstName}}'s Infrmation</h1>
+    <h1 class="common-title">{{physicianinfoForm.value.firstName}}'s Infrmation</h1>
     <button mat-raised-button color="primary" [routerLink]="['/physician-info', pId]" [queryParams]="{EditMode:true}">
             Edit Info</button>
 </div>
-
 <mat-card class="">
     <form [formGroup]="physicianinfoForm">
     <div class="row">

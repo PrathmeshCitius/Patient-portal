@@ -11,13 +11,15 @@ import { ChartsModule } from 'ng2-charts';
 import { PhysicianDashbardComponent } from './physician-dashbard/physician-dashbard.component';
 import { RouterModule } from '@angular/router';
 import { PhysicianinfoComponent } from './physicianinfo/physicianinfo.component';
+// import { PhysicianMasterComponent } from './physician-master/physician-master.component';
 @NgModule({
   declarations: [PhysicianComponent,
      //HeaderComponent,
       PhysicianSidebarComponent,
        PatientDetailsComponent,
        PhysicianDashbardComponent,
-      PhysicianinfoComponent
+      PhysicianinfoComponent,
+      // PhysicianMasterComponent
     ],
   imports: [
     CommonModule,
