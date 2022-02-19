@@ -5,7 +5,19 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ViewChild } from '@angular/core';
+import { formatDate } from '@angular/common';
+export interface PeriodicElement {
+  appdate: string;
+  patientname:string;
+  title:string;
+  status:string;
+  appointment:string
+}
 
+const ELEMENT_DATA: PeriodicElement[] = [
+  {appdate: "1/1/22", patientname: 'Prathmesh', title: 'Fever check', status: 'Done',appointment:'view'},
+
+];
 @Component({
   selector: 'app-patient-details',
   templateUrl: './patient-details.component.html',
@@ -13,94 +25,13 @@ import { ViewChild } from '@angular/core';
 })
 
 export class PatientDetailsComponent implements OnInit {
-
-  patientVitalForm: FormGroup
-  displayedColumns: string[] = ['date','email', 'name', 'bp', 'pulse', 'resp', 'temp', 'height', 'weight', 'action'];
-  dataSource!: MatTableDataSource<any>;
-  onedit = false;
-  onAdd = true;
-
-  @ViewChild(MatPaginator) paginator!: MatPaginator;
-  @ViewChild(MatSort) sort!: MatSort;
-  constructor(private api: PhysicianService, private fb: FormBuilder) {
-  }
-
+  date = formatDate(new Date(), 'dd/MM/yyyy', 'en-US');
+  displayedColumns: string[] = ['appdate', 'patientname', 'title', 'status', 'appointment'];
+  dataSource = ELEMENT_DATA;
   ngOnInit(): void {
-    this.patientVitalForm = this.fb.group({
-      
-      name: [''],
-      bp: [''],
-      pulse: [''],
-      resp: [''],
-      temp: [''],
-      height: [''],
-      weight: [''],
-     // id: [''],
-    })
-    this.getPatientVital()
+    throw new Error('Method not implemented.');
   }
-
-  addPatientVital() {
-    this.api.postPatientVital(this.patientVitalForm.value).subscribe(res => {
-      this.getPatientVital();
-      this.patientVitalForm.reset();
-      alert("data addedd sucessfully");
-      console.log(res);
-    })
-  }
-
-  getPatientVital() {
-    this.api.getPatientVital().subscribe(res => {
-      this.dataSource = new MatTableDataSource(res);
-      this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;
-      console.log(this.dataSource)
-      console.log("Get Response:", res);
-    })
-  }
-
-  onEdit(data: any) {
-    this.onedit = true;
-    this.onAdd = true;
-  
-    this.patientVitalForm.controls['name'].setValue(data.name);
-    this.patientVitalForm.controls['bp'].setValue(data.bp);
-    this.patientVitalForm.controls['pulse'].setValue(data.pulse);
-    this.patientVitalForm.controls['resp'].setValue(data.resp);
-    this.patientVitalForm.controls['temp'].setValue(data.temp);
-    this.patientVitalForm.controls['height'].setValue(data.height);
-    this.patientVitalForm.controls['weight'].setValue(data.weight);
-    // this.patientVitalForm.controls['id'].setValue(data.id);
-  }
-
-  updatePostPatientVital1(){
-    console.log("Updated Values:", this.patientVitalForm.value)
-    this.api.updatePostPatientVital(this.patientVitalForm.value.id,this.patientVitalForm.value).subscribe(res=>{
-      this.getPatientVital();
-      
-      // this.onedit=false;
-      // this.onAdd=true;
-      alert("Data updated successfully");
-      this.patientVitalForm.reset();
-    })
-  }
-  onDelete(data: any) {
-    this.api.deletePostPatientVital(data.id).subscribe(res => {
-      this.getPatientVital();
-      alert("Data Deleted Successfully");
-    })
-  }
-
-
-  clearFields() {
-    this.patientVitalForm.reset();
-  }
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-    if (this.dataSource.paginator) {
-      this.dataSource.paginator.firstPage();
-    }
-  }
-
 }
+ 
+
+

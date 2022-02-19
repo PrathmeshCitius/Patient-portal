@@ -63,10 +63,7 @@ a, p, div, span {
     display: flex;
     align-items: flex-end;
 }
-.common-container{
-height: 100vh;
-overflow-y: scroll;
-}
+
 .logout a{
     text-decoration: none;
 }
@@ -89,4 +86,74 @@ overflow-y: scroll;
 .w75_{
     width: 75%;
 
+}
+.common-title{
+    margin:0 !important;
+    font-size: 25px !important;
+    font-weight: 500 !important;
+}
+.layout{
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+/* width */
+.layout::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .layout::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #fff; 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  .layout::-webkit-scrollbar-thumb {
+    background: #8b98e6; 
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  .layout::-webkit-scrollbar-thumb:hover {
+    background: #1d32a8; 
+  }
+  .download_ a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+  }
+@media (max-width:600px){
+    .side-bar-sec strong{
+        display: none;
+    }
+    .side-bar-sec ul li a{
+        padding: 1rem;
+    }
+    .sidebar{
+        min-width: 17% !important;
+        max-width: 17%  !important;
+    }
+    .p-20{
+        font-size: 16px !important;
+    }
+    .toggleMenu{
+        top: 10px !important;
+        left: 3px !important;
+    }
+    .toggleMenu i{
+        font-size: 20px !important;
+    }
+    .p-20{
+        padding-left: 35px !important;
+    }
+    .layout1{
+        padding: 10px !important;
+    }
+    .yt-vi{
+        width: 100%  !important;
+    }
+    .common-title{
+        font-size: 20px !important;
+    }
 }
