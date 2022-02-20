@@ -21,7 +21,7 @@ import { RouterModule } from '@angular/router';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
-
+import { DateTimePickerModule } from "@syncfusion/ej2-angular-calendars";
 import timeGridPlugin from '@fullcalendar/timegrid';
 
 import { AppointmentDialogComponent } from './patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
@@ -29,7 +29,7 @@ import { AppointmentDialogComponent } from './patient/schedule-appointment/appoi
 //import { YouTubePlayerModule } from "@angular/youtube-player";
 import {MatIconModule} from '@angular/material/icon';
 import { YouTubePlayerModule } from '@angular/youtube-player';
-
+import { ScheduleModule,RecurrenceEditorModule,DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService } from '@syncfusion/ej2-angular-schedule';
 
 
 FullCalendarModule.registerPlugins([ 
@@ -69,11 +69,14 @@ FullCalendarModule.registerPlugins([
     FullCalendarModule,
     HttpClientModule, 
     YouTubePlayerModule,
-    MatIconModule
+    MatIconModule,
+    ScheduleModule,
+    RecurrenceEditorModule,
+    DateTimePickerModule
     
   ],
   schemas: [],
-
+  providers:[DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService],
   exports: [
     PatientComponent,
     ImmunizationDetailsComponent,

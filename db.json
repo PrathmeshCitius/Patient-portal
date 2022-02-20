@@ -1,4 +1,22 @@
 {
+  "eventList": [
+    {
+      "Subject": "doctor appointment",
+      "selectphysician": "Dr Satish Shah",
+      "discription": "M",
+      "StartTime": "2022-02-20T18:30:00.000Z",
+      "EndTime": "2022-02-21T07:00:00.000Z",
+      "id": 1
+    },
+    {
+      "Subject": "snehal",
+      "selectphysician": "Dr Chetan Jaiswal",
+      "discription": "checkup",
+      "StartTime": "2022-02-21T18:30:00.000Z",
+      "EndTime": "2022-02-22T07:00:00.000Z",
+      "id": 2
+    }
+  ],
   "users": [
     {
       "email": "prinu9@gmail.com",

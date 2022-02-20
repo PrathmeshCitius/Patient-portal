@@ -18,7 +18,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { AppointmentDialogComponent } from './patient/patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { FakeBackendInterceptor } from './helpers/fakebackend.interceptor';
-
+import { ScheduleModule,RecurrenceEditorModule,DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService } from '@syncfusion/ej2-angular-schedule';
 
 const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
@@ -52,6 +52,8 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BrowserAnimationsModule,
     AdminModule,
     PerfectScrollbarModule,
+    ScheduleModule,
+    RecurrenceEditorModule ,
     ToastrModule.forRoot(),
   ],
 
@@ -60,7 +62,8 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     useValue: P_SCROLLBAR_CONFIG, 
   },
   { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-  { provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true }
+  { provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true },
+  DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService
   
 ],
   bootstrap: [AppComponent]
