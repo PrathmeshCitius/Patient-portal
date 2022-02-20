@@ -1,13 +1,13 @@
+<div class="d-flex flex-row justify-content-between my-4">
+    <h1 class="common-title">Schedule Appointment</h1>
+</div>
 <div class="container">
-
     <mat-card>
         <div class="d-flex justify-content-start pb-3">
          <button mat-raised-button color="primary" style="margin-right:10px" (click)="openDialog()" >Book
                 Appointment</button>
         </div>
-        <hr><div #calendar>
-        </div>
-        <!-- <full-calendar [options]="calendarOptions" #calendar></full-calendar> -->
-        <!-- <full-calendar [options]="calendarOptions" #calendar></full-calendar> -->
-    </mat-card>
+    
+<ejs-schedule  #scheduleObj height="100vh" [currentView]="setView" [selectedDate]='selectedDate' [eventSettings]='eventSettings' ></ejs-schedule>
+</mat-card>
 </div>

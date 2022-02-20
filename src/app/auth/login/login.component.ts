@@ -54,6 +54,7 @@ export class LoginComponent implements OnInit {
          
       // })
       this.notificationService.showSuccess("Login Successful", "User");
+      console.log("currentuser",JSON.stringify(res))
       this.loginForm.reset();
       this.router.navigateByUrl('/patient');
       }

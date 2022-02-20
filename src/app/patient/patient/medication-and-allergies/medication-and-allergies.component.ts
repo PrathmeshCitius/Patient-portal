@@ -92,6 +92,6 @@ export class MedicationAndAllergiesComponent implements OnInit {
   if (this.dataSource.paginator) {
     this.dataSource.paginator.firstPage();
   }
-}
+} 
 }
  

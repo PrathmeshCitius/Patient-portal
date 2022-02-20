@@ -25,7 +25,7 @@ export class PatientComponent implements OnInit {
 
   showMe = true;
 
-  showMeFun() {
+  showMeFun() { 
     setTimeout(() => {
       this.showMe = !this.showMe;
     }, 300);

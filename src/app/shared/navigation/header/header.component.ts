@@ -16,7 +16,16 @@ export class HeaderComponent implements OnInit {
     private router: Router,
     private gs: GlobalService
   ) { }
+  showMe = true;
 
+  showMeFun() { 
+    setTimeout(() => {
+      this.showMe = !this.showMe;
+    }, 300);
+
+    // this.state = (this.state === "show" ? "hide":"show")
+
+  }
   ngOnInit(): void {
   }
 

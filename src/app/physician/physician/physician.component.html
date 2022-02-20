@@ -1,16 +1,24 @@
-<app-header></app-header>
-<div class="row">
+<!-- <app-header></app-header>
+<div class="row content-area">
   <div class="col-md-3">   <app-physician-sidebar></app-physician-sidebar></div>
   <div class="col-md-9"> <router-outlet></router-outlet></div>
-</div>
-<!-- 
-  <div class="physician-sidebar">
-    <app-physician-sidebar></app-physician-sidebar>
-    
-  </div>
-  <div>
-    <router-outlet></router-outlet>
-  </div>
-    -->
+</div> -->
+    <app-header></app-header>
+<div class="container-fluid content-area pl-0" >
+    <button class="toggleMenu btn" (click)="showMeFun()"><i class="fas fa-bars text-white"></i></button>
+    <div class="row" >
+        <div class="sidebar" *ngIf="showMe" style="padding-left: 0;">
+          <app-physician-sidebar></app-physician-sidebar>
 
+        </div>
+        <div class="layout" [ngClass]="showMe
+        ? 'layout'
+        : 'layout1' ">
+            <router-outlet></router-outlet> 
+            
+        </div>    
+    </div>
+</div>
+
+   
 

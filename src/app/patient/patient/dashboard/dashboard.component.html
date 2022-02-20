@@ -1,6 +1,6 @@
 <div class="d-flex flex-row justify-content-between my-4">
-    <h1>Dashboard</h1>   
-  </div>
+    <h1 class="common-title">Dashboard</h1>
+</div>
 <!-- <div id="chart-container">
 	<canvas #myCanvas id="canvas"
       [chartType]= "chartType" 
@@ -15,9 +15,9 @@
       </div> -->
 <div class="chart-wrapper">
     <div class="row">
-        
-            <div class="col-lg-6">
-                <mat-card>
+
+        <div class="col-lg-6 my-2">
+            <mat-card>
                 <div class="chart-wrapper">
                     <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
                         [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType"
@@ -25,41 +25,41 @@
                     </canvas>
                 </div>
             </mat-card>
-            </div>
-       
-            <div class="col-lg-6">
-                <mat-card>
+        </div>
+
+        <div class="col-lg-6 my-2">
+            <mat-card>
                 <div class="chart-wrapper">
-                    <canvas baseChart [datasets]="lineChartData1" [labels]="lineChartLabels1" [options]="lineChartOptions1"
-                        [colors]="lineChartColors1" [legend]="lineChartLegend1" [chartType]="lineChartType1"
-                        [plugins]="lineChartPlugins">
+                    <canvas baseChart [datasets]="lineChartData1" [labels]="lineChartLabels1"
+                        [options]="lineChartOptions1" [colors]="lineChartColors1" [legend]="lineChartLegend1"
+                        [chartType]="lineChartType1" [plugins]="lineChartPlugins">
                     </canvas>
                 </div>
             </mat-card>
-            </div>
-     
-        
-    </div>
-    <div class="row pt-4">
-        <div class="col-lg-6">
-        <mat-card>
-            <div class="chart-wrapper">
-                <canvas baseChart [datasets]="lineChartData2" [labels]="lineChartLabels2" [options]="lineChartOptions2"
-                    [colors]="lineChartColors2" [legend]="lineChartLegend2" [chartType]="lineChartType2"
-                    [plugins]="lineChartPlugins2">
-                </canvas>
-            </div>
-        </mat-card>
         </div>
-        <div class="col-lg-6">
-        <mat-card>
-            <div class="chart-wrapper">
-                <canvas baseChart [datasets]="lineChartData3" [labels]="lineChartLabels3" [options]="lineChartOptions3"
-                    [colors]="lineChartColors3" [legend]="lineChartLegend3" [chartType]="lineChartType3"
-                    [plugins]="lineChartPlugins3">
-                </canvas>
-            </div>
-        </mat-card>
+
+
+    </div>
+    <div class="row ">
+        <div class="col-lg-6 my-2">
+            <mat-card>
+                <div class="chart-wrapper">
+                    <canvas baseChart [datasets]="lineChartData2" [labels]="lineChartLabels2"
+                        [options]="lineChartOptions2" [colors]="lineChartColors2" [legend]="lineChartLegend2"
+                        [chartType]="lineChartType2" [plugins]="lineChartPlugins2">
+                    </canvas>
+                </div>
+            </mat-card>
+        </div>
+        <div class="col-lg-6 my-2">
+            <mat-card>
+                <div class="chart-wrapper">
+                    <canvas baseChart [datasets]="lineChartData3" [labels]="lineChartLabels3"
+                        [options]="lineChartOptions3" [colors]="lineChartColors3" [legend]="lineChartLegend3"
+                        [chartType]="lineChartType3" [plugins]="lineChartPlugins3">
+                    </canvas>
+                </div>
+            </mat-card>
         </div>
     </div>
 </div>

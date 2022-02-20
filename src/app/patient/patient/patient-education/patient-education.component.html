@@ -1,5 +1,7 @@
-<mat-card class="top-panel">
-  <h2>Patient Portal Manual</h2>
+<div class="d-flex flex-row justify-content-between my-4">
+	<h1 class="common-title">Patient Portal Manual</h1>
+</div>
+<mat-card class="top-panel my-2">
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
     Et fugiat maiores quas, odio consequuntur, vitae inventore iste doloribus facilis
     molestias labore? Possimus animi obcaecati excepturi itaque nesciunt adipisci
@@ -10,24 +12,27 @@
     quis architecto voluptatibus voluptas debitis consequuntur, obcaecati incidunt
     doloribus illum, perferendis natus.</p>
 </mat-card>
-
-<mat-grid-list cols="3" >
-  <mat-grid-tile colspan="2">
-    <youtube-player 
-      videoId="Hiskr0BSMsc"
-      suggestedQuality="highres"
-      [height]="300"
-      [width]="600"
-      [startSeconds]="0"
-      [endSeconds]="200">
-    </youtube-player>
-  </mat-grid-tile>
-  <mat-grid-tile colspan="1"><a href="../../../../assets/files/patient_manual.docx" download="patient_manual.docx">
-      <h3>Download Patient Portal Manual </h3>
-      <br>
-      <mat-icon aria-hidden="false" aria-label="Example home icon">download</mat-icon>
-    </a></mat-grid-tile>
-</mat-grid-list>
+<mat-card >
+    <div class="row" style="align-items: center;">
+      <div class="col-md-8 my-2">
+        <youtube-player 
+        videoId="Hiskr0BSMsc"
+        suggestedQuality="highres"
+        [height]="300"
+        [width]="600"
+        [startSeconds]="0"
+        [endSeconds]="200" class="yt-vi">
+      </youtube-player>
+      </div>
+      <div class="col-md-4 download_ my-2">
+        <a href="../../../../assets/files/patient_manual.docx" download="patient_manual.docx" target="_blank">
+         Download Patient Portal Manual 
+          <br>
+          <mat-icon aria-hidden="false" aria-label="Example home icon">download</mat-icon>
+        </a>
+      </div>
+    </div>
+</mat-card>
 
 <!-- 
 \src\assets\files\patient_manual.docx

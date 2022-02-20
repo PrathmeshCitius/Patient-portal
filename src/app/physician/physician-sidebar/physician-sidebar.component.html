@@ -8,9 +8,14 @@
         </li>
         <li>
             <a [routerLink]="['./patient-details']">
-              <i class="fa-solid fa-user"style="color:#4235f7"></i><strong>Patient Details</strong>
+              <i class="fa-solid fa-user" style="color:#4235f7"></i><strong>Patient Details</strong>
             </a>
         </li>
         
+        <li>
+            <a [routerLink]="['./physician-info',physicianId]">
+              <i class="fa-solid fa-circle-info" style="color:#4235f7"></i><strong>Info</strong>
+            </a>
+        </li>
     </ul>
 </div>
