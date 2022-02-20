@@ -27,6 +27,7 @@ import { DayService, WeekService, WorkWeekService, MonthService, AgendaService, 
 import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
 import { DateTimePickerModule } from "@syncfusion/ej2-angular-calendars";
 
+
 @NgModule({
   declarations: [
     PatientComponent,

@@ -2,7 +2,7 @@
   <div class="formparent">
 <div class="form-container mat-elevation-z5">
   <h3>Log into Patient Portal</h3>
-  <form [formGroup]="loginForm" (ngSubmit)="login()" >
+  <form [formGroup]="loginForm" (ngSubmit)="login()" id="loginform">
         <mat-form-field>
          <input matInput placeholder="username" formControlName="email" />
          <mat-icon  matSuffix>email</mat-icon>

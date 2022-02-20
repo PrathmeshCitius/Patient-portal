@@ -1,25 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PhysicianSidebarComponent } from './physician-sidebar.component';
+// import { PhysicianSidebarComponent } from './physician-sidebar.component';
 
-describe('PhysicianSidebarComponent', () => {
-  let component: PhysicianSidebarComponent;
-  let fixture: ComponentFixture<PhysicianSidebarComponent>;
+// describe('PhysicianSidebarComponent', () => {
+//   let component: PhysicianSidebarComponent;
+//   let fixture: ComponentFixture<PhysicianSidebarComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ PhysicianSidebarComponent ]
-    })
-    .compileComponents();
-  });
+//   beforeEach(async () => {
+//     await TestBed.configureTestingModule({
+//       declarations: [ PhysicianSidebarComponent ]
+//     })
+//     .compileComponents();
+//   });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PhysicianSidebarComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//   beforeEach(() => {
+//     fixture = TestBed.createComponent(PhysicianSidebarComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });

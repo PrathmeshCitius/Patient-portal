@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from './auth/auth.service';
+import { GlobalService } from './services/api.service';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +11,30 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnInit {
   title = 'Patient-portal';
   name1 = "abc";
-
+  userInfo: any;
   // users=[{'id':1,"name":"abc"}];
-  constructor(
-
-  ){}
+  constructor(private api:GlobalService)
+{}
 
   ngOnInit(): void {
+    
+  //   this.api.setLoggedInUser().subscribe((res)=>{
+  //   this.userInfo = res;
+  //   this.api.setLoggin(res)
+  
+    
+  // });
+
+
+
+    
   
   }
+
+
+ 
+
+  
 
     
   

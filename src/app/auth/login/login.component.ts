@@ -2,14 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 import { Router } from '@angular/router';
+import { GlobalService } from 'src/app/services/api.service';
 import { ToasternotficationService } from 'src/app/services/toasternotfication.service';
 import { AuthService } from '../auth.service';
-// import * as bcrypt from 'bcryptjs';
-// import { ok } from 'assert';
-// import { userInfo } from 'os';
 
-// declare var require: any;
-// var jwt = require('jsonwebtoken');
 
 
 @Component({
@@ -28,7 +24,8 @@ export class LoginComponent implements OnInit {
     private http: HttpClient,
     private router: Router,
     private notificationService:ToasternotficationService,
-    private authService: AuthService
+    private authService: AuthService,
+    private apiService: GlobalService
     ) { }
 
   ngOnInit(): void {
@@ -48,17 +45,19 @@ export class LoginComponent implements OnInit {
       "password": this.loginForm.value.password
     }
     this.authService.login(data).subscribe(res => {
-      console.log(res);
-      // const user = res.find((a: any) => {   
+      
 
-      //   return a.email === this.loginForm.value.email && bcrypt.compareSync(this.loginForm.value.password, a.password)
-      // });
-      localStorage.setItem('currentUser', JSON.stringify(res));
+      if(res){
+    
+      // this.apiService.setLoggedInUser().subscribe((res)=>{
+      //   console.log(res);
+         
+      // })
       this.notificationService.showSuccess("Login Successful", "User");
       console.log("currentuser",JSON.stringify(res))
       this.loginForm.reset();
       this.router.navigateByUrl('/patient');
-
+      }
     }, err => {
       this.notificationService.showError("Login Failed", "User");
     }

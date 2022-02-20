@@ -16,9 +16,10 @@ import { PhysicianService } from './physician/physician.service';
 import { ToastrModule } from 'ngx-toastr';
 import { AppointmentDialogComponent } from './patient/patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
-import { FakeBackendInterceptor } from './helpers/fakebackend.interceptor';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './shared/navigation/header/header.component';
+import { GlobalService } from './services/api.service';
+
 import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
 import { DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
 
@@ -61,12 +62,12 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     DateTimePickerModule 
   ],
 
-  providers: [PhysicianService, {
+  providers: [PhysicianService,GlobalService,{
     provide: PERFECT_SCROLLBAR_CONFIG, 
     useValue: P_SCROLLBAR_CONFIG, 
   },
   { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-  { provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true }
+
 ],
  exports:[
 HeaderComponent],

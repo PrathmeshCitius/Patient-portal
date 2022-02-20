@@ -76,7 +76,7 @@ export class RegistrationComponent implements OnInit {
     }
 
 
-    this.http.post<any>("http://localhost:3000/users", this.registerForm.value)
+    this.http.post<any>("http://localhost:8000/auth/register", this.registerForm.value)
       .subscribe(res => {
 
 

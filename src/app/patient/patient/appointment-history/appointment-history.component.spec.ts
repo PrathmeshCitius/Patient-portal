@@ -1,25 +1,25 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AppointmentHistoryComponent } from './appointment-history.component';
+// import { AppointmentHistoryComponent } from './appointment-history.component';
 
-describe('AppointmentHistoryComponent', () => {
-  let component: AppointmentHistoryComponent;
-  let fixture: ComponentFixture<AppointmentHistoryComponent>;
+// describe('AppointmentHistoryComponent', () => {
+//   let component: AppointmentHistoryComponent;
+//   let fixture: ComponentFixture<AppointmentHistoryComponent>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ AppointmentHistoryComponent ]
-    })
-    .compileComponents();
-  });
+//   beforeEach(async () => {
+//     await TestBed.configureTestingModule({
+//       declarations: [ AppointmentHistoryComponent ]
+//     })
+//     .compileComponents();
+//   });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(AppointmentHistoryComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//   beforeEach(() => {
+//     fixture = TestBed.createComponent(AppointmentHistoryComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });

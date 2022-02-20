@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { state, trigger, style, transition, animate, keyframes} from "@angular/animations";
-import { HighContrastModeDetector } from '@angular/cdk/a11y';
-import { ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
-// import { Chart, registerables} from 'chart.js';
+import { state, trigger, style, transition, animate, keyframes } from "@angular/animations";
+import { GlobalService } from 'src/app/services/api.service';
+
 
 @Component({
   selector: 'app-patient',
@@ -15,9 +14,14 @@ import { ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
   // ])]
 })
 export class PatientComponent implements OnInit {
-  chart:any;
+  chart: any;
   state: string = "show";
-   constructor() { }
+  patientId: any;
+  patientEmail:any;
+  constructor(private api: GlobalService) {
+
+
+  }
 
   showMe = true;
 
@@ -31,6 +35,17 @@ export class PatientComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
+    this.api.setLoggedInUser().subscribe((res) => {
+      this.patientId = res[0].userId;
+      this.patientEmail = res[0].email;
+    
+    });
+    // this.patientId = this.api.getUserInfo()
+    // console.log(this.patientId);
+
+    
+
     // this.chart= document.getElementById ('dashboard-chat')
     //   Chart.register(...registerables);
     //   this.loadChart();
