@@ -12,8 +12,19 @@ export class HeaderComponent implements OnInit {
   constructor(
     private route:ActivatedRoute,
     private router: Router
-  ) {console.log("Sujith", route);   }
+  )  
+   { }
+  showMe = true;
 
+
+  showMeFun() { 
+    setTimeout(() => {
+      this.showMe = !this.showMe;
+    }, 300);
+
+    // this.state = (this.state === "show" ? "hide":"show")
+
+  }
   ngOnInit(): void {
   }
 

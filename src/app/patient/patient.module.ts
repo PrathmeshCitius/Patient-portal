@@ -23,8 +23,9 @@ import { ChartsModule } from 'ng2-charts';
 import { AppointmentDialogComponent } from './patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { AppointmentDetailsComponent } from './patient/appointment-history/appointment-details/appointment-details.component';
-
-
+import { DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService} from '@syncfusion/ej2-angular-schedule';
+import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
+import { DateTimePickerModule } from "@syncfusion/ej2-angular-calendars";
 
 @NgModule({
   declarations: [
@@ -57,9 +58,11 @@ import { AppointmentDetailsComponent } from './patient/appointment-history/appoi
     HttpClientModule,
     ChartsModule,
     YouTubePlayerModule, 
+    ScheduleModule ,
+    DateTimePickerModule 
   ],
   schemas: [],
-
+  providers:[DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService],
   exports: [
     PatientComponent,
     ImmunizationDetailsComponent,

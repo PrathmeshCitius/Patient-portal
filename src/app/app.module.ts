@@ -19,7 +19,8 @@ import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { FakeBackendInterceptor } from './helpers/fakebackend.interceptor';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './shared/navigation/header/header.component';
-
+import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
+import { DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
 
 const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
@@ -56,6 +57,8 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ChartsModule,
     ToastrModule.forRoot(),
     FlexLayoutModule,
+    ScheduleModule ,
+    DateTimePickerModule 
   ],
 
   providers: [PhysicianService, {

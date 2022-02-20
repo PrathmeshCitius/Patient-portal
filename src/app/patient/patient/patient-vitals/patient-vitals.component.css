@@ -17,13 +17,13 @@
 }
 
 .table-display-data {
-    width: 70%;
+    width: 100%;
     background-color: red;
   }
 
 .display_res {
     margin: 3px;
-    width: 66%;
+    width: 100%;
 }
 
 td.mat-cell {
