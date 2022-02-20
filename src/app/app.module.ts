@@ -11,14 +11,16 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
+import { ChartsModule } from 'ng2-charts';
 import { PhysicianService } from './physician/physician.service';
-
 import { ToastrModule } from 'ngx-toastr';
-
 import { AppointmentDialogComponent } from './patient/patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
 import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { FakeBackendInterceptor } from './helpers/fakebackend.interceptor';
-import { ScheduleModule,RecurrenceEditorModule,DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService } from '@syncfusion/ej2-angular-schedule';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { HeaderComponent } from './shared/navigation/header/header.component';
+import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
+import { DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
 
 const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
@@ -52,9 +54,11 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     BrowserAnimationsModule,
     AdminModule,
     PerfectScrollbarModule,
-    ScheduleModule,
-    RecurrenceEditorModule ,
+    ChartsModule,
     ToastrModule.forRoot(),
+    FlexLayoutModule,
+    ScheduleModule ,
+    DateTimePickerModule 
   ],
 
   providers: [PhysicianService, {
@@ -62,10 +66,12 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     useValue: P_SCROLLBAR_CONFIG, 
   },
   { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
-  { provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true },
-  DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService
-  
+  { provide: HTTP_INTERCEPTORS, useClass: FakeBackendInterceptor, multi: true }
 ],
+ exports:[
+HeaderComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+}

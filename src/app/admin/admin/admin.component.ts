@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, ViewChild } from '@angular/core';
+import {MediaMatcher} from '@angular/cdk/layout';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-admin',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./admin.component.css']
 })
 export class AdminComponent implements OnInit {
+ 
+  @ViewChild('sidenav') sidenav: MatSidenav;
+  isExpanded = true;
   
-  constructor() { }
 
+  
   ngOnInit(): void {
+      
   }
-
+ 
 }

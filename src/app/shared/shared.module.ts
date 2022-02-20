@@ -6,6 +6,7 @@ import { SidebarComponent } from './navigation/sidebar/sidebar.component';
 import { RouterModule } from '@angular/router';
 import { PerfectScrollbarConfigInterface, PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { MaterialModule } from './material/material.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -20,14 +21,15 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     CommonModule,
     RouterModule,
     PerfectScrollbarModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule,
   ],
   providers: [{
     provide: PERFECT_SCROLLBAR_CONFIG,
     useValue: P_SCROLLBAR_CONFIG
   }],
   exports: [LandingComponent,
-    HeaderComponent, MaterialModule
+    HeaderComponent, MaterialModule,FlexLayoutModule
   ]
 })
 export class SharedModule { }

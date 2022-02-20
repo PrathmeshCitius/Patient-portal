@@ -1,41 +1,47 @@
 <div class="d-flex flex-row justify-content-between my-4">
-    <h1>My Profile</h1>
+    <h1 class="common-title">My Profile</h1>
     <button mat-raised-button color="primary" [routerLink]="['/myprofile', pId]" [queryParams]="{EditMode:true}">
             <!-- <mat-icon class="mr-5">edit</mat-icon> -->
             Edit Profile</button>
 </div>
 
 <mat-card class="">
+    <form [formGroup]="profileForm">
     <div class="row">
-        <div class="col-md-2">
-            <input type="file" (change)="onFileSelected($event)">
+        <div class="col-md-3 d-flex flex-column">
+            <img src="{{profileForm.controls['image'].value}}" alt="" style="width:100px;height:100px;margin-right:auto;margin-left:auto">
+        
+                <input type="file" name="file" class="inputFile mt-2" (change)="onFileSelected($event)" *ngIf="editMode" >
+                
+                      
+           
+           
         </div>
-        <div class="col-md-10 ">
-            <form [formGroup]="profileForm">
+        <div class="col-md-9 ">           
                 <div class="row">
                     <div class="col-md-4">
-                        <div *ngIf="!editMode" class="card-field"> First Name: {{profileForm.controls['firstName'].value}}</div>
+                        <div *ngIf="!editMode" class="card-field"> <strong>First Name: </strong>{{profileForm.controls['firstName'].value}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>First Name</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="firstName">
-                            <mat-hint>Hint</mat-hint>
+                          
                         </mat-form-field>
 
                     </div>
                     <div class="col-md-4">
-                        <div *ngIf="!editMode" class="card-field"> Last Name: {{profileForm.controls['lastName'].value}}</div>
+                        <div *ngIf="!editMode" class="card-field"> <strong>Last Name: </strong>{{profileForm.controls['lastName'].value}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>Last Name</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="lastName">
-                            <mat-hint>Hint</mat-hint>
+                         
                         </mat-form-field>
                     </div>
                     <div class="col-md-4">
-                        <div *ngIf="!editMode" class="card-field"> Date of Birth:{{profileForm.controls['dob'].value}}</div>
+                        <div *ngIf="!editMode" class="card-field"> <strong>Date of Birth:</strong>{{profileForm.controls['dob'].value  | date:"MM/dd/yy"}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>Date of Birth</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="dob">
-                            <mat-hint>Hint</mat-hint>
+                        
                         </mat-form-field>
                     </div>
 
@@ -44,29 +50,21 @@
 
                 </div>
                 <div class="row">
-                    <!-- <div class="col-md-4">
-                        <div *ngIf="!editMode" class="card-field"> Role:{{profileForm.controls['role'].value}}</div>
-                        <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
-                            <mat-label>Role</mat-label>
-                            <input matInput placeholder="Placeholder" formControlName="role">
-                            <mat-hint>Hint</mat-hint>
-                        </mat-form-field>
-                    </div> -->
                     <div class="col-md-4">
-                        <div *ngIf="!editMode" class="card-field"> Email: {{profileForm.controls['address'].value}}</div>
+                        <div *ngIf="!editMode" class="card-field"> <strong>Address:</strong> {{profileForm.controls['address'].value}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>Address</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="address">
-                            <mat-hint>Hint</mat-hint>
+                           
                         </mat-form-field>
                     </div>
                     <div class="col-md-4">
 
-                        <div *ngIf="!editMode" class="card-field"> Mobile: {{profileForm.controls['phone'].value}}</div>
+                        <div *ngIf="!editMode" class="card-field"> <strong>Mobile:</strong> {{profileForm.controls['phone'].value}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label>Mobile</mat-label>
                             <input matInput placeholder="Placeholder" formControlName="phone">
-                            <mat-hint>Hint</mat-hint>
+                            
                         </mat-form-field>
                     </div>
 
@@ -82,7 +80,8 @@
                 </div>
 
 
-            </form>
+            
         </div>
     </div>
+</form>
 </mat-card>

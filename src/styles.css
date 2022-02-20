@@ -1,8 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@fullcalendar/common/main.css';
-@import '~@fullcalendar/daygrid/main.css';
-@import '~@fullcalendar/timegrid/main.css';
-
 @import '../node_modules/@syncfusion/ej2-base/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';
@@ -17,6 +13,8 @@ body { margin: 0;font-family: 'Inter', sans-serif;}
 a, p, div, span {
     font-family: 'Inter', sans-serif;
 }
+
+
 /*  */
 .side-bar-sec ul{
     list-style-type: none;
@@ -24,7 +22,6 @@ a, p, div, span {
     margin:0;
 }
 .side-bar-sec{
-    height: 100vh;
     background-color: #fff;
     height: 100vh;
     width: 90%;
@@ -35,9 +32,9 @@ a, p, div, span {
 .side-bar-sec ul li a{
     display: block;
     padding:1rem 2rem;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     text-decoration: none;
-    font-weight: normal;
+    font-weight: 300;
     color: #000;
     font-size: 13px;
     }
@@ -60,11 +57,166 @@ a, p, div, span {
 .logout{
     border: none;
     line-height: 1.2;
+    text-align: center;
+    margin-right: 10px;
 }
 .logout .fa-solid{
-    color:#fff
+    color:#fff;
+    font-size: 15px;
 }
 .logout p{
     margin: 0;
     color: #fff;
+    font-size: 12px;
 }
+.parent-logout{
+    display: flex;
+    align-items: flex-end;
+}
+
+.logout a{
+    text-decoration: none;
+}
+/*Physican css*/
+
+
+
+.physician-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.physician-sidebar {
+  width: 25%;
+}
+
+
+.w75_{
+    width: 75%;
+
+}
+.common-title{
+    margin:0 !important;
+    font-size: 25px !important;
+    font-weight: 500 !important;
+}
+.layout{
+    height: 100vh;
+    overflow-y: scroll;
+    xoverflow-x: hidden;
+}
+/* width */
+.layout::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  .layout::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #fff; 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  .layout::-webkit-scrollbar-thumb {
+    background: #8b98e6; 
+    border-radius: 10px;
+  }
+
+  /* Handle on hover */
+  .layout::-webkit-scrollbar-thumb:hover {
+    background: #1d32a8; 
+  }
+  .download_ a {
+    color: #000;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .table-scroll{
+    overflow-x: scroll;
+}
+.common-title{
+    color:#4d5066;
+}
+.custom-chart{
+    height: 308px;
+}
+@media (max-width:1220px){
+    .side-bar-sec ul li a{
+        font-size: 11px;
+    }
+}
+@media (max-width:990px){
+    .layout,
+    .side-bar-sec{
+        height: 100% !important;
+    }
+    .content-area{
+        height: unset !important;
+    }
+    .side-bar-sec ul li a i{
+        margin-bottom: 10px;
+    }
+    .side-bar-sec ul li a i,
+    .side-bar-sec ul li a  strong{
+        display: block;
+    }
+    .side-bar-sec ul li a {
+        text-align: center;
+    }
+}
+@media (max-width:600px){
+    .side-bar-sec strong{
+        display: none !important;
+    }
+    .side-bar-sec ul li a{
+        padding: 1rem !important;
+    }
+    .sidebar{
+        min-width: 17% !important;
+        max-width: 17%  !important;
+    }
+    .p-20{
+        font-size: 16px !important;
+    }
+    .toggleMenu{
+        top: 10px !important;
+        left: 3px !important;
+    }
+    .toggleMenu i{
+        font-size: 20px !important;
+    }
+    .p-20{
+        padding-left: 35px !important;
+    }
+    .layout1{
+        padding: 10px !important;
+    }
+    .yt-vi{
+        width: 100%  !important;
+    }
+    .common-title{
+        font-size: 20px !important;
+    }
+    .content-area{
+        height: unset!important;
+    }
+    .side-bar-sec,
+    .layout,.side-bar, .layout1{
+        height: 100% !important;
+    }
+    .layout::-webkit-scrollbar {
+        display:none !important;
+      }
+      
+      mat-label{
+          xfont-weight: 700;
+      }
+      .layout{
+        overflow-x: hidden;
+    }
+    .zoom{
+        display: block !important;
+        margin:20px 0  0!important;
+    }
+}
+

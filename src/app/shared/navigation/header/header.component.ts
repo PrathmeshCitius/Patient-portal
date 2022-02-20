@@ -12,7 +12,16 @@ export class HeaderComponent implements OnInit {
   constructor(
     private router: Router
   ) { }
+  showMe = true;
 
+  showMeFun() { 
+    setTimeout(() => {
+      this.showMe = !this.showMe;
+    }, 300);
+
+    // this.state = (this.state === "show" ? "hide":"show")
+
+  }
   ngOnInit(): void {
   }
 

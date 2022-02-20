@@ -1,4 +1,4 @@
-.example-container {
+/* .example-container {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -7,4 +7,12 @@
     background: #eee;
     border: 1px solid red;
     /* border: 1px solid black; */
+    /* .example-container {
+      width: 400px;
+      height: 200px;
+      margin: 10px;
+      border: 1px solid #555;
+    } */
+    .fa-solid {
+      color: blue;
   }

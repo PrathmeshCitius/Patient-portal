@@ -18,26 +18,14 @@ import { DialogComponent } from './patient/immunization-details/dialog/dialog.co
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { FullCalendarModule } from '@fullcalendar/angular';
-import interactionPlugin from '@fullcalendar/interaction';
-import dayGridPlugin from '@fullcalendar/daygrid';
-import { DateTimePickerModule } from "@syncfusion/ej2-angular-calendars";
-import timeGridPlugin from '@fullcalendar/timegrid';
-
+//import {ChartModule} from '@syncfusion/'
+import { ChartsModule } from 'ng2-charts';
 import { AppointmentDialogComponent } from './patient/schedule-appointment/appointment-dialog/appointment-dialog.component';
-
-//import { YouTubePlayerModule } from "@angular/youtube-player";
-import {MatIconModule} from '@angular/material/icon';
 import { YouTubePlayerModule } from '@angular/youtube-player';
-import { ScheduleModule,RecurrenceEditorModule,DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService } from '@syncfusion/ej2-angular-schedule';
-
-
-FullCalendarModule.registerPlugins([ 
-  interactionPlugin,
-  dayGridPlugin,
-  timeGridPlugin
-]);
-
+import { AppointmentDetailsComponent } from './patient/appointment-history/appointment-details/appointment-details.component';
+import { DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService} from '@syncfusion/ej2-angular-schedule';
+import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
+import { DateTimePickerModule } from "@syncfusion/ej2-angular-calendars";
 
 @NgModule({
   declarations: [
@@ -56,6 +44,7 @@ FullCalendarModule.registerPlugins([
     SideNavbarComponent,
     DialogComponent,
     AppointmentDialogComponent,
+    AppointmentDetailsComponent,
   ],
   entryComponents:[
     AppointmentDialogComponent
@@ -66,14 +55,11 @@ FullCalendarModule.registerPlugins([
     PatientRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    FullCalendarModule,
-    HttpClientModule, 
-    YouTubePlayerModule,
-    MatIconModule,
-    ScheduleModule,
-    RecurrenceEditorModule,
-    DateTimePickerModule
-    
+    HttpClientModule,
+    ChartsModule,
+    YouTubePlayerModule, 
+    ScheduleModule ,
+    DateTimePickerModule 
   ],
   schemas: [],
   providers:[DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService],
@@ -83,6 +69,7 @@ FullCalendarModule.registerPlugins([
     MedicationAndAllergiesComponent,
     DialogComponent,
     ScheduleAppointmentComponent,
+    AppointmentDetailsComponent,
   ]
 })
 export class PatientModule {

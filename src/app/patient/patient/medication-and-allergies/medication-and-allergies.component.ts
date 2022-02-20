@@ -43,8 +43,8 @@ export class MedicationAndAllergiesComponent implements OnInit {
           this.getAllMedication();
           alert('Added Successfully ');
         })
-        alert('Added Successfully');
-    }  
+    } 
+    this.clearFields(); 
   }
   getAllMedication(){
      this.patientService.getMedication().subscribe(res=>{
@@ -93,6 +93,6 @@ export class MedicationAndAllergiesComponent implements OnInit {
   if (this.dataSource.paginator) {
     this.dataSource.paginator.firstPage();
   }
-}
+} 
 }
  
