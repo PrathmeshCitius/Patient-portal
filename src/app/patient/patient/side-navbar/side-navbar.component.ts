@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-side-navbar',
@@ -7,15 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SideNavbarComponent implements OnInit {
 
-  patientId: number;
+
   showMyContainer;
   constructor() { }
-
+  @Input() patientId;
+  @Input() patientEmail;
   ngOnInit(): void {
-
+  
     
-    const user = JSON.parse(localStorage.getItem("currentUser"));
-    this.patientId = user.user.id;
   }
+
+  
 
 }

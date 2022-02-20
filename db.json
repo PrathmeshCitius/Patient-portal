@@ -13,17 +13,6 @@
       "id": 1
     },
     {
-      "email": "p.p@yahoo.com",
-      "password": "$2a$10$anoXhfknXVki2H/jAwxR8.KxLgDpP/Aj0W6SlFminQougsQztnsAm",
-      "firstName": "prinu",
-      "lastName": "pillai",
-      "dob": "1993-09-14T18:30:00.000Z",
-      "phone": "9232235464",
-      "confirmPassword": "P#1234",
-      "address": "mumbai",
-      "id": 2
-    },
-    {
       "email": "aman@gmail.com",
       "password": "$2a$10$77f.CBXpfAhVb.gbLR2GHOS/mRdr.wmWq0N7ri3CMqPQRRdoOsnRW",
       "firstName": "Aman",
@@ -44,18 +33,6 @@
       "confirmPassword": "Sonia@123",
       "address": "New York City",
       "id": 4
-    },
-    {
-      "email": "seema@gmail.com",
-      "password": "$2a$10$ZFTmguMxwCCsfUBuXAynyeFQ12eWZYtyW6E3MJmmY5.mqm6yRQL9C",
-      "firstName": "Seema",
-      "lastName": "H",
-      "dob": "2022-02-02T18:30:00.000Z",
-      "phone": "7866645432",
-      "confirmPassword": "S@1234",
-      "address": "Pune",
-      "image": "",
-      "id": 5
     }
   ],
   "physician": [

@@ -26,6 +26,7 @@ import { AppointmentDetailsComponent } from './patient/appointment-history/appoi
 
 
 
+
 @NgModule({
   declarations: [
     PatientComponent,
