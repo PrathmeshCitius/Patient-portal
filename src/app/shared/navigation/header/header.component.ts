@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -10,8 +10,9 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   disableSelect = new FormControl();
   constructor(
+    private route:ActivatedRoute,
     private router: Router
-  ) { }
+  ) {console.log("Sujith", route);   }
 
   ngOnInit(): void {
   }
