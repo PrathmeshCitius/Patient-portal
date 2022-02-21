@@ -14,16 +14,19 @@
                 </mat-form-field>
             </div>
             <div class="col-md-4">
-                <mat-form-field appearance="fill">
+                    <mat-form-field appearance="fill">
+                   <mat-label>No of Doses</mat-label>
+                   <mat-select matInput placeholder="Placeholder" formControlName="doses">
+                     <mat-option *ngFor="let dose of doses" [value]="dose.value" >{{dose.viewValue}}</mat-option>
+                     
+                   </mat-select>
+               </mat-form-field>
+              
+                <!-- <mat-form-field appearance="fill">
                     <mat-label>No. of Doses Taken</mat-label>
                     <input matInput placeholder="Placeholder" formControlName="doses" customMin="1" customMax="5">
-                    <span *ngIf="immunizationForm.controls['doses'].errors"> 
                     <mat-hint class="text-danger" *ngIf="immunizationForm.controls['doses'].dirty && immunizationForm.hasError('required','doses') && immunizationForm.controls['doses'].untouched">No of doses are required.</mat-hint>
-                    <mat-hint class="text-danger" *ngIf="immunizationForm.controls['doses'].errors.min"> Minimum required number is 0</mat-hint>
-                    <mat-hint class="text-danger" *ngIf="immunizationForm.controls['doses'].errors?.customMax"> max required number is 5</mat-hint>
-                    <!-- <div *ngIf="doses.errors?.min"> Minimum required number is 0.</div>  -->
-                </span>
-                </mat-form-field>
+                </mat-form-field> -->
             </div>
             <div class="col-md-4">
                 <mat-form-field appearance="fill" class="example-form-field">
@@ -73,7 +76,7 @@
             <!-- date Column -->
             <ng-container matColumnDef="date">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header> Date of Vaccination </th>
-                <td mat-cell *matCellDef="let row"> {{row.date}} </td>
+                <td mat-cell *matCellDef="let row"> {{row.date | date: 'dd/MM/yyyy'}} </td>
             </ng-container>
 
             <!-- Action Column -->

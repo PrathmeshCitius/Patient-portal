@@ -272,12 +272,6 @@
       "id": 12
     },
     {
-      "vaccineName": "aa",
-      "doses": "Dose 2",
-      "date": "2022-02-15T18:30:00.000Z",
-      "id": 13
-    },
-    {
       "id": 14,
       "vaccineName": "Rabies",
       "doses": "Dose 4",

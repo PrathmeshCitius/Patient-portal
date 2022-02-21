@@ -13,15 +13,15 @@
             <table mat-table [dataSource]="dataSource" matSort>
 
                 <!-- Name Column -->
-                <ng-container matColumnDef="apppintmentDate">
-                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Appointment Date</th>
-                    <td mat-cell *matCellDef="let row"> {{row.apppintmentDate}} </td>
+                <ng-container matColumnDef="StartTime">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Appointment Date & Time</th>
+                    <td mat-cell *matCellDef="let row"> {{row.StartTime}} </td>
                 </ng-container>
 
                 <!-- doses Column -->
-                <ng-container matColumnDef="physician">
+                <ng-container matColumnDef="selectphysician">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Physician Name </th>
-                    <td mat-cell *matCellDef="let row"> {{row.physician}}</td>
+                    <td mat-cell *matCellDef="let row"> {{row.selectphysician}}</td>
                 </ng-container>
 
                 <!-- date Column -->
@@ -31,7 +31,7 @@
                 </ng-container>
 
                 <!-- Action Column -->
-                <ng-container matColumnDef="notes">
+                <ng-container matColumnDef="discription">
                     <th mat-header-cell *matHeaderCellDef mat-sort-header> Notes </th>
                     <td mat-cell *matCellDef="let row">
                         <!-- {{row.notes}} -->

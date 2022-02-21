@@ -16,6 +16,8 @@ export class MyprofileComponent implements OnInit {
   pId:any;
  selectedFile:File;
  imageURL:any='';
+
+ 
   constructor(private fb:FormBuilder, 
               private router:Router, 
               private apiService:ApiService,
