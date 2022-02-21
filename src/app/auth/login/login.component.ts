@@ -49,14 +49,18 @@ export class LoginComponent implements OnInit {
 
       if(res){
     
-      // this.apiService.setLoggedInUser().subscribe((res)=>{
-      //   console.log(res);
-         
-      // })
       this.notificationService.showSuccess("Login Successful", "User");
       console.log("currentuser",JSON.stringify(res))
       this.loginForm.reset();
-      this.router.navigateByUrl('/patient');
+      
+      
+      if (res.role == 'admin'){
+      this.router.navigateByUrl('/admin');
+      } else if (res.role == 'patient'){
+        this.router.navigateByUrl('/patient');
+      } else {
+        this.router.navigateByUrl('/physician');
+      }
       }
     }, err => {
       this.notificationService.showError("Login Failed", "User");
