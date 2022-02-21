@@ -12,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AppointmentHistoryComponent implements OnInit {
 
-  displayedColumns: string[] = ['apppintmentDate', 'physician', 'status', 'notes'];
+  displayedColumns: string[] = ['StartTime', 'selectphysician', 'status', 'discription'];
   dataSource!: MatTableDataSource<any>;
   onedit=false;
   onAdd=true;
@@ -33,7 +33,9 @@ export class AppointmentHistoryComponent implements OnInit {
   getAppoHistory(){
     this.api.getAppointmentHistory().subscribe(res=>{
       console.log("appointment History Resp", res)
-      this.dataSource=res;
+      this.dataSource = new MatTableDataSource(res);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
       console.log("app history datasource", this.dataSource)
     })
   }

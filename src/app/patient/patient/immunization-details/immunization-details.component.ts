@@ -4,7 +4,11 @@ import { ApiService } from '../../services/services';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
-
+import { DatePipe } from '@angular/common';
+interface Dname {
+  value: string;
+  viewValue: string;
+}
 @Component({
   selector: 'app-immunization-details',
   templateUrl: './immunization-details.component.html',
@@ -15,21 +19,32 @@ export class ImmunizationDetailsComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
   onedit = false;
   onAdd = true;
+  maxDate:string;
+
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  immunizationForm: FormGroup;
+  immunizationForm: FormGroup; 
 
-
-  constructor(private fb: FormBuilder, private api: ApiService) { }
-
+  constructor(private fb: FormBuilder, private api: ApiService, datePipe:DatePipe) {
+    const dateFormat = 'yyyy-MM-dd';
+    
+    this.maxDate = datePipe.transform(new Date(), dateFormat);
+   }
+   doses:Dname[]=[
+    {value: 'Dose 1', viewValue: 'Dose 1'},
+    {value: 'Dose 2', viewValue: 'Dose 2'},
+    {value: 'Dose 3', viewValue: 'Dose 3'},
+    {value: 'Dose 4', viewValue: 'Dose 4'},
+    {value: 'Dose 5', viewValue: 'Dose 5'},
+  ];
   ngOnInit(): void {
     this.immunizationForm = this.fb.group({
 
       id: Number,
-      vaccineName: ['', Validators.required],
-      doses: ['', Validators.required],
+      vaccineName: ['', Validators.required,],
+      doses: ['', Validators.required ],
       date: ['', Validators.required]
     })
     this.getImmunizationDetail();
@@ -53,6 +68,9 @@ export class ImmunizationDetailsComponent implements OnInit {
       })
       this.immunizationForm.reset();
 
+    }
+    else{
+      alert("Please fill all the fields")
     }
   }
   getImmunizationDetail() {

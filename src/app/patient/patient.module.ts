@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { PatientComponent } from './patient/patient.component';
 import { PatientRoutingModule } from './patient-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -63,7 +63,7 @@ import { DateTimePickerModule } from "@syncfusion/ej2-angular-calendars";
     DateTimePickerModule 
   ],
   schemas: [],
-  providers:[DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService],
+  providers:[DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService, DatePipe],
   exports: [
     PatientComponent,
     ImmunizationDetailsComponent,
