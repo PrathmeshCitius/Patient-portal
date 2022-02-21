@@ -40,6 +40,7 @@ export class PatientVitalsComponent implements OnInit {
     
       
       var result = res.filter(function(res_arg){
+        // console.log()
         return res_arg.email == current_user;
       })
 
