@@ -38,9 +38,11 @@ export class PatientVitalsComponent implements OnInit {
       var current_user: string = this.globalService.getUserInfo()[0].email;
       console.log(current_user);
     
-      
+      this.dataSource = new MatTableDataSource(res);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
       var result = res.filter(function(res_arg){
-        // console.log()
+        console
         return res_arg.email == current_user;
       })
 
