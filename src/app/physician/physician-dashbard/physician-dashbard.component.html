@@ -17,18 +17,18 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-6 my-2">
-      <mat-card>
+      <div class="col-lg-2 my-2">
+      <!-- <mat-card>
         <div class="d-flex" style="justify-content: center;">
           <mat-card class="demo-inline-calendar-card">
             <mat-calendar [(selected)]="selected"></mat-calendar>
           </mat-card>
           <p>{{ selected }}</p>
         </div>
-      </mat-card>
+      </mat-card> -->
       </div>
 
-      <div class="col-lg-6">
+      <div class="col-lg-8">
       <mat-card>
         <div class="chart-wrapper custom-chart">
           <canvas class="chartline" baseChart [datasets]="lineChartData" [labels]="lineChartLabels"
@@ -38,6 +38,7 @@
         </div>
       </mat-card>
       </div>
+      <div class="col-lg-2"></div>
     </div>
   </div>
 </div>

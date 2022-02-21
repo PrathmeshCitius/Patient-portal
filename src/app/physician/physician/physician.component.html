@@ -8,8 +8,7 @@
     <button class="toggleMenu btn" (click)="showMeFun()"><i class="fas fa-bars text-white"></i></button>
     <div class="row" >
         <div class="sidebar" *ngIf="showMe" style="padding-left: 0;">
-          <app-physician-sidebar></app-physician-sidebar>
-
+          <app-physician-sidebar  [physicianId]="physicianId" [physicianEmail]="physicianEmail"></app-physician-sidebar>
         </div>
         <div class="layout" [ngClass]="showMe
         ? 'layout'

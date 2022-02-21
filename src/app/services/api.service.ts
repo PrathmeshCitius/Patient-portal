@@ -17,7 +17,6 @@ export class GlobalService {
   }
 
   getUserInfo() {
-    
     return this.userInfo;
   }
 

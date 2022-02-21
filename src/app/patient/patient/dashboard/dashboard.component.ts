@@ -62,23 +62,23 @@ export class DashboardComponent implements OnInit {
     this.lineChartPlugins = [];
     this.lineChartType = 'line';
   }
-  /////////////////////////////////////////////////////////
-  // lineChartData1: ChartDataSets[] = [
-  //   { data: [0,3,4,6,1,2,1], label: 'Patient visits' },
-  // ];
-  // lineChartLabels1: Label[] = ['January', 'February', 'March', 'April', 'May', 'June'];
-  // lineChartOptions1 = {
-  //   responsive: true,
-  // };
-  // lineChartColors1: Color[] = [
-  //   {
-  //     borderColor: 'black',
-  //     backgroundColor: 'rgb(255,20,147)',
-  //   },
-  // ];
-  // lineChartLegend1 = true;
-  // lineChartPlugins1 = [];
-  // lineChartType1 = 'bar';
+  ///////////////////////////////////////////////////////
+  lineChartData1: ChartDataSets[] = [
+    { data: [0,3,4,6,1,2,1], label: 'Patient visits' },
+  ];
+  lineChartLabels1: Label[] = ['January', 'February', 'March', 'April', 'May', 'June'];
+  lineChartOptions1 = {
+    responsive: true,
+  };
+  lineChartColors1: Color[] = [
+    {
+      borderColor: 'black',
+      backgroundColor: 'rgb(255,20,147)',
+    },
+  ];
+  lineChartLegend1 = true;
+  lineChartPlugins1 = [];
+  lineChartType1 = 'bar';
   // /////////////////////////////////////////////////////////
   // lineChartData2: ChartDataSets[] = [
   //   { data: [0,3,4,6,1,2,1], label: 'Patient visits' },

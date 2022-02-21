@@ -16,20 +16,7 @@ export class AppComponent implements OnInit {
   constructor(private api:GlobalService)
 {}
 
-  ngOnInit(): void {
-    
-  //   this.api.setLoggedInUser().subscribe((res)=>{
-  //   this.userInfo = res;
-  //   this.api.setLoggin(res)
-  
-    
-  // });
-
-
-
-    
-  
-  }
+  ngOnInit(): void {}
 
 
  
