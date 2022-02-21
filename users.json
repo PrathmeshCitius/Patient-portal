@@ -15,16 +15,29 @@
     },
     {
       "id": 2,
-      "email": "shri@yahoo.com",
-      "password": "shri$75",
-      "firstName": "shrinath",
+      "email": "arav@gmail.com",
+      "password": "Ar@1233",
+      "firstName": "arav",
       "lastName": "nair",
-      "dob": "1993-07-28T18:30:00.000Z",
-      "phone": "9878676543",
-      "address": "pune",
+      "dob": "2022-02-08T18:30:00.000Z",
+      "phone": "9898789857",
+      "address": "mumbai",
       "image": "",
       "role": "patient",
-      "isAuthenticated": false
+      "isAuthenticated": true
+    },
+    {
+      "id": 3,
+      "email": "akash@gmail.com",
+      "password": "Akash@123",
+      "firstName": "Akash",
+      "lastName": "Kumar",
+      "dob": "2022-01-31T18:30:00.000Z",
+      "phone": "9898989898",
+      "address": "Ranchi",
+      "image": "",
+      "role": "patient",
+      "isAuthenticated": true
     }
   ],
   "eventList": [
@@ -54,18 +67,6 @@
     }
   ],
   "physician": [
-    {
-      "date": "2022-02-01",
-      "email": "jen@gmail.com",
-      "name": "Jen",
-      "bp": "110/110",
-      "pulse": "80 bpm",
-      "resp": "Normal",
-      "temp": "98 deg",
-      "height": "180 cm",
-      "weight": "78 kg",
-      "id": 7
-    },
     {
       "date": "2022-02-07",
       "email": "der@gmail.com",
@@ -103,18 +104,6 @@
       "id": 10
     },
     {
-      "date": "2022-02-25",
-      "email": "aman@gmail.com",
-      "name": "Kumar",
-      "bp": "130/110",
-      "pulse": "Normal",
-      "resp": "Normal",
-      "temp": "97 deg",
-      "height": "180 cm",
-      "weight": "98 kg",
-      "id": 11
-    },
-    {
       "date": "2021-11-11",
       "email": "sonia@gmail.com",
       "name": "Sonia ",
@@ -125,6 +114,66 @@
       "height": "180cm",
       "weight": "78 kg",
       "id": 12
+    },
+    {
+      "date": "2022-02-01",
+      "email": "arav@gmail.com",
+      "name": "Arav",
+      "bp": "120/110",
+      "pulse": "67 bpm",
+      "resp": "Normal",
+      "temp": "98 deg",
+      "height": "178 cm",
+      "weight": "80 kg",
+      "id": 14
+    },
+    {
+      "date": "2021-12-08",
+      "email": "arav@gmail.com",
+      "name": "Arav",
+      "bp": "130/110",
+      "pulse": "69 bpm",
+      "resp": "normal",
+      "temp": "97 deg",
+      "height": "178 cm",
+      "weight": "76 kg",
+      "id": 15
+    },
+    {
+      "date": "2022-02-01",
+      "email": "test@gmail.com",
+      "name": "Kumar Aman",
+      "bp": "120/111",
+      "pulse": "76 bpm",
+      "resp": "Normal",
+      "temp": "80 deg",
+      "height": "170 cm",
+      "weight": "87 kg",
+      "id": 16
+    },
+    {
+      "date": "2022-02-02",
+      "email": "nitin@gmail.com",
+      "name": "Nitin Raj",
+      "bp": "130/110",
+      "pulse": "88 bpm",
+      "resp": "Normal",
+      "temp": "89 deg",
+      "height": "169 cm",
+      "weight": "78 kg",
+      "id": 17
+    },
+    {
+      "date": "2022-02-04",
+      "email": "akash@gmail.com",
+      "name": "Akash",
+      "bp": "120/110",
+      "pulse": "67 bpm",
+      "resp": "high",
+      "temp": "98 deg",
+      "height": "180 cm",
+      "weight": "89 kg",
+      "id": 18
     }
   ],
   "patientdemo": [
@@ -166,12 +215,7 @@
     }
   ],
   "immunization_details": [
-    {
-      "id": 1,
-      "vaccineName": "Covid-19",
-      "doses": "2",
-      "date": "10/09/2021"
-    },
+    { "id": 1, "vaccineName": "Covid-19", "doses": "2", "date": "10/09/2021" },
     {
       "vaccineName": "Flu-Dengue",
       "doses": "aa",
@@ -247,17 +291,9 @@
       "appointment": "View"
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
+  "comments": [{ "id": 1, "body": "some comment", "postId": 1 }],
+  "profile": { "name": "typicode" },
   "loggedin": [
-  
+   
   ]
 }
