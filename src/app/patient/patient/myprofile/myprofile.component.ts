@@ -16,6 +16,8 @@ export class MyprofileComponent implements OnInit {
   pId:any;
  selectedFile:File;
  imageURL:any='';
+
+ 
   constructor(private fb:FormBuilder, 
               private router:Router, 
               private apiService:ApiService,
@@ -95,15 +97,13 @@ export class MyprofileComponent implements OnInit {
      //code for upload image
      this.profileForm.controls['image'].setValue(this.imageURL)
      //update userData
-     if(this.profileForm.value.image!=''){
+    
     this.apiService.updateUserById(this.pId,this.profileForm.value).subscribe(res=>{
       alert("user Updated Successfully");
       this.getPatientData();
       this.router.navigate([],{queryParams:{EditMode:null}})
     })
-  }else{
-    alert('image required');
-  }
+  
   }
   onFileSelected(event){
   
