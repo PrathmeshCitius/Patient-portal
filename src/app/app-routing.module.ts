@@ -12,11 +12,13 @@ import { PatientDetailsComponent } from "./physician/patient-details/patient-det
 // import { SideNavbarComponent } from "./patient/patient/side-navbar/side-navbar.component";
 import { AuthGuard } from "./helpers/authguard";
 import { PhysicianDashbardComponent } from "./physician/physician-dashbard/physician-dashbard.component";
+import { NavbarComponent } from "./mainpage/navbar/navbar.component";
+import { ContentComponent } from "./mainpage/content/content.component";
 const routes: Routes = [
 
 
 
-  { path: "", redirectTo: 'auth/login', pathMatch: "full" },
+ //{ path: 'auth/login', pathMatch: "full" },
   {
     path: 'patient',canActivate: [AuthGuard] ,
     loadChildren: () => import('./patient/patient.module').then((m) => m.PatientModule)
@@ -35,6 +37,8 @@ const routes: Routes = [
   { path: "auth/registration", component: RegistrationComponent },
 
   { path: "auth/logout", component: LogoutComponent },
+  {path:"mainpage/navbar",component:NavbarComponent},
+  {path:"mainpage/content",component:ContentComponent}
 
 
 ];
