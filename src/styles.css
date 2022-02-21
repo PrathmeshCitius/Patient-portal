@@ -165,6 +165,11 @@ a, p, div, span {
     }
 }
 @media (max-width:600px){
+
+    .yt_video {
+        width: 100% !important;
+        height: 200px !important;
+    }
     .side-bar-sec strong{
         display: none !important;
     }

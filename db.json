@@ -1,28 +1,21 @@
 {
   "eventList": [
     {
-      "Subject": "doctor appointment",
+      "Subject": "dipali",
       "selectphysician": "Dr Satish Shah",
-      "discription": "M",
-      "StartTime": "2022-02-20T18:30:00.000Z",
-      "EndTime": "2022-02-21T07:00:00.000Z",
+      "discription": "checkup",
+      "StartTime": "2022-02-22T18:30:00.000Z",
+      "EndTime": "2022-02-22T19:00:00.000Z",
       "id": 1
     },
     {
-      "Subject": "snehal",
-      "selectphysician": "Dr Chetan Jaiswal",
-      "discription": "checkup",
-      "StartTime": "2022-02-21T18:30:00.000Z",
-      "EndTime": "2022-02-22T07:00:00.000Z",
+      "Subject": "sandhya",
+      "selectphysician": "Dr Satish Shah",
+      "discription": "weqweqweqw",
+      "StartTime": "2022-02-21T21:30:00.000Z",
+      "EndTime": "2022-02-21T22:00:00.000Z",
+      "status": "pending",
       "id": 2
-    },
-    {
-      "Subject": "appointment",
-      "selectphysician": "Dr Chetan Jaiswal",
-      "discription": "checkup",
-      "StartTime": "2022-02-25T15:00:00.000Z",
-      "EndTime": "2022-02-25T15:30:00.000Z",
-      "id": 3
     }
   ],
   "users": [

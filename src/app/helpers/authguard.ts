@@ -39,11 +39,11 @@ export class AuthGuard implements CanActivate {
                 return false;
                 
             }
-            // } else {
+             else {
 
-            //    this.apiService.storeInfo(res);
-            //     return true;
-            // }
+               this.apiService.storeInfo(res);
+                
+            }
             
         })
         
