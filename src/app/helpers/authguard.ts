@@ -1,24 +1,59 @@
 import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { AuthService } from '../auth/auth.service';
+import { BehaviorSubject } from 'rxjs';
+import { GlobalService } from '../services/api.service';
+
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {
+
+
+   // userlog = new BehaviorSubject<boolean>(false)
+   currentUser:any;
     constructor(
         private router: Router,
-        private authService: AuthService
-    ) { }
+        private apiService: GlobalService
+    ) {
+
+
+     }
+
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-        const currentUser = this.authService.currentUserValue();
+        // const currentUser = this.authService.currentUserValue();
+  
+        // if (currentUser) {
+        //     // logged in so return true
+        //     return true;
+        // }
 
-        if (currentUser) {
-            // logged in so return true
-            return true;
-        }
+     
+        this.apiService.setLoggedInUser().subscribe((res)=>{
 
-        // not logged in so redirect to login page
-        this.router.navigate(['/auth/login']);
-        return false;
+            if(Object.values(res).length == 0)
+            {   
+
+                
+                this.router.navigateByUrl('/auth/login')
+
+                return false;
+                
+            }
+             else {
+
+               this.apiService.storeInfo(res);
+                
+            }
+            
+        })
+        
+            // this.currentUser = this.apiService.getLoggin();
+            // console.log(this.currentUser);
+         
+        
+      
+         
+       
+        return true;
     }
 }

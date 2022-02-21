@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableDataSource } from '@angular/material/table';
 import { Observable, Observer } from 'rxjs';
@@ -6,6 +6,7 @@ import { ApiService } from '../../services/services';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { AuthService } from 'src/app/auth/auth.service';
+import { GlobalService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-patient-vitals',
@@ -25,7 +26,8 @@ export class PatientVitalsComponent implements OnInit {
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor(private api:ApiService, private authService: AuthService) { }
+
+  constructor(private api:ApiService, private globalService: GlobalService) { }
   
   ngOnInit(): void {
     
@@ -33,14 +35,16 @@ export class PatientVitalsComponent implements OnInit {
       console.log("Physician data into patient: ", res);
       
       //current login user email 
-      var current_user: string = this.authService.currentUserValue().user.email;
-      console.log(this.authService.currentUserValue().user.email)
+      var current_user: string = this.globalService.getUserInfo()[0].email;
+      console.log(current_user);
+    
       
       var result = res.filter(function(res_arg){
         return res_arg.email == current_user;
       })
 
       this.dataSource = result;
+
 
     });
   }

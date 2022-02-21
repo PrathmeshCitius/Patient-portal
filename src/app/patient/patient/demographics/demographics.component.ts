@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { PatientService } from '../../patient.service';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { AuthService } from 'src/app/auth/auth.service';
+import { GlobalService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-demographics',
@@ -14,6 +16,7 @@ export class DemographicsComponent implements OnInit {
   scrollConfig: PerfectScrollbarConfigInterface = { suppressScrollX: false };
   demographicForm: FormGroup;
   submitted = false;
+  
 
   pId: any;
   pDemoData: any;
@@ -22,7 +25,8 @@ export class DemographicsComponent implements OnInit {
   constructor(private fb: FormBuilder,
     private patientService: PatientService,
     private router: Router,
-    private activeRoute: ActivatedRoute
+    private activeRoute: ActivatedRoute,
+    private api: GlobalService
 
 
   ) {
@@ -36,6 +40,11 @@ export class DemographicsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // this.api.userInfo.subscribe((value)=>{
+    //   console.log(value);
+    //   //  this.patientId = value[0].userId;
+    //   //  console.log( this.patientId);
+    //  });
   }
 
 

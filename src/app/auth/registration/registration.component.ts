@@ -32,7 +32,9 @@ export class RegistrationComponent implements OnInit {
     password: new FormControl('', [Validators.required, Validators.minLength(6)]),
     confirmPassword: new FormControl('', Validators.required),
     address: new FormControl(''),
-    image:new FormControl('')
+    image:new FormControl(''),
+    role: new FormControl('patient'),
+    isauthenticated:new FormControl(false)
   },
     { validators: passwordsMatchValidator() }
   )
@@ -70,13 +72,21 @@ export class RegistrationComponent implements OnInit {
   get image() {
     return this.registerForm.get('image');
   }
+
+  get role(){
+    return this.registerForm.get('role');
+  }
+
+  get isauthenticated(){
+    return this.registerForm.get('isauthenticated');
+  }
   submit() {
     if (this.registerForm.invalid) {
       return;
     }
 
 
-    this.http.post<any>("http://localhost:3000/users", this.registerForm.value)
+    this.http.post<any>("http://localhost:8000/auth/register", this.registerForm.value)
       .subscribe(res => {
 
 

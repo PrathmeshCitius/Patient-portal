@@ -3,10 +3,12 @@ import { HttpRequest, HttpHandler, HttpEvent, HttpInterceptor, HttpResponse } fr
 import { observable, Observable, of, throwError } from 'rxjs';
 
 import { AuthService } from '../auth/auth.service';
+import { GlobalService } from '../services/api.service';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
-    constructor(private authenticationService: AuthService) { }
+    constructor(private authenticationService: AuthService,
+        private gs: GlobalService ) { }
 
 
     
@@ -15,13 +17,14 @@ export class JwtInterceptor implements HttpInterceptor {
        
         // add authorization header with jwt token if available
 
-        let currentUser = this.authenticationService.currentUserValue();
-    
+        let currentUser = this.gs.getUserInfo();
       
-        if (currentUser && currentUser.accessToken) {
+      
+        if (currentUser !== undefined) {
+           
             request = request.clone({
                 setHeaders: {
-                    Authorization: `Bearer ${currentUser.accessToken}`
+                    Authorization: `Bearer ${currentUser[0]['token']}`
                 }
             });
         }

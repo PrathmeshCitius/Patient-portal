@@ -120,6 +120,13 @@
 <mat-toolbar color="primary" class="example-toolbar">
 	<button mat-icon-button (click)="isExpanded = !isExpanded"><mat-icon>menu</mat-icon></button>
 	<h1 class="example-app-name">Welcome Admin</h1>
+
+  <button mat-menu-item (click)="logOut()" class="logout" style="position: absolute;right:0">
+    <i class="fa-solid fa-right-from-bracket"></i>
+    <p>Logout</p>
+    <!-- <mat-icon>power_settings_new</mat-icon> -->
+
+</button>
 </mat-toolbar>
 <mat-sidenav-container class="example-container" autosize>
 <mat-sidenav #sidenav class="example-sidenav" mode="side" opened="true" >
@@ -146,6 +153,18 @@
       </span>
       <mat-icon mat-list-icon>group</mat-icon>
     </mat-list-item>
+    
+    <mat-list-item>
+
+      <span class="full-width" *ngIf="isExpanded">
+        <a [routerLink]="['./managephysicianrecords']">
+  
+          Manage Physicians Records</a>
+  
+      </span>
+      <mat-icon mat-list-icon>group</mat-icon>
+    </mat-list-item>
+   
   
   </mat-nav-list>
   <mat-nav-list>

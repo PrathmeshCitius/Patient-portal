@@ -22,7 +22,7 @@ export class MyprofileComponent implements OnInit {
               private activatedRoute:ActivatedRoute, 
               private patientService:PatientService ) {
                 this.pId= this.activatedRoute.snapshot.paramMap.get('id');
-                console.log("PID", this.pId)
+               
   if(this.pId){
     this.getPatientData();
   }
@@ -59,7 +59,7 @@ export class MyprofileComponent implements OnInit {
 
   onSubmit(){
     if(this.profileForm.valid){
-      console.log(this.profileForm.value);      
+     
     }
     this.profileForm.reset();
   }
@@ -69,9 +69,9 @@ export class MyprofileComponent implements OnInit {
 
   getPatientData(){
     this.apiService.getUserById(this.pId).subscribe(res=>{
-      console.log("userID Response",res);
+     
       this.userData=res;
-      console.log("userData", this.userData)
+      
       this.patchUserData();
     })        
   }
@@ -88,7 +88,7 @@ export class MyprofileComponent implements OnInit {
       image:this.userData.image
       
     })
-    console.log("updated profile form value",this.profileForm.value)
+  
   }
   
   upadteUserData(){
@@ -106,7 +106,7 @@ export class MyprofileComponent implements OnInit {
   }
   }
   onFileSelected(event){
-    console.log('onchange event values', event)
+  
     // this.selectedFile=<File>event.target.files[0];
     if (event.target.files.length > 0) {
       this.selectedFile = event.target.files[0];
