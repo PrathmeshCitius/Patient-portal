@@ -178,10 +178,6 @@
       "discription": "checkup",
       "StartTime": "2022-02-25T15:00:00.000Z",
       "EndTime": "2022-02-25T15:30:00.000Z",
-<<<<<<< HEAD
-      "id": 3,
-      "status": "Pending"
-=======
       "id": 3
     },
     {
@@ -208,7 +204,6 @@
       "EndTime": "2022-02-21T19:30:00.000Z",
       "status": "Pending",
       "id": 6
->>>>>>> Snehal
     }
   ],
   "physician": [
@@ -470,8 +465,4 @@
       "role": "physician"
     }
   ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> Snehal
