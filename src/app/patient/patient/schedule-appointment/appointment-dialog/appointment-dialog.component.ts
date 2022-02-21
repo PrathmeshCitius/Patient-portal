@@ -37,7 +37,8 @@ export class AppointmentDialogComponent implements OnInit {
       discription: ['', Validators.required],
       //time: ['', Validators.required],
       StartTime: [''],
-      EndTime:['']
+      EndTime:[''],
+      status:['']
     
     })
  
@@ -45,7 +46,7 @@ export class AppointmentDialogComponent implements OnInit {
 
   onEvent() {
     //this.appointmentForm.value.StartTime="Fri Feb 19 2022 09:00:00 GMT+0530 (India Standard Time)";
-    //this.appointmentForm.value.EndTime="Fri Feb 20 2022 09:30:00 GMT+0530 (India Standard Time)";
+    this.appointmentForm.value.status="pending";
     if (this.appointmentForm.valid) {
       console.log(this.appointmentForm)
       this.patientService.postEvent(this.appointmentForm.value).subscribe(res=>{
