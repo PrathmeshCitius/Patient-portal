@@ -4,6 +4,7 @@ import { ApiService } from '../../services/services';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-immunization-details',
@@ -15,21 +16,28 @@ export class ImmunizationDetailsComponent implements OnInit {
   dataSource!: MatTableDataSource<any>;
   onedit = false;
   onAdd = true;
+  maxDate:string;
+
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
   immunizationForm: FormGroup;
+  minNum = 15;
+  maxNum = 50;
 
-
-  constructor(private fb: FormBuilder, private api: ApiService) { }
+  constructor(private fb: FormBuilder, private api: ApiService, datePipe:DatePipe) {
+    const dateFormat = 'yyyy-MM-dd';
+    
+    this.maxDate = datePipe.transform(new Date(), dateFormat);
+   }
 
   ngOnInit(): void {
     this.immunizationForm = this.fb.group({
 
       id: Number,
-      vaccineName: ['', Validators.required],
-      doses: ['', Validators.required],
+      vaccineName: ['', Validators.required,],
+      doses: ['', Validators.required, Validators.min(this.minNum), Validators.max(this.maxNum) ],
       date: ['', Validators.required]
     })
     this.getImmunizationDetail();
