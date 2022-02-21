@@ -16,26 +16,6 @@
       "EndTime": "2022-02-21T22:00:00.000Z",
       "status": "pending",
       "id": 2
-<<<<<<< HEAD
-    },
-    {
-      "Subject": "appointment",
-      "selectphysician": "Dr Chetan Jaiswal",
-      "discription": "checkup",
-      "StartTime": "2022-02-25T15:00:00.000Z",
-      "EndTime": "2022-02-25T15:30:00.000Z",
-      "id": 3
-    },
-    {
-      "Subject": "sandhya",
-      "selectphysician": "Dr Satish Shah",
-      "discription": "M",
-      "StartTime": "2022-02-23T18:30:00.000Z",
-      "EndTime": "2022-02-23T18:30:00.000Z",
-      "status": "Pending",
-      "id": 4
-=======
->>>>>>> bef8010a62d69e0421f805553e87d053d55199ed
     }
   ],
   "users": [

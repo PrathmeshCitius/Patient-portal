@@ -38,11 +38,22 @@
                     </div>
                     <div class="col-md-4">
                         <div *ngIf="!editMode" class="card-field"> <strong>Date of Birth:</strong>{{profileForm.controls['dob'].value  | date:"MM/dd/yy"}}</div>
-                        <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
-                            <mat-label>Date of Birth</mat-label>
-                            <input matInput placeholder="Placeholder" formControlName="dob">
-                        
+                        <mat-form-field appearance="fill" class="example-form-field"  *ngIf="editMode">
+                            <mat-label>Choose a date</mat-label>
+                            <input matInput [matDatepicker]="datepicker" formControlName="dob" [max]="maxDate" >
+                            <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                            <mat-datepicker #datepicker>
+                                <mat-datepicker-actions>
+                                    <button mat-button matDatepickerCancel>Cancel</button>
+                                    <button mat-raised-button color="primary" matDatepickerApply>Apply</button>
+                                </mat-datepicker-actions>
+                            </mat-datepicker>
                         </mat-form-field>
+                       
+                        <!-- <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
+                            <mat-label>Date of Birth</mat-label>
+                            <input matInput placeholder="Placeholder" formControlName="dob">                        
+                        </mat-form-field> -->
                     </div>
 
 

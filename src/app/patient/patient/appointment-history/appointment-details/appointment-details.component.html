@@ -4,15 +4,15 @@
 </div>
 <mat-card>
   <div class="row">
-    <div class="col-md-4 p-3"><strong>Appointment Date:</strong> {{appointmentDetail.apppintmentDate}}</div>
-    <div class="col-md-4 p-3"><strong>Physician Detail:</strong> {{appointmentDetail.physician}}</div>
+    <div class="col-md-4 p-3"><strong>Appointment Date:</strong> {{appointmentDetail.StartTime | date:"MM/dd/yy"}}</div>
+    <div class="col-md-4 p-3"><strong>Physician Detail:</strong> {{appointmentDetail.selectphysician}}</div>
     <div class="col-md-4 p-3"><strong>Status: </strong>{{appointmentDetail.status}}</div>
   </div>
   <div class="row">
     <div class="col p-3">
     <strong>
-      Notes: </strong><br/>
-      {{appointmentDetail.notes}}
+      Description: </strong><br/>
+      {{appointmentDetail.discription}}
     </div>
   </div>
 </mat-card>
