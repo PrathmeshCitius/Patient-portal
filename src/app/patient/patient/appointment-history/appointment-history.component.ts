@@ -12,7 +12,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class AppointmentHistoryComponent implements OnInit {
 
-  displayedColumns: string[] = ['apppintmentDate', 'physician', 'status', 'notes'];
+  displayedColumns: string[] = ['StartTime', 'selectphysician', 'status', 'discription'];
   dataSource!: MatTableDataSource<any>;
   onedit=false;
   onAdd=true;

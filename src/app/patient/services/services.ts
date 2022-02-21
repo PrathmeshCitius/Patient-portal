@@ -47,10 +47,10 @@ updateUserById(id:any, data:any){
 //code for appointment history
 
 getAppointmentHistory(){
-    return this.http.get<any>("http://localhost:3000/appointment-history/")
+    return this.http.get<any>("http://localhost:3000/eventList/")
 }
 getDetailById(id:any){
-    return this.http.get("http://localhost:3000/appointment-history/"+id)
+    return this.http.get("http://localhost:3000/eventList/"+id)
     
 }
 }
