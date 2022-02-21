@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
+import {
+  HttpClientTestingModule,
+} from '@angular/common/http/testing';
+import{RouterTestingModule} from '@angular/router/testing';
 @Injectable({
   providedIn: 'root'
 })
@@ -9,7 +12,7 @@ export class PhysicianService {
     throw new Error('Method not implemented.');
   }
 
-  constructor(private HttpClient: HttpClient) { }
+  constructor(private HttpClient: HttpClient, HttpClientModule:HttpClient) { }
 
   getPatientVital() {
     return this.HttpClient.get<any>("http://localhost:3000/physician")
