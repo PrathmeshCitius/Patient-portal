@@ -98,14 +98,14 @@
       "id": 5
     },
     {
-      "email": "chetan@gmail.com",
-      "password": "$2a$10$NHfpERGcAuO/Od1h7U3CM.SVSO/HsXImkahyfzkL4SAMB0YoO0ZsK",
       "firstName": "Dr Chetan",
       "lastName": "Jaiswal",
+      "email": "chetan@gmail.com",
       "dob": "1987-08-17T18:30:00.000Z",
       "phone": "9090909090",
-      "confirmPassword": "chetan123",
       "address": "Nagpur",
+      "password": "$2a$10$hm4cLlR.TJrqzGaI7XPx4uxROQHytSFpp2pn58dp.HeCCTqsjlIoK",
+      "confirmPassword": "chetan123",
       "image": "",
       "id": 6
     },

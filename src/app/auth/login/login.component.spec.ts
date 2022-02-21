@@ -75,8 +75,4 @@ describe('LoginComponent', () => {
 
     expect(authServiceSpy.login).toHaveBeenCalledWith(formData);
   })
-
-
-
-
 });
