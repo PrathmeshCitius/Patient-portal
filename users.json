@@ -15,16 +15,16 @@
     },
     {
       "id": 2,
-      "email": "shri@yahoo.com",
-      "password": "shri$75",
-      "firstName": "shrinath",
+      "email": "arav@gmail.com",
+      "password": "Ar@1233",
+      "firstName": "arav",
       "lastName": "nair",
-      "dob": "1993-07-28T18:30:00.000Z",
-      "phone": "9878676543",
-      "address": "pune",
+      "dob": "2022-02-08T18:30:00.000Z",
+      "phone": "9898789857",
+      "address": "mumbai",
       "image": "",
       "role": "patient",
-      "isAuthenticated": false
+      "isAuthenticated": true
     }
   ],
   "eventList": [
@@ -257,7 +257,5 @@
   "profile": {
     "name": "typicode"
   },
-  "loggedin": [
-  
-  ]
+  "loggedin": []
 }

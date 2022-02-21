@@ -34,7 +34,7 @@ export class RegistrationComponent implements OnInit {
     address: new FormControl(''),
     image:new FormControl(''),
     role: new FormControl('patient'),
-    isauthenticated:new FormControl(false)
+    isAuthenticated:new FormControl(false)
   },
     { validators: passwordsMatchValidator() }
   )
@@ -77,8 +77,8 @@ export class RegistrationComponent implements OnInit {
     return this.registerForm.get('role');
   }
 
-  get isauthenticated(){
-    return this.registerForm.get('isauthenticated');
+  get isAuthenticated(){
+    return this.registerForm.get('isAuthenticated');
   }
   submit() {
     if (this.registerForm.invalid) {

@@ -4,7 +4,7 @@ const jsonServer = require('json-server')
 const jwt = require('jsonwebtoken')
 
 const server = jsonServer.create()
-const router = jsonServer.router('./database.json')
+const router = jsonServer.router('./users.json')
 const userdb = JSON.parse(fs.readFileSync('./users.json', 'UTF-8'))
 
 
@@ -27,19 +27,25 @@ function verifyToken(token) {
 }
 
 // Check if the user exists in database
-function isAuthenticated({ email, password }) {
-
+function isAuthenticatedUser({ email, password }) {
   return userdb.users.findIndex(user => user.email === email && user.password === password) !== -1
+}
+
+
+function isEmailExist({ email}){
+  const user = userdb.users.find(user => user.email === email);
+    if (user) return true;
+
 }
 
 // Register New User
 server.post('/auth/register', (req, res) => {
 
-  const { email, password, firstName, lastName, dob, phone, address, image, role, isauthenticated } = req.body;
+  const { email, password, firstName, lastName, dob, phone, address, image, role, isAuthenticated } = req.body;
 
-  if (isAuthenticated({ email, password }) === true) {
+  if (isEmailExist({ email }) ){
     const status = 401;
-    const message = 'Email and Password already exist';
+    const message = 'Email already exist';
     res.status(status).json({ status, message });
     return
   }
@@ -77,7 +83,7 @@ server.post('/auth/register', (req, res) => {
       address: address,
       image: image,
       role: role,
-      isauthenticated: isauthenticated
+      isAuthenticated: isAuthenticated
 
 
     }); //add some data
@@ -92,10 +98,10 @@ server.post('/auth/register', (req, res) => {
     });
   });
 
-  // Create token for new user
-  const access_token = createToken({ email, password })
+ // Create token for new user
+  // const access_token = createToken({ email, password })
 
-  res.status(200).json({ access_token })
+  res.status(200).json("sucess")
 })
 
 // Login to one of the users from ./users.json
@@ -127,7 +133,7 @@ server.post('/auth/login', (req, res) => {
     }
 
    
-    if (isAuthenticated({ email, password }) === false) {
+    if (isAuthenticatedUser({ email, password }) === false) {
       const status = 401
       const message = 'Incorrect email or password'
       res.status(status).json({ status, message })
@@ -169,6 +175,7 @@ server.post('/auth/login', (req, res) => {
 })
 
 server.use(/^(?!\/auth).*$/, (req, res, next) => {
+  console.log("auth header"+req.headers.authorization);
   if (req.headers.authorization === undefined || req.headers.authorization.split(' ')[0] !== 'Bearer') {
     const status = 401
     const message = 'Error in authorization format'
