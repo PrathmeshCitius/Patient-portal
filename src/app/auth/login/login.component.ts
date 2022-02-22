@@ -45,14 +45,9 @@ export class LoginComponent implements OnInit {
       "password": this.loginForm.value.password
     }
     this.authService.login(data).subscribe(res => {
-      
-
       if(res){
-    
       this.notificationService.showSuccess("Login Successful", "User");
-      console.log("currentuser",JSON.stringify(res))
       this.loginForm.reset();
-      
       
       if (res.role == 'admin'){
       this.router.navigateByUrl('/admin/manageuser');

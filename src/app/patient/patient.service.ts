@@ -53,6 +53,10 @@ export class PatientService {
     });
     return scheduleObservable;
   }
-
+/////////////////dynamic chart trial/////////////
+getdoctorsFromEventlist()
+{
+  return this.http.get<any>('http://localhost:3000/eventList/');
+}
   
 }

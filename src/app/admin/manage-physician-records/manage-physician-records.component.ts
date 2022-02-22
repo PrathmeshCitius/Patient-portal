@@ -7,7 +7,6 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ApiService } from 'src/app/patient/services/services';
 import { AdminService } from '../admin.service';
 import { FormDialogComponent } from '../form-dialog/form-dialog.component';
-
 @Component({
   selector: 'app-manage-physician-records',
   templateUrl: './manage-physician-records.component.html',

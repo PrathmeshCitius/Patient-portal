@@ -8,6 +8,7 @@
 @import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
 @import '../node_modules/@syncfusion/ej2-angular-schedule/styles/material.css';
+@import '~font-awesome/css/font-awesome.css';
 html, body { height: 100%; }
 body { margin: 0;font-family: 'Inter', sans-serif;}
 a, p, div, span {
@@ -225,3 +226,6 @@ a, p, div, span {
     }
 }
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

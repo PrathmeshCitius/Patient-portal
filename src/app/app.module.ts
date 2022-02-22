@@ -19,10 +19,14 @@ import { JwtInterceptor } from './helpers/jwt.interceptor';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderComponent } from './shared/navigation/header/header.component';
 import { GlobalService } from './services/api.service';
-
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
 import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
 import { DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
-
+import { NavbarComponent } from './mainpage/navbar/navbar.component';
+import { ContentComponent } from './mainpage/content/content.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { MaterialModule } from './shared/material/material.module';
 const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
   suppressScrollX: true,
@@ -34,6 +38,8 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
+    ContentComponent
   ],
   schemas: [],
 
@@ -63,7 +69,11 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     }),
     FlexLayoutModule,
     ScheduleModule ,
-    DateTimePickerModule 
+    DateTimePickerModule ,
+    NgbModule,
+    MaterialModule ,
+    MatButtonModule,
+    MatToolbarModule
   ],
 
   providers: [PhysicianService,GlobalService,{

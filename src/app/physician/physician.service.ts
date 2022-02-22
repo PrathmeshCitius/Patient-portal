@@ -34,7 +34,7 @@ export class PhysicianService {
   updateUserById(id: number, data: any) {
     return this.HttpClient.put<any>("http://localhost:3000/users/" + id, data)
   }
-  ////////////Prathmesh Physician demo api////////////////
+  ////////////Prathmesh Physician dash api////////////////
   getPhysician(){
     return this.HttpClient.get<any>("http://localhost:3000/eventPatientDemo/" );
   }
