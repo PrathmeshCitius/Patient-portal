@@ -23,4 +23,19 @@ export class AdminService {
     return this.http.put(`${this.API_URL}/users/${id}`, data);
   }
 
+  deleteUserData(id) {
+    return this.http.delete(`http://localhost:3000/users/${id}`);
+  }
+
+
+  getPhysicianRecord(){
+  return this.http.get<any>("http://localhost:3000/users/")
+
+  }
+
+
+  registerPhysician(data){
+    return this.http.post<any>("http://localhost:3000/users/",data)
+  }
+
 }

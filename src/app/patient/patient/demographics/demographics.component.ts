@@ -5,6 +5,7 @@ import { PatientService } from '../../patient.service';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { AuthService } from 'src/app/auth/auth.service';
 import { GlobalService } from 'src/app/services/api.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-demographics',
@@ -55,7 +56,7 @@ export class DemographicsComponent implements OnInit {
     this.demographicForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      dob: ['', Validators.required],
+      dob:  [moment().format('dd-mm-yy'),[Validators.required]],
       gender: ['', Validators.required],
       ethnicity: [''],
       education: [''],
@@ -89,7 +90,7 @@ export class DemographicsComponent implements OnInit {
     this.patientService.updatePatientDemographics(this.demographicForm.value,this.pId).subscribe((response) => {
 
       if (response) {
-        this.router.navigate(['/patient/immunization-details']);
+        this.router.navigate(['/patient/appointment-history']);
       }
 
 

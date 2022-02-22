@@ -11,6 +11,9 @@ import { RouterModule } from '@angular/router';
 import { AdminRoutingModule } from './admin-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { ManageuserComponent } from './manageuser/manageuser.component';
+import { DialogComponent } from './dialog/dialog.component';
+import { FormDialogComponent } from './form-dialog/form-dialog.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -23,9 +26,11 @@ import { ManageuserComponent } from './manageuser/manageuser.component';
     BillingComponent,
     SideNavBarComponent,
     ManageuserComponent,
+    DialogComponent,
+    FormDialogComponent,
     ],
   imports: [
-    CommonModule, RouterModule, AdminRoutingModule,SharedModule
+    CommonModule, RouterModule, AdminRoutingModule,SharedModule,ReactiveFormsModule,FormsModule
   ],
   exports: [
      AdminComponent,

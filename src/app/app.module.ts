@@ -56,7 +56,11 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     AdminModule,
     PerfectScrollbarModule,
     ChartsModule,
-    ToastrModule.forRoot(),
+    ToastrModule.forRoot({
+      timeOut: 2000,
+      positionClass: 'toast-top-right',
+      preventDuplicates: true
+    }),
     FlexLayoutModule,
     ScheduleModule ,
     DateTimePickerModule 
