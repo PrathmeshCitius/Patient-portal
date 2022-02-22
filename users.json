@@ -34,7 +34,7 @@
       "phone": "9876787656",
       "password": "aman@123",
       "address": "UP",
-      "image": "",
+      "image": "data:image/png;base64,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",
       "role": "patient",
       "isAuthenticated": true,
       "id": 4
@@ -77,6 +77,18 @@
       "height": "175 cm",
       "weight": "80 kg",
       "id": 1
+    },
+    {
+      "date": "2022-02-02",
+      "email": "seema@gmail.com",
+      "name": "Seema",
+      "bp": "120/80",
+      "pulse": "70",
+      "resp": "Normal",
+      "temp": "97",
+      "height": "150",
+      "weight": "60",
+      "id": 2
     }
   ],
   "patientdemo": [
@@ -84,16 +96,16 @@
       "firstName": "Snehal",
       "lastName": "Tiwaskar",
       "dob": "1992-08-09T18:30:00.000Z",
-      "gender": "",
-      "ethnicity": "",
-      "education": "",
-      "occupation": "",
+      "gender": "female",
+      "ethnicity": "Indian",
+      "education": "BE",
+      "occupation": "Software Developer",
       "address": "Bangalore",
       "contact": "8987898765",
-      "medHist": "",
-      "fmMedHist": "",
-      "surgery": "",
-      "insurance": "",
+      "medHist": "NA",
+      "fmMedHist": "Diabetes",
+      "surgery": "Knee",
+      "insurance": "Star alliance",
       "id": 3
     },
     {

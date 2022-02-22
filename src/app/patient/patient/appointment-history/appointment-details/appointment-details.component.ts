@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router} from '@angular/router';
 import { ApiService } from 'src/app/patient/services/services';
 
 @Component({
@@ -10,7 +10,7 @@ import { ApiService } from 'src/app/patient/services/services';
 export class AppointmentDetailsComponent implements OnInit {
 aId;
 appointmentDetail;
-  constructor( private activatedRoutes:ActivatedRoute, private api:ApiService) {
+  constructor( private activatedRoutes:ActivatedRoute, private api:ApiService, private router:Router) {
     this.aId= this.activatedRoutes.snapshot.params['id']
     console.log("appointment ID", this.aId)
    }
@@ -21,5 +21,7 @@ this.api.getDetailById(this.aId).subscribe(res=>{
   console.log("111111111", this.appointmentDetail)
 })
   }
-
+  goBack(){
+    this.router.navigate(['appointment-history'])
+  }
 }

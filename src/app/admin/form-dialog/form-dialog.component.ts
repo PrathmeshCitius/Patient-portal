@@ -52,7 +52,7 @@ export class FormDialogComponent implements OnInit {
       firstName: new FormControl('', Validators.required),
       lastName: new FormControl(''),
       email: new FormControl('', [Validators.email, Validators.required]),
-      dob:   new FormControl(moment().format('dd-mm-yy')),
+      dob:   new FormControl(moment('22-2-2022').format('dd-mm-yy')),
       phone: new FormControl(''),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
       confirmPassword: new FormControl('', Validators.required),
