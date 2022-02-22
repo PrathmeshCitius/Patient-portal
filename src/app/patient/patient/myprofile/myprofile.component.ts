@@ -45,6 +45,8 @@ export class MyprofileComponent implements OnInit {
       confirmPassword: [''],
       address: ['', Validators.required],
       image: [''],
+      role:[''],
+      isAuthenticated:''
     });
 
     this.activatedRoute.queryParamMap.subscribe((res) => {
@@ -84,6 +86,8 @@ export class MyprofileComponent implements OnInit {
       password: this.userData.password,
       confirmPassword: this.userData.confirmPassword,
       image: this.userData.image,
+      role: this.userData.role,
+      isAuthenticated: this.userData.isAuthenticated
     });
   }
 

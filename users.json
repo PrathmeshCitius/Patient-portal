@@ -1,494 +1,176 @@
 {
-    "users": [
-        {
-            "firstName": "prinu",
-            "lastName": "pillai",
-            "email": "prinu9@gmail.com",
-            "dob": "1993-09-14T18:30:00.000Z",
-            "phone": "9876546777",
-            "password": "P@1234",
-            "address": "thane Mumbai",
-            "image": "data:image/jpeg;base64,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",
-            "id": 1,
-            "role": "admin",
-            "isAuthenticated": true
-        },
-        {
-            "firstName": "arav",
-            "lastName": "nair1",
-            "email": "arav@gmail.com",
-            "dob": "2022-02-08T18:30:00.000Z",
-            "phone": "9898789857",
-            "password": "Ar@1233",
-            "address": "mumbai",
-            "image": "data:image/png;base64,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",
-            "id": 2,
-            "isAuthenticated": true
-        },
-        {
-            "id": 3,
-            "email": "akash@gmail.com",
-            "password": "Akash@123",
-            "firstName": "Akash",
-            "lastName": "Kumar",
-            "dob": "2022-01-31T18:30:00.000Z",
-            "phone": "9898989898",
-            "address": "Ranchi",
-            "image": "",
-            "role": "patient",
-            "isAuthenticated": true
-        },
-        {
-            "id": 4,
-            "email": "dips@gmail.com",
-            "password": "D@12345",
-            "firstName": "Dipali",
-            "lastName": "Tiwaskar",
-            "dob": "2016-01-11T18:30:00.000Z",
-            "phone": "8966656543",
-            "address": "Pune",
-            "image": "",
-            "role": "patient",
-            "isAuthenticated": true
-        },
-        {
-            "firstName": "Satish",
-            "lastName": "Shah",
-            "email": "satish@gmail.com",
-            "dob": "1993-09-14T18:30:00.000Z",
-            "phone": "9876546778",
-            "password": "satish123",
-            "address": "Pune",
-            "image": "data:image/jpeg;base64,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",
-            "id": 3
-        },
-        {
-            "id": 4,
-            "email": "chetan@gmail.com",
-            "password": "chetan123",
-            "firstName": "Dr Chetan",
-            "lastName": "Jaiswal",
-            "dob": "2022-02-08T18:30:00.000Z",
-            "phone": "9898789857",
-            "address": "Nagpur",
-            "image": "",
-            "role": "physician",
-            "isAuthenticated": true
-        },
-        {
-            "id": 5,
-            "email": "raj@gmail.com",
-            "password": "raj123",
-            "firstName": "Dr Raj",
-            "lastName": "Kumar",
-            "dob": "2022-02-08T18:30:00.000Z",
-            "phone": "9898789857",
-            "address": "Bangalore",
-            "image": "",
-            "role": "physician",
-            "isAuthenticated": true
-        },
-        {
-            "firstName": "snehal",
-            "lastName": "T",
-            "email": "snehal@gmail.com",
-            "dob": "1993-09-14T18:30:00.000Z",
-            "phone": "9876546777",
-            "password": "snehal123",
-            "address": "thane Mumbai",
-            "image": "data:image/jpeg;base64,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",
-            "id": 6,
-            "role": "patient",
-            "isAuthenticated": true
-        },
-        {
-            "id": 7,
-            "email": "aman@gmail.com",
-            "password": "aman123",
-            "firstName": "Aman",
-            "lastName": "Kumar",
-            "dob": "2022-02-08T18:30:00.000Z",
-            "phone": "9898789857",
-            "address": "Raipur",
-            "image": "",
-            "role": "patient",
-            "isAuthenticated": true
-        },
-        {
-            "id": 8,
-            "email": "prathamesh@gmail.com",
-            "password": "prathamesh123",
-            "firstName": "Prathamesh",
-            "lastName": "Kori",
-            "dob": "2022-02-08T18:30:00.000Z",
-            "phone": "9898789857",
-            "address": "Navi-Mumbai",
-            "image": "",
-            "role": "patient",
-            "isAuthenticated": true
-        },
-        {
-            "id": 9,
-            "email": "sandhya@gmail.com",
-            "password": "sandhya123",
-            "firstName": "Sandhya",
-            "lastName": "M",
-            "dob": "2022-02-08T18:30:00.000Z",
-            "phone": "9898789857",
-            "address": "Hydrabad",
-            "image": "",
-            "role": "patient",
-            "isAuthenticated": true
-        },
-        {
-            "id": 10,
-            "email": "Deepali@gmail.com",
-            "password": "deepali123",
-            "firstName": "Deepali",
-            "lastName": "T",
-            "dob": "2022-02-08T18:30:00.000Z",
-            "phone": "9898789857",
-            "address": "Pune",
-            "image": "",
-            "role": "patient",
-            "isAuthenticated": true
-        },
-        {
-            "id": 11,
-            "email": "nitesh@gmail.com",
-            "password": "Nitesh@123",
-            "firstName": "Nitesh",
-            "lastName": "Kumar",
-            "dob": "2022-01-31T18:30:00.000Z",
-            "phone": "9898989898",
-            "address": "Kuru",
-            "image": "",
-            "role": "patient",
-            "isAuthenticated": true
-        },
-        {
-            "id": 12,
-            "email": "alok@gmail.com",
-            "password": "Alok@123",
-            "firstName": "Alok",
-            "lastName": "Kumar",
-            "dob": "2022-02-02T18:30:00.000Z",
-            "phone": "8989898989",
-            "address": "Pune",
-            "image": "",
-            "role": "patient",
-            "isAuthenticated": true
-        }
-    ],
-    "eventList": [
-        {
-            "Subject": "doctor appointment",
-            "selectphysician": "Dr Satish Shah",
-            "discription": "M",
-            "StartTime": "2022-02-20T18:30:00.000Z",
-            "EndTime": "2022-02-21T07:00:00.000Z",
-            "id": 1,
-            "status": "Pending"
-        },
-        {
-            "Subject": "snehal",
-            "selectphysician": "Dr Chetan Jaiswal",
-            "discription": "checkup",
-            "StartTime": "2022-02-21T18:30:00.000Z",
-            "EndTime": "2022-02-22T07:00:00.000Z",
-            "id": 2,
-            "status": "Pending"
-        },
-        {
-            "Subject": "appointment",
-            "selectphysician": "Dr Chetan Jaiswal",
-            "discription": "checkup",
-            "StartTime": "2022-02-25T15:00:00.000Z",
-            "EndTime": "2022-02-25T15:30:00.000Z",
-            "id": 3
-        },
-        {
-            "Subject": "BP check-up",
-            "selectphysician": "Dr Chetan Jaiswal",
-            "discription": "Feeling low",
-            "StartTime": "2022-02-22T18:30:00.000Z",
-            "EndTime": "2022-02-22T19:00:00.000Z",
-            "id": 4
-        },
-        {
-            "Subject": "xxxx",
-            "selectphysician": "Dr Satish Shah",
-            "discription": "xxxxx",
-            "StartTime": "2022-02-19T18:30:00.000Z",
-            "EndTime": "2022-02-19T18:30:00.000Z",
-            "id": 5
-        },
-        {
-            "Subject": "Aman not well",
-            "selectphysician": "Dr Satish Shah",
-            "discription": "Cough and cold",
-            "StartTime": "2022-02-21T18:30:00.000Z",
-            "EndTime": "2022-02-21T19:30:00.000Z",
-            "status": "Pending",
-            "id": 6
-        }
-    ],
-    "physician": [
-        {
-            "date": "2022-02-07",
-            "email": "der@gmail.com",
-            "name": "Der",
-            "bp": "130/110",
-            "pulse": "80 bpm",
-            "resp": "Normal",
-            "temp": "98 deg",
-            "height": "176 cm",
-            "weight": "80 kg",
-            "id": 8
-        },
-        {
-            "date": "2022-02-02",
-            "email": "aman@gmail.com",
-            "name": "AK",
-            "bp": "120/110",
-            "pulse": "60 bps",
-            "resp": "Normal",
-            "temp": "96 deg",
-            "height": "180 cm",
-            "weight": "80 kg",
-            "id": 10
-        },
-        {
-            "date": "2021-11-11",
-            "email": "sonia@gmail.com",
-            "name": "Sonia ",
-            "bp": "135/110",
-            "pulse": "70 bpm",
-            "resp": "Normal",
-            "temp": "98 deg",
-            "height": "180cm",
-            "weight": "78 kg",
-            "id": 12
-        },
-        {
-            "date": "2022-02-01",
-            "email": "arav@gmail.com",
-            "name": "Arav",
-            "bp": "120/110",
-            "pulse": "67 bpm",
-            "resp": "Normal",
-            "temp": "98 deg",
-            "height": "178 cm",
-            "weight": "80 kg",
-            "id": 14
-        },
-        {
-            "date": "2021-12-08",
-            "email": "arav@gmail.com",
-            "name": "Arav",
-            "bp": "130/110",
-            "pulse": "69 bpm",
-            "resp": "normal",
-            "temp": "97 deg",
-            "height": "178 cm",
-            "weight": "76 kg",
-            "id": 15
-        },
-        {
-            "date": "2022-02-01",
-            "email": "test@gmail.com",
-            "name": "Kumar Aman",
-            "bp": "120/111",
-            "pulse": "76 bpm",
-            "resp": "Normal",
-            "temp": "80 deg",
-            "height": "170 cm",
-            "weight": "87 kg",
-            "id": 16
-        },
-        {
-            "date": "2022-02-02",
-            "email": "nitin@gmail.com",
-            "name": "Nitin Raj",
-            "bp": "130/110",
-            "pulse": "88 bpm",
-            "resp": "Normal",
-            "temp": "89 deg",
-            "height": "169 cm",
-            "weight": "78 kg",
-            "id": 17
-        },
-        {
-            "date": "2022-02-04",
-            "email": "akash@gmail.com",
-            "name": "Akash",
-            "bp": "120/110",
-            "pulse": "67 bpm",
-            "resp": "high",
-            "temp": "98 deg",
-            "height": "180 cm",
-            "weight": "89 kg",
-            "id": 18
-        },
-        {
-            "date": "2022-02-01",
-            "email": "nitesh@gmail.com",
-            "name": "Nitesh",
-            "bp": "120 /110",
-            "pulse": "80 bpm",
-            "resp": "normal",
-            "temp": "98 deg",
-            "height": "180cm",
-            "weight": "80kg",
-            "id": 19
-        }
-    ],
-    "patientdemo": [
-        {
-            "firstName": "Seema",
-            "lastName": "Patil",
-            "dob": "2022-02-16T18:30:00.000Z",
-            "gender": "female",
-            "ethnicity": "mlk",
-            "education": "`llnl",
-            "occupation": "lknk",
-            "address": "n",
-            "contact": "8787887865",
-            "medHist": "lknk",
-            "fmMedHist": "kn",
-            "surgery": "kn",
-            "insurance": "kjn",
-            "id": 1
-        }
-    ],
-    "medicationList": [
-        {
-            "currentmedications": "Hydrocronice",
-            "otc": "zymol",
-            "hvma": "NA",
-            "socialdrugs": "Crocin",
-            "drugsallergies": "NA",
-            "otherallergies": "Lactose",
-            "id": 16
-        }
-    ],
-    "immunization_details": [
-        {
-            "id": 1,
-            "vaccineName": "Covid-19",
-            "doses": "2",
-            "date": "10/09/2021"
-        },
-        {
-            "vaccineName": "Flu-Dengue",
-            "doses": "aa",
-            "date": "2022-02-24T18:30:00.000Z",
-            "id": 4
-        },
-        {
-            "vaccineName": "Maleria",
-            "doses": "1",
-            "date": "2021-11-18T18:30:00.000Z",
-            "id": 6
-        },
-        {
-            "vaccineName": "Maleria Flu",
-            "doses": "2",
-            "date": "2022-01-31T18:30:00.000Z",
-            "id": 9
-        },
-        {
-            "id": 10,
-            "vaccineName": "Polio Vaccine",
-            "doses": "5",
-            "date": "2022-02-04T18:30:00.000Z"
-        },
-        {
-            "vaccineName": "aaaa",
-            "doses": "2",
-            "date": "2022-01-31T18:30:00.000Z",
-            "id": 11
-        },
-        {
-            "vaccineName": "aaa",
-            "doses": "Dose 1",
-            "date": "2022-02-14T18:30:00.000Z",
-            "id": 12
-        },
-        {
-            "vaccineName": "aa",
-            "doses": "Dose 2",
-            "date": "2022-02-15T18:30:00.000Z",
-            "id": 13
-        },
-        {
-            "id": 14,
-            "vaccineName": "Rabies",
-            "doses": "Dose 4",
-            "date": "2022-02-15T18:30:00.000Z"
-        }
-    ],
-    "appointment-history": [
-        {
-            "apppintmentDate": "23/09/2021",
-            "physician": "Dr John Kennedy",
-            "status": "Pending",
-            "notes": "The blood pressure is normal, vitals are all normal, suggestion of healthy lifestyle changes",
-            "id": 1
-        },
-        {
-            "apppintmentDate": "25/09/2019",
-            "physician": "Dr Jenny Doe",
-            "status": "Completed",
-            "notes": "The blood pressure is normal, vitals are all normal, suggestion of healthy lifestyle changes",
-            "id": 2
-        }
-    ],
-    "physicianDetails": [
-        {
-            "firstName": "23/09/2021",
-            "lastName": "Dr John Kennedy",
-            "email": "Pending",
-            "address": "The blood pressure is normal, vitals are all normal, suggestion of healthy lifestyle changes",
-            "phone": 1
-        },
-        {
-            "apppintmentDate": "25/09/2019",
-            "physician": "Dr Jenny Doe",
-            "status": "Completed",
-            "notes": "The blood pressure is normal, vitals are all normal, suggestion of healthy lifestyle changes",
-            "id": 2
-        }
-    ],
-    "eventPatientDemo": [
-        {
-            "id": 1,
-            "patientname": "Prathmesh",
-            "appdate": "1/2/22",
-            "title": "Fever",
-            "status": "pending",
-            "appointment": "View"
-        },
-        {
-            "id": 2,
-            "patientname": "Snehal",
-            "appdate": "2/2/22",
-            "title": "Covid",
-            "status": "Done",
-            "appointment": "View"
-        }
-    ],
-    "comments": [
-        {
-            "id": 1,
-            "body": "some comment",
-            "postId": 1
-        }
-    ],
-    "profile": {
-        "name": "typicode"
+  "users": [
+    {
+      "firstName": "prinu",
+      "lastName": "pillai",
+      "email": "prinu9@gmail.com",
+      "dob": "1993-09-14T18:30:00.000Z",
+      "phone": "9876546777",
+      "password": "P@1234",
+      "address": "thane Mumbai",
+      "image": "data:image/jpeg;base64,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",
+      "id": 1,
+      "role": "admin",
+      "isAuthenticated": true
     },
-    "loggedin": [
-      
-    ]
+    {
+      "id": 3,
+      "email": "snehal@gmail.com",
+      "password": "snehal@123",
+      "firstName": "Snehal",
+      "lastName": "Tiwaskar",
+      "dob": "1992-08-09T18:30:00.000Z",
+      "phone": "8987898765",
+      "address": "Bangalore",
+      "image": "",
+      "role": "patient",
+      "isAuthenticated": true
+    },
+    {
+      "firstName": "Aman",
+      "lastName": "Kumar",
+      "email": "aman@gmail.com",
+      "dob": "1997-05-15T18:30:00.000Z",
+      "phone": "9876787656",
+      "password": "aman@123",
+      "address": "UP",
+      "image": "",
+      "role": "patient",
+      "isAuthenticated": true,
+      "id": 4
+    },
+    {
+      "firstName": "Seema",
+      "lastName": "Naik",
+      "email": "seema@gmail.com",
+      "dob": "1997-05-15T18:30:00.000Z",
+      "phone": "7878777778",
+      "password": "seema@123",
+      "address": "pune",
+      "image": "",
+      "role": "physician",
+      "isAuthenticated": true,
+      "id": 5,
+      "speciality": "Gynaecology"
+    }
+  ],
+  "eventList": [
+    {
+      "Subject": "Low Blood Sugar",
+      "selectphysician": "Dr Chetan Jaiswal",
+      "discription": "Severe tiredness",
+      "StartTime": "2022-02-23T03:30:00.000Z",
+      "EndTime": "2022-02-23T04:30:00.000Z",
+      "status": "Pending",
+      "id": 1
+    }
+  ],
+  "physician": [
+    {
+      "date": "2022-02-16",
+      "email": "aman@gmail.com",
+      "name": "Aman",
+      "bp": "120/110",
+      "pulse": "70 bps",
+      "resp": "Normal",
+      "temp": "98 degree",
+      "height": "175 cm",
+      "weight": "80 kg",
+      "id": 1
+    }
+  ],
+  "patientdemo": [
+    {
+      "firstName": "Snehal",
+      "lastName": "Tiwaskar",
+      "dob": "1992-08-09T18:30:00.000Z",
+      "gender": "",
+      "ethnicity": "",
+      "education": "",
+      "occupation": "",
+      "address": "Bangalore",
+      "contact": "8987898765",
+      "medHist": "",
+      "fmMedHist": "",
+      "surgery": "",
+      "insurance": "",
+      "id": 3
+    },
+    {
+      "firstName": "Aman",
+      "lastName": "Kumar",
+      "dob": "1997-05-15T18:30:00.000Z",
+      "gender": "",
+      "ethnicity": "",
+      "education": "",
+      "occupation": "",
+      "address": "Pune",
+      "contact": "9876787656",
+      "medHist": "",
+      "fmMedHist": "",
+      "surgery": "",
+      "insurance": "",
+      "id": 4
+    }
+  ],
+  "medicationList": [
+    {
+      "id": 1,
+      "currentmedications": "Zevolin",
+      "otc": "Dolo 650",
+      "hvma": "Vitamin D",
+      "socialdrugs": "NA",
+      "drugsallergies": "NA",
+      "otherallergies": "Gluten"
+    },
+    {
+      "id": 2,
+      "currentmedications": "HydroSulphide",
+      "otc": "Levolin",
+      "hvma": "Vitamin E",
+      "socialdrugs": "NA",
+      "drugsallergies": "NA",
+      "otherallergies": "Lactogen"
+    }
+  ],
+  "immunization_details": [
+    {
+      "id": 1,
+      "vaccineName": "Covid19",
+      "doses": "Dose 2",
+      "date": "2021-10-19T18:30:00.000Z"
+    },
+    {
+      "id": 2,
+      "vaccineName": "Rabies",
+      "doses": "Dose 3",
+      "date": "2011-03-09T18:30:00.000Z"
+    },
+    {
+      "id": 3,
+      "vaccineName": "Dengue",
+      "doses": "Dose 1",
+      "date": "2022-01-17T18:30:00.000Z"
+    },
+    {
+      "id": 4,
+      "vaccineName": "Polio",
+      "doses": "Dose 5",
+      "date": "1998-12-08T18:30:00.000Z"
+    }
+  ],
+  "appointment-history": [],
+  "physicianDetails": [],
+  "eventPatientDemo": [],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "loggedin": []
 }

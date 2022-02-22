@@ -18,7 +18,7 @@ const routes: Routes = [
 
 
 
- //{ path: 'auth/login', pathMatch: "full" },
+  { path: '',redirectTo:'auth/login', pathMatch: "full" },
   {
     path: 'patient',canActivate: [AuthGuard] ,
     loadChildren: () => import('./patient/patient.module').then((m) => m.PatientModule)

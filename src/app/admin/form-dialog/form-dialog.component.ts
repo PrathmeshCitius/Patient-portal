@@ -32,6 +32,7 @@ export class FormDialogComponent implements OnInit {
     this.physicianRegisterForm.value.password = `${this.physicianRegisterForm.value.firstName}@1234`;
     this.physicianRegisterForm.value.confirmPassword = `${this.physicianRegisterForm.value.firstName}@1234`;
    
+    console.log(this.physicianRegisterForm);
    if(this.physicianRegisterForm.invalid){
      return 
    }
@@ -51,7 +52,7 @@ export class FormDialogComponent implements OnInit {
       firstName: new FormControl('', Validators.required),
       lastName: new FormControl(''),
       email: new FormControl('', [Validators.email, Validators.required]),
-      dob:   new FormControl(moment().format('dd-mm-yy'),[Validators.required]),
+      dob:   new FormControl(moment().format('dd-mm-yy')),
       phone: new FormControl(''),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
       confirmPassword: new FormControl('', Validators.required),

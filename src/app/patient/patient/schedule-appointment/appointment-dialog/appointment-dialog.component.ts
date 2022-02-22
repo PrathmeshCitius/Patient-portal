@@ -20,11 +20,12 @@ export class AppointmentDialogComponent implements OnInit {
  // displayedColumns: string[] = ['meetingtitle', 'selectphysician', 'discription', 'time','date'];
   appointmentForm : FormGroup;
   @ViewChild('ejDateTimePicker') ejDateTimePicker: DateTimePickerComponent;
-public placeholder: String = 'StartTime';
+public placeholder: String = 'Select Date & Time';
 
   dnames:Dname[]=[
     {value: 'Dr Chetan Jaiswal', viewValue: 'Dr Chetan Jaiswal'},
     {value: 'Dr Satish Shah', viewValue: 'Dr Satish Shah'},
+    {value: 'Dr RajKumar', viewValue: 'Dr RajKumar'},
   ];
   constructor(private fb: FormBuilder, private patientService: PatientService) {}
 

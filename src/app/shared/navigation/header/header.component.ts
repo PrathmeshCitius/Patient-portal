@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { GlobalService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-header',
@@ -11,7 +12,8 @@ export class HeaderComponent implements OnInit {
   disableSelect = new FormControl();
   constructor(
     private route:ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private gs: GlobalService
   )  
    { }
   showMe = true;
@@ -29,9 +31,14 @@ export class HeaderComponent implements OnInit {
   }
 
   logOut(){
-    // remove user from local storage to log user out
-    localStorage.removeItem('currentUser');
-    this.router.navigateByUrl('/auth/login');
+    this.gs.deleteuserloggeddata("abc",1).subscribe((res)=>{
+
+
+      if(res){
+        console.log("record deleted");
+        this.router.navigateByUrl('/auth/login');
+      }
+    });
   }
 
 }
