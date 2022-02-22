@@ -1,20 +1,26 @@
 // import { ComponentFixture, TestBed } from '@angular/core/testing';
+// import { DashboardComponent } from 'src/app/admin/dashboard/dashboard.component';
+// import {
+//   HttpClientTestingModule,
+//   HttpTestingController
+// } from '@angular/common/http/testing';
+// import{RouterTestingModule} from '@angular/router/testing';
 
-// import { AppointmentHistoryComponent } from './appointment-history.component';
-
-// describe('AppointmentHistoryComponent', () => {
-//   let component: AppointmentHistoryComponent;
-//   let fixture: ComponentFixture<AppointmentHistoryComponent>;
+// describe('RegistrationComponent', () => {
+//   let component: RegistrationComponent;
+//   let fixture: ComponentFixture<RegistrationComponent>;
 
 //   beforeEach(async () => {
 //     await TestBed.configureTestingModule({
-//       declarations: [ AppointmentHistoryComponent ]
+//       imports:[HttpClientTestingModule,
+//         RouterTestingModule.withRoutes([])],
+//       declarations: [ RegistrationComponent ]
 //     })
 //     .compileComponents();
 //   });
 
 //   beforeEach(() => {
-//     fixture = TestBed.createComponent(AppointmentHistoryComponent);
+//     fixture = TestBed.createComponent(RegistrationComponent);
 //     component = fixture.componentInstance;
 //     fixture.detectChanges();
 //   });

@@ -94,6 +94,8 @@ server.post('/auth/register', (req, res) => {
         const message = err
         res.status(status).json({ status, message })
         return
+      } else {
+        res.status(200).json({id:last_item_id +1})
       }
     });
   });
@@ -101,7 +103,7 @@ server.post('/auth/register', (req, res) => {
  // Create token for new user
   // const access_token = createToken({ email, password })
 
-  res.status(200).json("sucess")
+  
 })
 
 // Login to one of the users from ./users.json
@@ -123,7 +125,8 @@ server.post('/auth/login', (req, res) => {
 
 
     const userdata = data.users.filter(x => x.email === email);
-
+    console.log(userdata);
+    if(userdata.length !== 0){
     if(userdata[0].role !== 'admin' && userdata[0].isAuthenticated == false){
       const status = 401;
       const message = 'Not authenticated by Admin'
@@ -131,7 +134,7 @@ server.post('/auth/login', (req, res) => {
       res.status(status).json({ status, message });
       return
     }
-
+  }
    
     if (isAuthenticatedUser({ email, password }) === false) {
       const status = 401

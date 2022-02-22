@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-physician-sidebar',
@@ -6,13 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./physician-sidebar.component.css']
 })
 export class PhysicianSidebarComponent implements OnInit {
- physicianId:number;
+
+ @Input() physicianId;
+ @Input() physicianEmail;
 
   constructor() { }
-  //shouldRun = /(^|.)(stackblitz|webcontainer).(io|com)$/.test(window.location.host);
+ 
   ngOnInit(): void {
-    const user = JSON.parse(localStorage.getItem("currentUser"));
-    this.physicianId = user.user.id;
+  
   }
 
 }

@@ -5,6 +5,7 @@ import { AdminService } from '../admin.service';
 
 
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 
 @Component({
@@ -67,24 +68,34 @@ export class ManageuserComponent implements OnInit {
   }
 
 
-  // openDialog(element) {
-  //   obj.action = action;
-  //   const dialogRef = this.dialog.open(DialogBoxComponent, {
-  //     width: '250px',
-  //     data:obj
-  //   });
+  openDialog(element) {
+   
+    const dialogRef = this.dialog.open(DialogComponent, {
+      width: '250px',
+      // data:obj
+    });
 
-  //   dialogRef.afterClosed().subscribe(result => {
-     
-  //       this.deleteRowData(result.data);
-  //     });
-  // }
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(result);
+      if(result.event == 'Ok'){
+        this.deleteRowData(result,element);
 
-  // deleteRowData(row_obj){
-  //   this.userList = this.userList[row_obj].filter((value,key)=>{
-  //     return value.id != row_obj.id;
-  //   });
-  // }
+      }
+      });
+  }
+
+  deleteRowData(param,elementRow){
+    console.log(param);
+    console.log(elementRow);
+    this.adminService.deleteUserData(elementRow.id).subscribe((res)=>{
+     if(res){
+        this.getUserList();
+     }
+    })
+    // this.userList = this.userList[row_obj].filter((value,key)=>{
+    //   return value.id != row_obj.id;
+    // });
+  }
 
 
   // doAction(){

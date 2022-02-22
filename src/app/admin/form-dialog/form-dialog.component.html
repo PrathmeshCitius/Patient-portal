@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>Create New Physician</h1>
+<div mat-dialog-content>
+
+<form [formGroup]="physicianRegisterForm">
+        <div class="row pt-4 ">
+            <div class="col-md-4 col-sm-6">
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput placeholder="Placeholder" formControlName="firstName">
+                    <mat-hint class="text-danger" *ngIf="physicianRegisterForm.controls['firstName'].dirty && physicianRegisterForm.hasError('required','firstName')">Name is required</mat-hint>
+
+
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Placeholder" formControlName="email">
+                    <mat-hint class="text-danger" *ngIf="physicianRegisterForm.controls['email'].dirty && physicianRegisterForm.hasError('required','email')">Email required.</mat-hint>
+
+                </mat-form-field>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <mat-form-field appearance="fill">
+                    <mat-label>Speciality</mat-label>
+                    <input matInput placeholder="Placeholder" formControlName="speciality">
+                    <mat-hint class="text-danger" *ngIf="physicianRegisterForm.controls['speciality'].dirty && physicianRegisterForm.hasError('required','speciality')">Speciality is required.</mat-hint>
+
+                </mat-form-field>
+            </div>
+        </div>
+    </form>
+
+
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button style="color: #fff;background-color: #153961;" (click)="doAction()">Confirm</button>
+  <button mat-button (click)="closeDialog()">Cancel</button>
+</div>

@@ -22,4 +22,10 @@ export class AuthService {
     return this.http.post<any>('http://localhost:8000/auth/login', data);
   }
 
+
+
+  updateDemographics(data){
+    return this.http.post<any>('http://localhost:3000/patientdemo',data)
+  }
+
 }

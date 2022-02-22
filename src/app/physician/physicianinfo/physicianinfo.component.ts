@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { sanitizeShrinkWidth } from '@fullcalendar/angular';
 import { AuthService } from 'src/app/auth/auth.service';
 import { PhysicianService } from '../physician.service';
-
+import { GlobalService } from 'src/app/services/api.service';
 @Component({
   selector: 'app-physicianinfo',
   templateUrl: './physicianinfo.component.html',
@@ -24,14 +24,16 @@ export class PhysicianinfoComponent implements OnInit {
               private router:Router, 
               private authService:AuthService,
               private activatedRoute:ActivatedRoute, 
-              private physicianService:PhysicianService ) {
+              private physicianService:PhysicianService,
+              private globalService:GlobalService ) {
                 this.pId= this.activatedRoute.snapshot.paramMap.get('id');
                 console.log("PID", this.pId)
-  if(this.pId){
-    this.getUserData();
-  }
+  
+  
+  
    }
   ngOnInit(): void {
+   
     this.physicianinfoForm=this.fb.group({
       firstName:['',Validators.required],
       lastName:['',Validators.required],
@@ -52,9 +54,19 @@ export class PhysicianinfoComponent implements OnInit {
      else{
        this.editMode=false;
      }
-    }) 
+    })
+      //current login user email
+
+      
+      // var result = res.filter(function(res_arg){
+
+      //   // console.log()
+
+      //   return res_arg.email == current_user;
+      this.getUserData();
+} 
   
-  }
+  
 
   onSubmit(){
     if(this.physicianinfoForm.valid){
@@ -67,13 +79,15 @@ export class PhysicianinfoComponent implements OnInit {
   }
 
   getUserData(){
-    this.physicianService.getUserById(this.pId).subscribe(res=>{
+   this.physicianService.getUserById(this.pId).subscribe(res=>{
+      console.log("PID",this.pId);
       this.userData=res;
-      this.patchUsersData();
-    })        
+      this.patchUsersData();    
+   })    
+  
   }
   patchUsersData(){
-    console.log("Dipali ")
+   
     this.physicianinfoForm.patchValue({
       firstName:this.userData.firstName,
       lastName:this.userData.lastName,
@@ -91,7 +105,7 @@ export class PhysicianinfoComponent implements OnInit {
   
   updateUserData(){  
     this.physicianService.updateUserById(this.pId, this.physicianinfoForm.value).subscribe(res=>{
-      //this.userData=res;
+      this.userData=res;
       alert("user Updated Successfully");
     this.getUserData();
     this.router.navigate([],{queryParams:{EditMode:null}})
