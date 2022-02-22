@@ -95,7 +95,7 @@ export class MyprofileComponent implements OnInit {
     this.apiService
       .updateUserById(this.pId, this.profileForm.value)
       .subscribe((res) => {
-        alert('user Updated Successfully');
+        alert('Profile Updated Successfully');
         this.getPatientData();
         this.router.navigate([], { queryParams: { EditMode: null } });
       });

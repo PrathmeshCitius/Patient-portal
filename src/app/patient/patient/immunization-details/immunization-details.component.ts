@@ -70,7 +70,7 @@ export class ImmunizationDetailsComponent implements OnInit {
 
     }
     else{
-      alert("Please fill all the fields")
+      alert("All the fields are required")
     }
   }
   getImmunizationDetail() {
