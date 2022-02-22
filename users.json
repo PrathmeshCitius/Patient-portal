@@ -45,13 +45,38 @@
       "email": "seema@gmail.com",
       "dob": "1997-05-15T18:30:00.000Z",
       "phone": "7878777778",
+      "address": "mumbai",
       "password": "seema@123",
-      "address": "pune",
       "image": "",
       "role": "physician",
       "isAuthenticated": true,
-      "id": 5,
-      "speciality": "Gynaecology"
+      "id": 5
+    },
+    {
+      "firstName": "Sandya",
+      "lastName": "M",
+      "email": "sandya@gmail.com",
+      "dob": "1994-07-06T18:30:00.000Z",
+      "phone": "9878676545",
+      "password": "sandya@1234",
+      "address": "mumbai",
+      "image": "",
+      "role": "patient",
+      "isAuthenticated": true,
+      "id": 6
+    },
+    {
+      "id": 7,
+      "email": "prath@gmail.com",
+      "password": "prath@1234",
+      "firstName": "Prathamesh",
+      "lastName": "Nair",
+      "dob": "1997-07-07T18:30:00.000Z",
+      "phone": "9878678765",
+      "address": "pune",
+      "image": "",
+      "role": "patient",
+      "isAuthenticated": true
     }
   ],
   "eventList": [
@@ -63,6 +88,24 @@
       "EndTime": "2022-02-23T04:30:00.000Z",
       "status": "Pending",
       "id": 1
+    },
+    {
+      "Subject": "BP issue",
+      "selectphysician": "Dr Satish Shah",
+      "discription": "Low",
+      "StartTime": "2022-02-23T04:30:00.000Z",
+      "EndTime": "2022-02-23T06:00:00.000Z",
+      "status": "Pending",
+      "id": 2
+    },
+    {
+      "Subject": "Viral Fever",
+      "selectphysician": "Dr Satish Shah",
+      "discription": "Flu",
+      "StartTime": "2022-02-24T07:00:00.000Z",
+      "EndTime": "2022-02-24T07:30:00.000Z",
+      "status": "Pending",
+      "id": 3
     }
   ],
   "physician": [
@@ -89,6 +132,30 @@
       "height": "150",
       "weight": "60",
       "id": 2
+    },
+    {
+      "date": "2022-02-09",
+      "email": "sandya@gmail.com",
+      "name": "Sandya",
+      "bp": "120/80",
+      "pulse": "71",
+      "resp": "Normal",
+      "temp": "98 degree",
+      "height": "160cm",
+      "weight": "70 kg",
+      "id": 3
+    },
+    {
+      "date": "2022-02-17",
+      "email": "sandya@gmail.com",
+      "name": "Sandya",
+      "bp": "120/80",
+      "pulse": "70",
+      "resp": "Normal",
+      "temp": "97",
+      "height": "155 cm",
+      "weight": "70 Kg",
+      "id": 4
     }
   ],
   "patientdemo": [
@@ -112,17 +179,49 @@
       "firstName": "Aman",
       "lastName": "Kumar",
       "dob": "1997-05-15T18:30:00.000Z",
+      "gender": "male",
+      "ethnicity": "Indian",
+      "education": "BE",
+      "occupation": "Software developer",
+      "address": "Pune",
+      "contact": "9876787656",
+      "medHist": "Diabetes",
+      "fmMedHist": "NA",
+      "surgery": "Knee",
+      "insurance": "Star alliance",
+      "id": 4
+    },
+    {
+      "firstName": "Sandya",
+      "lastName": "M",
+      "dob": "1994-07-06T18:30:00.000Z",
+      "gender": "female",
+      "ethnicity": "Indian",
+      "education": "BE",
+      "occupation": "Software developer",
+      "address": "pune",
+      "contact": "9878676545",
+      "medHist": "Diabetes",
+      "fmMedHist": "diabetes",
+      "surgery": "Kness",
+      "insurance": "Bajaj",
+      "id": 6
+    },
+    {
+      "firstName": "Prathamesh",
+      "lastName": "Nair",
+      "dob": "1997-07-07T18:30:00.000Z",
       "gender": "",
       "ethnicity": "",
       "education": "",
       "occupation": "",
-      "address": "Pune",
-      "contact": "9876787656",
+      "address": "pune",
+      "contact": "9878678765",
       "medHist": "",
       "fmMedHist": "",
       "surgery": "",
       "insurance": "",
-      "id": 4
+      "id": 7
     }
   ],
   "medicationList": [
@@ -143,6 +242,15 @@
       "socialdrugs": "NA",
       "drugsallergies": "NA",
       "otherallergies": "Lactogen"
+    },
+    {
+      "id": 4,
+      "currentmedications": "Novolog70",
+      "otc": "Asthelin",
+      "hvma": "Vitamin B12",
+      "socialdrugs": "Kitamine",
+      "drugsallergies": "Paracetmol",
+      "otherallergies": "Gluten"
     }
   ],
   "immunization_details": [
@@ -165,10 +273,10 @@
       "date": "2022-01-17T18:30:00.000Z"
     },
     {
-      "id": 4,
-      "vaccineName": "Polio",
-      "doses": "Dose 5",
-      "date": "1998-12-08T18:30:00.000Z"
+      "id": 6,
+      "vaccineName": "Rotavirus",
+      "doses": "Dose 2",
+      "date": "2021-12-20T18:30:00.000Z"
     }
   ],
   "appointment-history": [],

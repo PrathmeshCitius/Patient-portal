@@ -47,10 +47,10 @@
                 <div class="row mt-4">
                     <div class="col-md-4">
                         <div *ngIf="!editMode" class="card-field"> <strong>Date of
-                            Birth:</strong>{{physicianinfoForm.controls['dob'].value | date:"MM/dd/yy"}}</div>
+                            Birth:</strong>{{physicianinfoForm.controls['dob'].value | date: 'DD/MM/YYYY'}}</div>
                         <mat-form-field appearance="fill" class="mx-2" *ngIf="editMode">
                             <mat-label><strong>Date of Birth</strong></mat-label>
-                            <input matInput placeholder="Placeholder" formControlName="dob">
+                            <input matInput placeholder="Placeholder" formControlName="dob" [max]="maxDate">
                         </mat-form-field>
                     </div>
 

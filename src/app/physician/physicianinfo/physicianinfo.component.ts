@@ -6,6 +6,7 @@ import { sanitizeShrinkWidth } from '@fullcalendar/angular';
 import { AuthService } from 'src/app/auth/auth.service';
 import { PhysicianService } from '../physician.service';
 import { GlobalService } from 'src/app/services/api.service';
+import { DatePipe } from '@angular/common';
 @Component({
   selector: 'app-physicianinfo',
   templateUrl: './physicianinfo.component.html',
@@ -19,15 +20,21 @@ export class PhysicianinfoComponent implements OnInit {
   userData:any;
   pId:any;
  selectedFile:File;
+ maxDate: string;
  
   constructor(private fb:FormBuilder, 
               private router:Router, 
               private authService:AuthService,
               private activatedRoute:ActivatedRoute, 
               private physicianService:PhysicianService,
-              private globalService:GlobalService ) {
+              
+              private globalService:GlobalService ,
+              private datePipe: DatePipe) {
                 this.pId= this.activatedRoute.snapshot.paramMap.get('id');
                 console.log("PID", this.pId)
+                const dateFormat = 'yyyy-MM-dd';
+    
+                this.maxDate = datePipe.transform(new Date(), dateFormat);
   
   
   
@@ -44,6 +51,8 @@ export class PhysicianinfoComponent implements OnInit {
       password:[''],
       confirmPassword:[''],      
       image:[''],   
+      role:[''],
+      isAuthenticated:['']
       })
     this.activatedRoute.queryParamMap.subscribe(res=>{
      let qParams=res.get('EditMode');
@@ -97,7 +106,9 @@ export class PhysicianinfoComponent implements OnInit {
       address:this.userData.address,
       password:this.userData.password,
       confirmPassword:this.userData.confirmPassword,
-      image:this.userData.image
+      image:this.userData.image,
+      role:this.userData.role,
+      isAuthenticated: this.userData.isAuthenticated
       
     })
     console.log("updated profile form value",this.physicianinfoForm.value)
