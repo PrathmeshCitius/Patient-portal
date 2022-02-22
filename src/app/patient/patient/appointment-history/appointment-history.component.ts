@@ -43,4 +43,11 @@ export class AppointmentHistoryComponent implements OnInit {
   //   this.router.navigate['appointment-history/appointment-detail']
   //   console.log("on view click function")
   // }
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+  }
 }

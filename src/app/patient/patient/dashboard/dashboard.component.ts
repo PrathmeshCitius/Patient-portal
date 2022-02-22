@@ -48,14 +48,14 @@ export class DashboardComponent implements OnInit {
     this.lineChartData = [
       { data: [this.count, 5, this.countone], label: 'Patient visits' },
     ];
-    this.lineChartLabels = ['Dr Chetan Jaiswal', 'ran', 'Dr Satish Shah'];
+    this.lineChartLabels = ['Dr Chetan Jaiswal', 'Dr Rajkumar', 'Dr Satish Shah'];
     this.lineChartOptions = {
       responsive: true,
     };
     this.lineChartColors = [
       {
         borderColor: 'black',
-        backgroundColor: 'rgb(127,255,0)',
+        backgroundColor: '#a5d8dd',
       },
     ];
     this.lineChartLegend = true;
@@ -73,7 +73,7 @@ export class DashboardComponent implements OnInit {
   lineChartColors1: Color[] = [
     {
       borderColor: 'black',
-      backgroundColor: 'rgb(255,20,147)',
+      backgroundColor: '#f28ff7',
     },
   ];
   lineChartLegend1 = true;

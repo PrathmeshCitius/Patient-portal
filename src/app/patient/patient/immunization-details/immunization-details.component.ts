@@ -97,7 +97,7 @@ export class ImmunizationDetailsComponent implements OnInit {
       this.immunizationForm.reset();
       this.onedit = false;
       this.onAdd = true;
-      alert("data updated successfully");
+      alert("Immunization updated successfully");
     })
   }
 
