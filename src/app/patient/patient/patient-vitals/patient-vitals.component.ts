@@ -36,7 +36,7 @@ export class PatientVitalsComponent implements OnInit {
       
       //current login user email 
       var current_user: string = this.globalService.getUserInfo()[0].email;
-      console.log(current_user);
+      console.log("1112222",current_user);
     
       this.dataSource = new MatTableDataSource(res);
       this.dataSource.paginator = this.paginator;

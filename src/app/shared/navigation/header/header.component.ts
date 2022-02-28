@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GlobalService } from 'src/app/services/api.service';
@@ -9,7 +9,11 @@ import { GlobalService } from 'src/app/services/api.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  @Input() patientImage;
   disableSelect = new FormControl();
+  welcome:any=[];
+  length:number;
+  username :string;
   constructor(
     private route:ActivatedRoute,
     private router: Router,
@@ -28,11 +32,24 @@ export class HeaderComponent implements OnInit {
 
   }
   ngOnInit(): void {
+    this.gs.setLoggedInUser().subscribe((res)=>{
+      console.log("res",res);
+ 
+    this.welcome=res;
+    //  console.log("sindu",this.welcome.length)
+//.log("1111111", this.welcome.image)
+this.length = this.welcome.length;
+ // this.aman = res[this.welcome.length].firstName
+  //console.log("Length",this.length);
+  //console.log("Ovi", this.welcome[this.length-1].firstName);
+  console.log("adit",this.welcome[this.length-1].image)
+  this.username = this.welcome[this.length-1].firstName;
+
+    })
   }
 
   logOut(){
     this.gs.deleteuserloggeddata("abc",1).subscribe((res)=>{
-
 
       if(res){
         console.log("record deleted");

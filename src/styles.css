@@ -141,6 +141,10 @@ a, p, div, span {
 .custom-chart{
     height: 308px;
 }
+.Welcome{
+    font-size: 10px;
+    
+}
 @media (max-width:1220px){
     .side-bar-sec ul li a{
         font-size: 11px;
@@ -224,6 +228,7 @@ a, p, div, span {
         display: block !important;
         margin:20px 0  0!important;
     }
+    
 }
 
 

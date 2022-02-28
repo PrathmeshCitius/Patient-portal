@@ -26,6 +26,7 @@ import { AppointmentDetailsComponent } from './patient/appointment-history/appoi
 import { DayService, WeekService, WorkWeekService, MonthService, AgendaService, MonthAgendaService, TimelineViewsService, TimelineMonthService} from '@syncfusion/ej2-angular-schedule';
 import { ScheduleModule } from '@syncfusion/ej2-angular-schedule';
 import { DateTimePickerModule } from "@syncfusion/ej2-angular-calendars";
+import { BillingComponent } from './patient/billing/billing.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { DateTimePickerModule } from "@syncfusion/ej2-angular-calendars";
     DialogComponent,
     AppointmentDialogComponent,
     AppointmentDetailsComponent,
+    BillingComponent,
   ],
   entryComponents:[
     AppointmentDialogComponent

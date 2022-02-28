@@ -15,6 +15,7 @@ import { MedicationAndAllergiesComponent } from './patient/medication-and-allerg
 import { PatientVitalsComponent } from './patient/patient-vitals/patient-vitals.component';
 import { ScheduleAppointmentComponent } from './patient/schedule-appointment/schedule-appointment.component';
 import { AppointmentDetailsComponent } from './patient/appointment-history/appointment-details/appointment-details.component';
+import { BillingComponent } from './patient/billing/billing.component';
 
 const routes: Routes = [
 
@@ -56,6 +57,9 @@ const routes: Routes = [
          },
          {
             path: 'schedule-appointment', component: ScheduleAppointmentComponent,
+         },
+         {
+            path: 'billing', component: BillingComponent,
          }
         ]
     }

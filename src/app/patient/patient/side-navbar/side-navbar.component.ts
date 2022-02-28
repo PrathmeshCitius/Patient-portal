@@ -13,6 +13,7 @@ export class SideNavbarComponent implements OnInit {
   constructor() { }
   @Input() patientId;
   @Input() patientEmail;
+  @Input() patientImage;
   ngOnInit(): void {
   
     

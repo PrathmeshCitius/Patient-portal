@@ -46,6 +46,8 @@ export class LoginComponent implements OnInit {
     }
     this.authService.login(data).subscribe(res => {
       if(res){
+        console.log("Indu",res)
+        localStorage.setItem('currentUserId',res.userId)
       this.notificationService.showSuccess("Login Successful", "User");
       this.loginForm.reset();
       

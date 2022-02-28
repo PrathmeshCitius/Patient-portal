@@ -16,8 +16,10 @@ import { GlobalService } from 'src/app/services/api.service';
 export class PatientComponent implements OnInit {
   chart: any;
   state: string = "show";
+  logArr:any=[];
   patientId: any;
   patientEmail:any;
+  patientImage:any;
   constructor(private api: GlobalService) {
 
 
@@ -37,43 +39,22 @@ export class PatientComponent implements OnInit {
   ngOnInit(): void {
     
     this.api.setLoggedInUser().subscribe((res) => {
+this.logArr =res;
+if(this.logArr.length == 1){
       this.patientId = res[0].userId;
       this.patientEmail = res[0].email;
-    
+      this.patientImage=res[0].image;
+}
+else
+{
+  this.patientId = res[this.logArr.length-1].userId;
+  this.patientEmail = res[this.logArr.length-1].email;
+  this.patientImage=res[this.logArr.length-1].image;
+}
     });
-    // this.patientId = this.api.getUserInfo()
-    // console.log(this.patientId);
-
-    
-
-    // this.chart= document.getElementById ('dashboard-chat')
-    //   Chart.register(...registerables);
-    //   this.loadChart();
+   
   }
-  // loadChart(): void{
-  //   new Chart(this.chart, {
-  //     type:'line',
-  //     data:{
-  //       datasets:[
-  //         {
-  //         data: ['Red', 'Blue', 'Yellow', 'Green', 'Purple','abc'],
-  //         label:'Series 1',
-  //         backgroundColor:"007bff",
-  //         tension:0.2,
-  //       }
-  //     ],
-  //       labels:[
-  //         '11th',
-  //         '12th',
-  //         '13th',
-  //         '14th',
-  //         '15th',
-  //         '16th',
-  //       ]
-  //     }
-
-  //   });
-  // }
+ 
 }
 
 

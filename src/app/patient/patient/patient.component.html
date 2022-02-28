@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header  [patientImage]="patientImage" ></app-header>
 <div class="container-fluid content-area pl-0" >
     <button class="toggleMenu btn" (click)="showMeFun()"><i class="fas fa-bars text-white"></i></button>
     <div class="row" >
         <div class="sidebar" *ngIf="showMe" style="padding-left: 0;">
-            <app-side-navbar [patientId]="patientId" [patientEmail]="patientEmail">
+            <app-side-navbar [patientId]="patientId" [patientEmail]="patientEmail" [patientImage]="patientImage">
      
             </app-side-navbar>
 

@@ -20,6 +20,7 @@ export class ImmunizationDetailsComponent implements OnInit {
   onedit = false;
   onAdd = true;
   maxDate:string;
+  immunization:any;
 
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -59,8 +60,8 @@ export class ImmunizationDetailsComponent implements OnInit {
 
   addImmunizationDetail() {
     if (this.immunizationForm.valid) {
-      console.log(this.immunizationForm.value)
-      this.api.postImmunizationDetails(this.immunizationForm.value).subscribe({
+      //console.log(this.immunizationForm.value)
+      this.api.postImmunizationDetails({...this.immunizationForm.value,userId:+localStorage.getItem('currentUserId')}).subscribe({
         next: res => {
           this.getImmunizationDetail();
           alert('Patient Immunization added successfully')
@@ -75,7 +76,9 @@ export class ImmunizationDetailsComponent implements OnInit {
   }
   getImmunizationDetail() {
     this.api.getImmunizationDetails().subscribe(res => {
-      this.dataSource = new MatTableDataSource(res);
+      console.log("GET USER INFO Deeps",localStorage.getItem('currentUserId') );
+      this.immunization = res.filter((temp)=>{return temp.userId === +localStorage.getItem('currentUserId') })
+      this.dataSource = new MatTableDataSource(this.immunization);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
       console.log(this.dataSource)

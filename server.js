@@ -118,7 +118,7 @@ server.post('/auth/login', (req, res) => {
       res.status(status).json({ status, message })
       return
     };
-
+    
     // Get current users data
 
     var data = JSON.parse(data.toString());
@@ -142,9 +142,11 @@ server.post('/auth/login', (req, res) => {
       res.status(status).json({ status, message })
       return
     }
-    const access_token = createToken({ email, password })
+    const access_token = createToken({ email, password})
     const role = userdata[0].role
-    res.status(200).json({ access_token ,role})
+    //console.log("USERS DATA_____",userdata)
+    const userId = userdata[0].id;
+    res.status(200).json({ access_token ,role, userId})
 
 
     // Get current users data
@@ -159,7 +161,9 @@ server.post('/auth/login', (req, res) => {
       "userId": userdata[0].id,
       "email": userdata[0].email,
       "id": 1,
-      "role": userdata[0].role
+      "role": userdata[0].role,
+      "firstName":userdata[0].firstName,
+      "image":userdata[0].image
 
 
     }); //add some data

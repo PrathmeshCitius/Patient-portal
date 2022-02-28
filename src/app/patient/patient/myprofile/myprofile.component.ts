@@ -1,5 +1,5 @@
 import { DatePipe } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PatientService } from '../../patient.service';
@@ -18,6 +18,8 @@ export class MyprofileComponent implements OnInit {
   selectedFile: File;
   imageURL: any = '';
   maxDate:string;
+  dataimg:any;
+  
   constructor(
     private fb: FormBuilder,
     private router: Router,
@@ -99,10 +101,14 @@ export class MyprofileComponent implements OnInit {
     this.apiService
       .updateUserById(this.pId, this.profileForm.value)
       .subscribe((res) => {
+       // console.log("deeps",res)
+          this.dataimg = res;
+          console.log("image", this.dataimg.image);
         alert('Profile Updated Successfully');
         this.getPatientData();
         this.router.navigate([], { queryParams: { EditMode: null } });
       });
+     
   }
   onFileSelected(event) {
     // this.selectedFile=<File>event.target.files[0];
@@ -113,14 +119,10 @@ export class MyprofileComponent implements OnInit {
         reader.readAsDataURL(this.selectedFile);
         reader.onload = (event) => {
           this.imageURL = (<FileReader>event.target).result;
+          console.log("IMAGE",this.imageURL)
         };
       }
-      //   // console.log("selected event value",this.selectedFile)
-      //   // this.profileForm.patchValue({
-      //   //   image: this.selectedFile.name
-      //   });
-      //   console.log("image value",this.profileForm.value)
-      // this.imageURL=this.selectedFile.name;
+    
     }
   }
 }

@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class PatientService {
   private readonly API_URL = `${environment.apiUrl}`;
   students: ScheduleData[];
+  mna:any;
   constructor(
   private http: HttpClient,
   ) { }
@@ -26,7 +27,8 @@ export class PatientService {
     return this.http.post<any>('http://localhost:3000/medicationList/', data);
   }
   getMedication() {
-    return this.http.get<any>('http://localhost:3000/medicationList/');
+   
+   return this.http.get<any>('http://localhost:3000/medicationList/');
   }
   updateMedication(id:number,data:any){
     return this.http.put<any>("http://localhost:3000/medicationList/"+id, data)
