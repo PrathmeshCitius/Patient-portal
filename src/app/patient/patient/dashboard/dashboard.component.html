@@ -48,11 +48,44 @@
                         [chartType]="lineChartType3" [plugins]="lineChartPlugins3">
                     </canvas>
                 </div>
-            </mat-card> --> -->
+            </mat-card> --> 
         <!-- </div>
     </div>
 </div> -->
 <!-- <div id="chart-container">
 <canvas #myCanvas id="canvas" ></canvas>
 </div> -->
-<div #chartDiv id="initial_chart_div"></div>
+<!-- <div #chartDiv id="initial_chart_div"></div> -->
+
+<!-- <div class="chart-wrapper">
+
+</div> -->
+
+<div class="dashboard_chart">
+    <div class="row">
+        <div class="col-md-6">
+            <canvas baseChart 
+            [datasets]="lineChartData" 
+            [labels]="lineChartLabels" 
+            [options]="lineChartOptions"
+            [colors]="lineChartColors" 
+            [legend]="lineChartLegend" 
+            [chartType]="lineChartType" 
+            [plugins]="lineChartPlugins">
+        </canvas>
+        </div>
+        <div class="col-md-6">
+            <canvas baseChart 
+            [datasets]="lineChartData" 
+            [labels]="lineChartLabels" 
+            [options]="lineChartOptions"
+            [colors]="lineChartColors" 
+            [legend]="lineChartLegend" 
+            [chartType]="lineChartType" 
+            [plugins]="lineChartPlugins">
+        </canvas>
+        </div>
+    </div>
+   
+  
+</div>
