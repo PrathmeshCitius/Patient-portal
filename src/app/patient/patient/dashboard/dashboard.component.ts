@@ -6,8 +6,7 @@ import { ChartDataSets } from 'chart.js';
 import { Label, Color } from 'ng2-charts';
 import { PatientService } from '../../patient.service';
 import { TestBed } from '@angular/core/testing';
-declare let google: any;
-
+// declare let google: any;
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -23,7 +22,24 @@ export class DashboardComponent implements OnInit {
   lineChartPlugins: [];
   lineChartType;
 
-  constructor(private api: ApiService, private globalService: GlobalService) {  }
+  //weight
+  lineChartData1: ChartDataSets[];
+  lineChartLabels1: Label[];
+  lineChartOptions1;
+  lineChartColors1: Color[];
+  lineChartLegend1;
+  lineChartPlugins1: [];
+  lineChartType1;
+
+  //pulse
+  lineChartData2: ChartDataSets[];
+  lineChartLabels2: Label[];
+  lineChartOptions2;
+  lineChartColors2: Color[];
+  lineChartLegend2;
+  lineChartPlugins2: [];
+  lineChartType2;
+  constructor(private api: ApiService, private globalService: GlobalService) { }
 
   ngOnInit(): void {
     // this.drawChart();
@@ -43,6 +59,8 @@ export class DashboardComponent implements OnInit {
       // console.log('name', result[0].name);
 
       this.plotChart(result);
+      this.tempChart(result);
+      this.pulseChart(result);
     });
 
   }
@@ -82,22 +100,22 @@ export class DashboardComponent implements OnInit {
   //   }
   // }
 
-  bp_data: any = [];
-  latest_bp: any = [];
+  weight_data: any = [];
+  latest_weight: any = [];
+
+  // weight_data: any = [];
+  // latest_weight:any = [];
+
   plotChart(result) {
 
     for (let i = 0; i < result.length; i++) {
-      this.bp_data[i] = result[i].bp;
+      this.weight_data[i] = result[i].weight;
     }
 
     // console.log("flow", this.bp_data);
-    this.latest_bp = this.bp_data.reverse();
-    // console.log("rev-flow", this.latest_bp);
-
-    // console.log("BP DATA", this.bp_data);
-
+    this.latest_weight = this.weight_data.reverse();
     this.lineChartData = [
-      { data: this.bp_data, label: 'Patient Last Three Visits BP' },
+      { data: this.weight_data, label: 'Patient Last Three Visits - Patients Weight' },
     ];
     this.lineChartLabels = ['Latest', 'Second Latest', 'Third Latest'];
     this.lineChartOptions = {
@@ -112,6 +130,60 @@ export class DashboardComponent implements OnInit {
     this.lineChartLegend = true;
     this.lineChartPlugins = [];
     this.lineChartType = 'line';
+  }
+
+  temp_data: any = [];
+  latest_temp: any = [];
+
+  tempChart(result) {
+    for (let i = 0; i < result.length; i++) {
+      this.temp_data[i] = result[i].temp;
+    }
+    // console.log("flow", this.bp_data);
+    this.latest_temp = this.temp_data.reverse();
+    // console.log("rev-flow", this.latest_bp);
+
+    this.lineChartData1 = [
+      { data: this.temp_data, label: 'Patient Last Three Visits Temperature' },
+    ];
+    this.lineChartLabels1 = ['Latest', 'Second Latest', 'Third Latest'];
+    this.lineChartOptions1 = {
+      responsive: true,
+    };
+    this.lineChartColors1 = [
+      {
+        borderColor: 'black',
+        backgroundColor: 'rgb(299,255,0)',
+      },
+    ];
+    this.lineChartLegend1 = true;
+    this.lineChartPlugins1 = [];
+    this.lineChartType1 = 'line';
+  }
+
+  pulse_data: any = [];
+  latest_pulse: any = [];
+  pulseChart(result) {
+    for (let i = 0; i < result.length; i++) {
+      this.pulse_data[i] = result[i].pulse;
+    }
+    this.latest_pulse = this.pulse_data.reverse();
+    this.lineChartData2 = [
+      { data: this.pulse_data, label: 'Patient Last Three Visits Pulse Rate' },
+    ];
+    this.lineChartLabels2 = ['Latest', 'Second Latest', 'Third Latest'];
+    this.lineChartOptions2 = {
+      responsive: true,
+    };
+    this.lineChartColors2 = [
+      {
+        borderColor: 'black',
+        backgroundColor: 'tomato',
+      },
+    ];
+    this.lineChartLegend2 = true;
+    this.lineChartPlugins2 = [];
+    this.lineChartType2 = 'line';
   }
 }
 
