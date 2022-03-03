@@ -8,18 +8,29 @@ import { PatientDetailsComponent } from './patient-details/patient-details.compo
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from '../shared/navigation/header/header.component';
 import { ChartsModule } from 'ng2-charts';
-import { PhysicianDashbardComponent } from './physician-dashbard/physician-dashbard.component';
 import { RouterModule } from '@angular/router';
 import { PhysicianinfoComponent } from './physicianinfo/physicianinfo.component';
-// import { PhysicianMasterComponent } from './physician-master/physician-master.component';
+import { PhysicianDashbardComponent } from './physician-dashbard/physician-dashbard.component';
+import { FullCalendarModule } from '@fullcalendar/angular'; // must go before plugins
+import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
+import interactionPlugin from '@fullcalendar/interaction'; // a plugin!
+import { HttpClientModule } from '@angular/common/http';
+import { PhyDialogComponent } from './physician-dashbard/phy-dialog/phy-dialog.component';
+
+FullCalendarModule.registerPlugins([interactionPlugin, dayGridPlugin]);
+ 
 @NgModule({
-  declarations: [PhysicianComponent,
-     //HeaderComponent,
+  declarations: [
+    PhysicianComponent,
       PhysicianSidebarComponent,
        PatientDetailsComponent,
-       PhysicianDashbardComponent,
       PhysicianinfoComponent,
-      // PhysicianMasterComponent
+      PhysicianDashbardComponent,
+      PhyDialogComponent
+     
+    ],
+    entryComponents:[
+      PhyDialogComponent
     ],
   imports: [
     CommonModule,
@@ -27,7 +38,9 @@ import { PhysicianinfoComponent } from './physicianinfo/physicianinfo.component'
     PhysicianRoutingModule, 
     ReactiveFormsModule,
     ChartsModule,
-    RouterModule
+    FullCalendarModule,
+    RouterModule,
+    HttpClientModule
   ],
   exports: [
     PhysicianDashbardComponent,

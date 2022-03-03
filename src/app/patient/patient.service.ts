@@ -48,7 +48,7 @@ export class PatientService {
     console.log(this.students)})
     },500);
     
-    const scheduleObservable = new Observable(observer => {
+  const scheduleObservable = new Observable(observer => {
       setTimeout(() => {
         observer.next(this.students);
       }, 1000);
@@ -61,4 +61,8 @@ getdoctorsFromEventlist()
   return this.http.get<any>('http://localhost:3000/eventList/');
 }
   
+getEvents()
+{
+  return this.http.get<any>('http://localhost:3000/eventList/');
+}
 }

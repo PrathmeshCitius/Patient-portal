@@ -17,7 +17,7 @@ export class AppointmentHistoryComponent implements OnInit {
   onedit=false;
   onAdd=true;
   aId;
-
+appointments:any;
   @ViewChild(MatPaginator) paginator! : MatPaginator;
   @ViewChild(MatSort) sort! : MatSort;
 
@@ -33,7 +33,10 @@ export class AppointmentHistoryComponent implements OnInit {
   getAppoHistory(){
     this.api.getAppointmentHistory().subscribe(res=>{
       console.log("appointment History Resp", res)
-      this.dataSource = new MatTableDataSource(res);
+this.appointments = res.filter((i)=>{
+  return i.userId === +localStorage.getItem("currentUserId")
+});
+      this.dataSource = new MatTableDataSource(this.appointments);
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
       console.log("app history datasource", this.dataSource)
