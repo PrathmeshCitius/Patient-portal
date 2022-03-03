@@ -189,7 +189,7 @@
       "date": "2022-02-09",
       "email": "sandya@gmail.com",
       "name": "Sandya",
-      "bp": "120/80",
+      "bp": "120",
       "pulse": "71",
       "resp": "Normal",
       "temp": "98 degree",
@@ -213,61 +213,49 @@
       "date": "2022-02-16",
       "email": "snehal@gmail.com",
       "name": "Snehal",
-      "bp": "80",
+      "bp": "80/100",
       "pulse": "90",
       "resp": "100",
-      "temp": "High",
+      "temp": "100",
       "height": "Low",
-      "weight": "High",
+      "weight": "100",
       "id": 5
     },
     {
       "date": "2022-02-02",
       "email": "snehal@gmail.com",
       "name": "Snehal",
-      "bp": "200",
+      "bp": "150",
       "pulse": "89",
       "resp": "High",
-      "temp": "Low",
+      "temp": "98",
       "height": "Low",
-      "weight": "Low",
+      "weight": "80",
       "id": 6
-    },
-    {
-      "date": "2022-03-14",
-      "email": "snehal@gmail.com",
-      "name": "Snehal",
-      "bp": "100",
-      "pulse": "normal",
-      "resp": "normal",
-      "temp": "normal",
-      "height": "normal",
-      "weight": "normal",
-      "id": 8
-    },
-    {
-      "date": "",
-      "email": "snehal@gmail.com",
-      "name": "Snehal",
-      "bp": "160",
-      "pulse": "normal",
-      "resp": "normal",
-      "temp": "normal",
-      "height": "normal",
-      "weight": "normal",
-      "id": 9
     },
     {
       "date": "2022-03-03",
       "email": "snehal@gmail.com",
       "name": "Snehal",
-      "bp": "180",
-      "pulse": "normal",
+      "bp": "100",
+      "pulse": "60",
       "resp": "normal",
-      "temp": "normal",
+      "temp": "96",
       "height": "normal",
-      "weight": "adsf",
+      "weight": "90",
       "id": 10
+    },
+    {
+      "date": "2022-03-16",
+      "email": "snehal@gmail.com",
+      "name": "Snehal",
+      "bp": "100",
+      "pulse": "97",
+      "resp": "normal",
+      "temp": "86",
+      "height": "normal",
+      "weight": "50",
+      "id": 11
     }
   ],
   "patientdemo": [
@@ -561,15 +549,6 @@
   },
   "loggedin": [
     {
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNuZWhhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6InNuZWhhbEAxMjMiLCJpYXQiOjE2NDYxMTk4NDgsImV4cCI6MTY0NjEyMzQ0OH0.86RxPtN8aXGlZwenPNM8_iJ_YQ5pBOU9y7IrMpPeEos",
-      "userId": 3,
-      "email": "snehal@gmail.com",
-      "id": 1,
-      "role": "patient",
-      "firstName": "Snehal",
-      "image": ""
-    },
-    {
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNuZWhhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6InNuZWhhbEAxMjMiLCJpYXQiOjE2NDYxMjEyOTQsImV4cCI6MTY0NjEyNDg5NH0.iNbAJkY2uwaWJYDWcnHkB-MvCZj1SCxenPo-wfaokDI",
       "userId": 3,
       "email": "snehal@gmail.com",
@@ -598,6 +577,42 @@
     },
     {
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNuZWhhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6InNuZWhhbEAxMjMiLCJpYXQiOjE2NDYxMzE2MTksImV4cCI6MTY0NjEzNTIxOX0.hxQwct_tbxVer7KBbETKi8KkdiovDsBdAVe5tIqaXRM",
+      "userId": 3,
+      "email": "snehal@gmail.com",
+      "id": 1,
+      "role": "patient",
+      "firstName": "Snehal",
+      "image": ""
+    },
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNuZWhhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6InNuZWhhbEAxMjMiLCJpYXQiOjE2NDYxOTUwOTAsImV4cCI6MTY0NjE5ODY5MH0.KmNjSGepj8lkXvRYPw-s8ljAtoL7lDvccSsCqBFOOlQ",
+      "userId": 3,
+      "email": "snehal@gmail.com",
+      "id": 1,
+      "role": "patient",
+      "firstName": "Snehal",
+      "image": ""
+    },
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNuZWhhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6InNuZWhhbEAxMjMiLCJpYXQiOjE2NDYxOTU4MzUsImV4cCI6MTY0NjE5OTQzNX0.PvBIEOFtwgcBl5j7ViieTWi6Vn9_CF3h87rEcv1DxRE",
+      "userId": 3,
+      "email": "snehal@gmail.com",
+      "id": 1,
+      "role": "patient",
+      "firstName": "Snehal",
+      "image": ""
+    },
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNuZWhhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6InNuZWhhbEAxMjMiLCJpYXQiOjE2NDYxOTkzNjQsImV4cCI6MTY0NjIwMjk2NH0.01zuH3JteieOGJIAkocm4E9tMwlWSoax0B6nNdYd4Js",
+      "userId": 3,
+      "email": "snehal@gmail.com",
+      "id": 1,
+      "role": "patient",
+      "firstName": "Snehal",
+      "image": ""
+    },
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNuZWhhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6InNuZWhhbEAxMjMiLCJpYXQiOjE2NDYyMDA3OTcsImV4cCI6MTY0NjIwNDM5N30.yiO9CgfClCv9cBaXr_ifp3Hvld_XwacRen4cHUp_vGA",
       "userId": 3,
       "email": "snehal@gmail.com",
       "id": 1,
