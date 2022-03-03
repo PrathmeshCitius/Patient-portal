@@ -6,7 +6,10 @@ import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 import { AuthService } from 'src/app/auth/auth.service';
 import { GlobalService } from 'src/app/services/api.service';
 import * as moment from 'moment';
-
+interface Dname {
+  value: string;
+  viewValue: string;
+}
 @Component({
   selector: 'app-demographics',
   templateUrl: './demographics.component.html',
@@ -39,7 +42,23 @@ export class DemographicsComponent implements OnInit {
     this.initForm();
     
   }
-
+  ethnicity:Dname[]=[
+    {value: 'Indian', viewValue: 'Indian'},
+    {value: 'American', viewValue: 'American'},
+    {value: 'African', viewValue: 'African'},   
+   ];
+   education:Dname[]=[
+    {value: 'SSC/X', viewValue: 'SSC/X'},
+    {value: 'HSC/XII', viewValue: 'HSC/XII'},
+    {value: 'Graduation', viewValue: 'Graduation'},   
+    {value: 'Post Graduation', viewValue: 'Post Graduation'},
+    {value: 'PHD', viewValue: 'PHD'},
+   ];
+   occupation:Dname[]=[
+    {value: 'Salaried', viewValue: 'Salaried'},
+    {value: 'Self Employed', viewValue: 'Self Employed'},
+    {value: 'Other', viewValue: 'Other'},   
+   ];
   ngOnInit(): void {
     // this.api.userInfo.subscribe((value)=>{
     //   console.log(value);

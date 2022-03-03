@@ -5,7 +5,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { DatePipe } from '@angular/common';
-interface Dname {
+interface Iname {
   value: string;
   viewValue: string;
 }
@@ -33,7 +33,15 @@ export class ImmunizationDetailsComponent implements OnInit {
     
     this.maxDate = datePipe.transform(new Date(), dateFormat);
    }
-   doses:Dname[]=[
+   vaccineName:Iname[]=[
+    {value: 'Hepatitis B', viewValue: 'Hepatitis B'},
+    {value: 'Rotavirus(RV) RV1 (2-dose series); ', viewValue: 'Rotavirus(RV) RV1 (2-dose series); '},
+    {value: 'Influenza (LAIV4)', viewValue: 'Influenza (LAIV4)'},
+    {value: 'Dengue', viewValue: 'Dengue'},
+    {value: 'Tetanus', viewValue: 'Tetanus'},
+    {value: 'Polio', viewValue: 'Polio'},
+   ];
+   doses:Iname[]=[
     {value: 'Dose 1', viewValue: 'Dose 1'},
     {value: 'Dose 2', viewValue: 'Dose 2'},
     {value: 'Dose 3', viewValue: 'Dose 3'},

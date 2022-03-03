@@ -1,7 +1,9 @@
 mat-form-field{
     width:100%;
 }
-
+.mr-2{
+    margin-right:2px;
+}
 .m-b-10{
     margin-bottom:10px;
 }

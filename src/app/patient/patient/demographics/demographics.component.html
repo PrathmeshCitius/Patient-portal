@@ -46,10 +46,11 @@
 						</div>
 
 						<div class="form-group m-b-10 col-lg-6">
-
+							<mat-label class="mr-2">Gender</mat-label>
 							<mat-radio-group aria-label="Select an option" formControlName="gender">
 								<mat-radio-button value="male">Male</mat-radio-button>
 								<mat-radio-button value="female">Female</mat-radio-button>
+								<mat-radio-button value="female">Other</mat-radio-button>
 							</mat-radio-group>
 
 
@@ -62,9 +63,15 @@
 
 
 						<div class="form-group m-b-10 col-lg-6">
-							<mat-form-field>
-								<input matInput placeholder="Ethnicity" formControlName="ethnicity">
+							<mat-form-field appearance="fill">
+								<mat-label>Ethinicity</mat-label>
+								<mat-select matInput placeholder="Placeholder" formControlName="ethnicity">
+								  <mat-option *ngFor="let ename of ethnicity" [value]="ename.value" >{{ename.viewValue}}</mat-option>
+								</mat-select>
 							</mat-form-field>
+							<!-- <mat-form-field>
+								<input matInput placeholder="Ethnicity" formControlName="ethnicity">
+							</mat-form-field> -->
 
 							<div *ngIf="!f.ethnicity.valid && (f.ethnicity.dirty ||f.ethnicity.touched || submitted)"
 								class="error-msg">
@@ -74,9 +81,15 @@
 
 
 						<div class="form-group m-b-10 col-lg-6">
-							<mat-form-field>
-								<input matInput placeholder="Education" formControlName="education">
+							<mat-form-field appearance="fill">
+								<mat-label>Education</mat-label>
+								<mat-select matInput placeholder="Placeholder" formControlName="education">
+								  <mat-option *ngFor="let eduname of education" [value]="eduname.value" >{{eduname.viewValue}}</mat-option>
+								</mat-select>
 							</mat-form-field>
+							<!-- <mat-form-field>
+								<input matInput placeholder="Education" formControlName="education">
+							</mat-form-field> -->
 
 							<div *ngIf="!f.education.valid && (f.education.dirty ||f.education.touched || submitted)"
 								class="error-msg">
@@ -86,9 +99,15 @@
 
 
 						<div class="form-group m-b-10 col-lg-6">
-							<mat-form-field>
-								<input matInput placeholder="Employment" formControlName="occupation">
+							<mat-form-field appearance="fill">
+								<mat-label>Education</mat-label>
+								<mat-select matInput placeholder="Placeholder" formControlName="occupation">
+								  <mat-option *ngFor="let occname of occupation" [value]="occname.value" >{{occname.viewValue}}</mat-option>
+								</mat-select>
 							</mat-form-field>
+							<!-- <mat-form-field>
+								<input matInput placeholder="Employment" formControlName="occupation">
+							</mat-form-field> -->
 
 							<div *ngIf="!f.occupation.valid && (f.occupation.dirty ||f.occupation.touched || submitted)"
 								class="error-msg">

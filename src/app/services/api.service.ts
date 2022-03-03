@@ -8,12 +8,14 @@ export class GlobalService {
   userInfo: any
    constructor(private http:HttpClient ) { }
   setLoggedInUser(){
-
     return this.http.get("http://localhost:3000/loggedin");
   }
+  updateImageById(id:any, data:any){
+    return this.http.put<any>("http://localhost:3000/loggedin/"+ id, data)
+}
   storeInfo(data){
       this.userInfo = data;
-      console.log(this.userInfo);
+      console.log("store data",this.userInfo);
   }
 
   getUserInfo() {
