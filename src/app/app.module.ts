@@ -27,6 +27,7 @@ import { NavbarComponent } from './mainpage/navbar/navbar.component';
 import { ContentComponent } from './mainpage/content/content.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { MaterialModule } from './shared/material/material.module';
+//import { PhysicianDialogComponent } from './physician-dashbard/physician-dialog/physician-dialog.component';
 const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
   suppressScrollX: true,
@@ -39,7 +40,8 @@ const P_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   declarations: [
     AppComponent,
     NavbarComponent,
-    ContentComponent
+    ContentComponent,
+   
   ],
   schemas: [],
 

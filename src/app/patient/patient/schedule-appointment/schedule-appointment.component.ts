@@ -77,7 +77,6 @@ ngOnInit() {
       console.log(scheduleData);
       scheduleData.forEach(element => {
         console.log(element);
-       
           initialData.push(element);
       
       });

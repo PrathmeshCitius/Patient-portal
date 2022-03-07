@@ -14,12 +14,7 @@ import { DialogComponent } from '../dialog/dialog.component';
   styleUrls: ['./manageuser.component.css']
 })
 
-
-
-
 export class ManageuserComponent implements OnInit {
-
-
   userList: MatTableDataSource<any>
   ischecked = false;
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -44,9 +39,7 @@ export class ManageuserComponent implements OnInit {
 
 
   getUserList() {
-    this.adminService.getUser().subscribe(res => {
-      
-      
+    this.adminService.getUser().subscribe(res => { 
       this.userList = new MatTableDataSource(res.filter(person => person.role !== 'admin'));
       this.userList.paginator = this.paginator;
     

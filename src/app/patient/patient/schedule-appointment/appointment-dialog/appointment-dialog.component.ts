@@ -49,7 +49,7 @@ public placeholder: String = 'Select Date & Time';
     this.appointmentForm.value.status="Pending";
     if (this.appointmentForm.valid) {
       console.log(this.appointmentForm)
-      this.patientService.postEvent(this.appointmentForm.value).subscribe(res=>{
+      this.patientService.postEvent({...this.appointmentForm.value,userId:+localStorage.getItem('currentUserId')}).subscribe(res=>{
           
           alert('Event added Successfully ');
         })
